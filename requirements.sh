@@ -1,6 +1,4 @@
 #!/data/data/com.termux/files/usr/bin/bash
-echo ""
-clear
 clear
 echo ""
 echo ""
@@ -70,5 +68,8 @@ cp -R shark /data/data/com.termux/files/usr/bin
 ###########XXXXXXXXXXXXX####################
 #     JUST LEARNING KEEP SUPPORTING        #
 ############XXXXXXXXXXXX####################
-echo
-
+echo -e "\e[92m[+] To run the tool from anywhere simply type : shark \e[m "
+echo 
+#####################################
+#           THANKYOU                #
+#####################################
