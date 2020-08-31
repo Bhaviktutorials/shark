@@ -57,8 +57,8 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 sleep 1
 echo " "
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Paste Your Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
-$token
-sleep 2
+$token >> /dev/null 2>&1
+sleep 1
 clear
 echo
 echo -e "\e[92m[+] Setting up shark \e[m "
