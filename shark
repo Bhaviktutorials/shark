@@ -446,7 +446,7 @@ ash() {
 
                            break;
    
-                     elif [ $option = 13]
+                     elif [ $option = 13 ]
 	             then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd Hotstar-otp-bypass/
