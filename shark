@@ -946,7 +946,8 @@ ash() {
                            break;
 
                   else 
-		  echo -e "\e[32m[\e[34m!\e[32m]\e[31 Invalid option Try Again !! \e[m "
+		  echo
+		  echo -e "\e[32m[\e[34m!\e[32m]\e[31m Invalid option Try Again !! \e[m "
 		  sleep 2
 		  fi
                   done
