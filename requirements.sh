@@ -2,7 +2,7 @@
 clear
 echo 
 echo 
-echo -e $'\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Best Phishing Tool Please Wait \e[0m'
+echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Best Phishing Tool Please Wait \e[0m"
 echo
 termux-setup-storage
 apt-get install apache2 -y
