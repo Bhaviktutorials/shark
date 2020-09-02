@@ -11,6 +11,7 @@ apt install jq -y
 apt install curl -y
 apt install zip -y
 pkg install wget -y
+pkg install ncurses-utils -y
 clear
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
 unzip ngrok-stable-linux-arm.zip
