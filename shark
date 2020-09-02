@@ -61,7 +61,6 @@ done
 printf "   \b\b\b"
 tput cnorm
 printf "\e[1;32m[Done]\e[0m"
-done
 }
 
 php="$(ps -efw | grep php | grep -v grep | awk '{print $2}')"
