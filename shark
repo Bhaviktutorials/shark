@@ -10,19 +10,16 @@ connection() {
 while :
 do
 if curl -s --head  --request GET www.google.com | grep "200 OK" > /dev/null ; then
-    echo -e "\e[92m-->> Active Internet Connection\e[m"
+    echo -e "\e[92m>> \e[93m[\e[92mActive ●\e[93m]\e[m"
     echo 
-    sleep 1
-    echo -e "\e[92m-->> READY TO GO...\e[m"
-    sleep 2
-    echo
+    sleep 3
     break
 else
-    echo -e "\e[91m-->> Inactive Internet Connection\e[m"
-    sleep 1
-    echo
-    echo -e "\e[93m-->> Check your connection and Try Again!!\e[m"
+    echo -e "\e[92m>> \e[93m[\e[91mInactive ●\e[93m]\e[m"
     sleep 2
+    echo
+    echo -e "\e[92m>> \e[91mCheck your connection and Try Again!!\e[m"
+    sleep 3
     echo
     exit
 fi
