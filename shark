@@ -165,6 +165,7 @@ ash() {
 			    echo                                                                                                                        
 			    ash 
 			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			    clear
 			    echo 
 			    echo
 			    echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m====================== \e[93m"  
