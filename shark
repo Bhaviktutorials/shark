@@ -51,7 +51,7 @@ echo -e "\e[94m
            Y88888
            jgs/VK  \`Y88P
            YP
-e\[94m"
+\e[m"
 }
 
 
