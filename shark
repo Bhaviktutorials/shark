@@ -50,24 +50,25 @@ echo -e "\e[94m
           888888b                       \`\"\'
            Y88888
            jgs/VK  \`Y88P
-           YP
-\e[m"
+           YP\e[m"
 }
 
 
 echo 
 echo 
-echo -e "\e[31m[\e[32m★\e[31m]\e[32m ENABLE YOUR MOBILE DATA & HOTSPOT TO CONTINUE\e[m "
-sleep 1
-echo ""
-echo " "
-echo -en "\e[31m[\e[32m*\e[31m]\e[32m Do You Have Enable it (y/n)? \e[m "
+echo -e "\e[31m[\e[32m★\e[31m]\e[32m CONNECT TO STABLE INTERNET CONNECTION\e[m "
+sleep 2
+echo 
+echo 
+echo -en "\e[31m[\e[32m*\e[31m]\e[32m HAVE YOU CONNECTED TO IT (y/n)? \e[m "
 read ans
 if [ "$ans" != "${ans#[Yy]}" ]; then
 echo 
 echo 
-echo -e "\e[92m>>>\e[91m Note:\e[96m Do not turn off your hotspot while performing phishing \e[m "
-sleep 8
+echo -e "\e[92m>>\e[96m BEST PHISHING TOOL \e[m "
+tput civis
+sleep 4
+tput cnorm
 else 
 exit
 fi
