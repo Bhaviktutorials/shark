@@ -29,8 +29,8 @@ done
 shark_logo() {
 clear
 echo
-echo -e "\e[94m
-
+echo -e "\e[92m
+SHARK ©\e[34m
                                8b
                                88b
                                888b
