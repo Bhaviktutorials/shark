@@ -26,6 +26,35 @@ fi
 done
 }
 
+shark_logo() {
+clear
+echo
+echo -e "\e[94m
+
+                               8b
+                               88b
+                               888b
+                               8888b
+                               88888b
+                               888888b
+                             .d88888888b.__
+                       _.od888888888888888888boo..._
+                   .od8888888888888888888888888888888booo.._
+                .od888888888888888888888888888888888888888888\)
+              .d888P\'    "Y88888888888888888888(_   _ )888P"\'
+            .d8888Poo.     `Y88888888888888888P-.`-`@\'.-\'""-.
+   .oooooood8888888P""\'     `"Y8888888P.d888P   `---\'"""".-\'
+ d888888888'888P\'  _...-----..__      \'d88888__...------\'
+ `""Y88888\'8888|-\'              `----\'|88888P
+         `Y8888b                       Y888P
+          888888b                       `"\'
+           Y88888
+           jgs/VK  `Y88P
+           YP
+e\[94m"
+}
+
+
 echo 
 echo 
 echo -e "\e[31m[\e[32m★\e[31m]\e[32m ENABLE YOUR MOBILE DATA & HOTSPOT TO CONTINUE\e[m "
@@ -166,6 +195,7 @@ ash() {
 			    ash 
 			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			    clear
+			    shark_logo
 			    echo 
 			    echo
 			    echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -199,6 +229,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -232,6 +263,7 @@ ash() {
 			   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -265,6 +297,7 @@ ash() {
 			  ash 
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -298,6 +331,7 @@ ash() {
 		          ash
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -331,6 +365,7 @@ ash() {
 		          ash
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -373,6 +408,7 @@ ash() {
 			        ash
 				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			        clear
+				shark_logo
 			        echo 
 			        echo
 			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -403,6 +439,7 @@ ash() {
 			        ash
 				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			        clear
+				shark_logo
 			        echo 
 			        echo
 			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -438,6 +475,7 @@ ash() {
 		          ash
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -471,6 +509,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -504,6 +543,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -537,6 +577,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -570,6 +611,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -603,6 +645,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -636,6 +679,7 @@ ash() {
 		           ash 
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -669,6 +713,7 @@ ash() {
 	                   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -702,6 +747,7 @@ ash() {
              		   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -735,6 +781,7 @@ ash() {
 	                   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -768,6 +815,7 @@ ash() {
           		   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -801,6 +849,7 @@ ash() {
 	                   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -834,6 +883,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -867,6 +917,7 @@ ash() {
 	 	           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -900,6 +951,7 @@ ash() {
 		          ash
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -933,6 +985,7 @@ ash() {
 		          ash
 			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
+			  shark_logo
 			  echo 
 			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -966,6 +1019,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -999,6 +1053,7 @@ ash() {
 	              	   ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1032,6 +1087,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1065,6 +1121,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1098,6 +1155,7 @@ ash() {
  		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1131,6 +1189,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1164,6 +1223,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
@@ -1197,6 +1257,7 @@ ash() {
 		           ash
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
+			   shark_logo
 			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
