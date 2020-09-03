@@ -28,7 +28,6 @@ done
 
 shark_logo() {
 clear
-echo
 echo -e "\e[92m
 SHARK ©\e[34m
                                8b
@@ -198,7 +197,6 @@ ash() {
 			    clear
 			    shark_logo
 			    echo 
-			    echo
 			    echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			    echo 
 			    echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m=========================\e[92m"
@@ -232,7 +230,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -266,7 +263,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 	        	   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -300,7 +296,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -334,7 +329,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -368,7 +362,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -411,7 +404,6 @@ ash() {
 			        clear
 				shark_logo
 			        echo 
-			        echo
 			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			        echo 
 			        echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -441,7 +433,6 @@ ash() {
 				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			        clear
 				shark_logo
-			        echo 
 			        echo
 			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			        echo 
@@ -478,7 +469,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -512,7 +502,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 		           echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -545,7 +534,6 @@ ash() {
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   shark_logo
-			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
@@ -580,7 +568,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -614,7 +601,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -648,7 +634,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 		           echo 
 		           echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -682,7 +667,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -716,7 +700,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -750,7 +733,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
@@ -784,7 +766,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -818,7 +799,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -852,7 +832,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -886,7 +865,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -919,7 +897,6 @@ ash() {
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   shark_logo
-			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
@@ -954,7 +931,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -988,7 +964,6 @@ ash() {
 			  clear
 			  shark_logo
 			  echo 
-			  echo
 			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
 			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1022,7 +997,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"  
@@ -1056,7 +1030,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1090,7 +1063,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1124,7 +1096,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1158,7 +1129,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1191,7 +1161,6 @@ ash() {
 			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   shark_logo
-			   echo 
 			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
@@ -1226,7 +1195,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
@@ -1260,7 +1228,6 @@ ash() {
 			   clear
 			   shark_logo
 			   echo 
-			   echo
 			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
 			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
