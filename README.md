@@ -40,14 +40,16 @@ $ ls
 
 $ chmod +x *
 
-$ ./requirements.sh
+$ ./setup
 
 $ shark
 ```
 
 * Single `Command` for termux
 ```
-$ termux-setup-storage && pkg update && pkg upgrade && pkg install git -y && git clone https://github.com/Bhaviktutorials/shark && cd shark && chmod +x * && ./requirements.sh
+$ termux-setup-storage && pkg update && pkg upgrade && pkg install git -y
+
+$ git clone https://github.com/Bhaviktutorials/shark && cd shark && chmod +x * && ./setup
 
 $ shark
 ```
