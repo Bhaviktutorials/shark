@@ -1282,7 +1282,7 @@ ash() {
 	          then     
 		      echo
 		      exit 
-		      break:
+		      break;
 		      
                   else 
 		  
