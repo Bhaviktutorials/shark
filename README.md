@@ -66,7 +66,7 @@ $ shark
 
 ### Development by
 
-Developer / Author: [Ashish]() / [Bhavik Oza](https://github.com/Bhaviktutorials/)
+Developer / Author: [Bhavik Oza](https://github.com/Bhaviktutorials/)
 
 Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
 
