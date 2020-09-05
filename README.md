@@ -56,8 +56,10 @@ $ shark
 ### Screenshots
 
 #### Installing Shark :-
-
-
+![Screenshot_2020-09-05-12-12-25](https://user-images.githubusercontent.com/64035221/92299639-c2658f00-ef71-11ea-8eeb-cfa50f4c6c8c.jpg)
+![Screenshot_2020-09-05-12-13-33](https://user-images.githubusercontent.com/64035221/92299650-ec1eb600-ef71-11ea-8934-3dda718ea11d.jpg)
+![Screenshot_2020-09-05-12-14-31](https://user-images.githubusercontent.com/64035221/92299657-f5a81e00-ef71-11ea-89ce-9c29dc09b04f.jpg)
+![Screenshot_2020-09-05-12-14-40](https://user-images.githubusercontent.com/64035221/92299664-03f63a00-ef72-11ea-9b88-4faf157e727c.jpg)
 ***
 
 ### Development by
