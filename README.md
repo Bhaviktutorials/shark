@@ -71,6 +71,13 @@ Developer / Author: [Bhavik Oza](https://github.com/Bhaviktutorials/)
 
 Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
 
+### Credit :-
+[DarkSecDevelopers](https://github.com/DarkSecDevelopers)
+
+[jaykali](https://github.com/jaykali)
+
+Ignitetch
+
 ## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:-
 
 [![Github](https://github.frapsoft.com/social/github.png)](https://github.com/Bhaviktutorials/)
