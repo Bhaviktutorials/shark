@@ -27,6 +27,11 @@ we guys have add a feature of custom link so the normal link of ngrok that will 
 That way no one will caught that you are phishing
 Hope you guys like this Project,then dont forget to give it a like.
 ### Installation Shark
+  
+### YouTube Tutorials :- 
+
+##### https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s
+
 * `Commands` for termux
 ```
 $ termux-setup-storage
@@ -72,7 +77,7 @@ Developer / Author: [Bhavik Oza](https://github.com/Bhaviktutorials/)
 Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
 
 ## Credit :-
-### [DarkSecDevelopers](https://github.com/DarkSecDevelopers)
+### [DarkSecDevelopers HTML Code](https://github.com/DarkSecDevelopers)
 
 ### [jaykali](https://github.com/jaykali)
 
