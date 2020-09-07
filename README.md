@@ -85,7 +85,7 @@ $ shark
 
 ### [jaykali](https://github.com/jaykali)
 
-### [AdvPhishing HTML Code](https://github.com/Ignitetch/AdvPhishing)
+
 
 ## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:-
 
