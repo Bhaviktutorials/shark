@@ -246,7 +246,7 @@ ash() {
 	echo
         }
 
-        read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;93m Enter Your Choice : \e[0m' option
+        read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;93m Choose Your Option : \e[0m' option
 	
          if [ $option = 01 ] || [ $option = 1 ]
          then
