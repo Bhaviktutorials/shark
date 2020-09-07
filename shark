@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 ##############################################
+#                                            #
 #             PROJECT: SHARK                 #
 #             AUTHOR: ASHISH                 #
 #              SHARK ©2020                   #
@@ -7,6 +8,7 @@
 #           BEST PHISHING TOOLS              #
 #            CREDIT: Darksec                 #
 #       created by :- a s h i s h            #
+#                                            #
 ##############################################
 
 
@@ -445,9 +447,9 @@ ash() {
                           cd /data/data/com.termux/files/usr/bin/phs
                           cd Paytm-Phishing/
                           echo 
-                          echo -e "\e[1;31m[\e[0m\e[1;77m 1 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign In \e[0m" 
+                          echo -e "\e[1;31m[\e[0m\e[1;77m 1 \e[0m\e[1;31m]\e[0m\e[1;32m Sign In \e[0m" 
 			  echo
-                          echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Paytm Sign UP \e[0m"
+                          echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Sign UP \e[0m"
                           echo 
                           read -p $'\e[1;91m[\e[0m\e[1;92m >>> \e[0m\e[1;91m]\e[0m\e[1;92m Enter Your Choice : \e[0m' option1
 		          if [ $option1 = 1 ] || [ $option1 = 01 ]
