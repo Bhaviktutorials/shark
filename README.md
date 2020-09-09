@@ -70,6 +70,8 @@ $ git clone https://github.com/Bhaviktutorials/shark
 
 $ cd shark
 
+$ chmod +x *
+
 $ ./kali-setup
 
 $ shark 
