@@ -64,6 +64,16 @@ $ git clone https://github.com/Bhaviktutorials/shark && cd shark && chmod +x * &
 
 $ shark
 ```
+### * `Commands` for Kali-Linux :-
+
+$ git clone https://github.com/Bhaviktutorials/shark
+
+$ cd shark
+
+$ ./kali-setup
+
+$ shark 
+```
 ## Screenshots :- 
 
 ### Installing Shark :-
