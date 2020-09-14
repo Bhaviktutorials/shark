@@ -33,7 +33,7 @@ Hope you guys like this Project,then dont forget to give it a like.
   
 ### YouTube Tutorials :- 
 
-##### https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s
+##### [YouTube](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
 
 ### * `Commands` for termux :-
 ```
