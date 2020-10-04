@@ -91,13 +91,6 @@ $ shark
 
 ## Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
 
-## Credit :-
-
-### [DarkSecDevelopers HTML Code](https://github.com/DarkSecDevelopers)
-
-### [jaykali](https://github.com/jaykali)
-
-
 
 ## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:-
 
