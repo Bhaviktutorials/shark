@@ -92,7 +92,7 @@ $ shark
 ## Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
 
 
-## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:-
+## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:
 
 [![Github](https://github.frapsoft.com/social/github.png)](https://github.com/Bhaviktutorials/)
 [![Youtube](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)](<img src="https://www.freepnglogos.com/uploads/youtube-logo-png-images-0.png" width="200" alt="youtube logo png images" />)
