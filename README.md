@@ -19,19 +19,19 @@
 ###### <p align="center"> *[**@Bhavik_Tutorials**](https://www.instagram.com/bhavik_tutorials/) ❤️*
 ###### <p align="center"> *You can check [youtube](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)✌*
 ---
-  
+
 ## What is Shark??
-  
+
 Shark is a tool that will help you do Phishing in advance way so no one check and identify that you are you doing phishing.
 For those guys who Doesn't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site."
 This Projetc Does not Promote any thing Like this we just have made for testing perpose dont thing we into any illegal thing.
 we guys have add a feature of custom link so the normal link of ngrok that will change in to different link in the tool it self and you can customise that link also like you can make https://google.com/gvbrvbtfg/ftps.io
 That way no one will caught that you are phishing
 Hope you guys like this Project,then dont forget to give it a like.
-  
-## Installation of Shark :- 
-  
-### YouTube Tutorials :- 
+
+## Installation of Shark :-
+
+### * YouTube Tutorials :-
 
 ##### [YouTube](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
 
@@ -39,7 +39,7 @@ Hope you guys like this Project,then dont forget to give it a like.
 ```
 $ termux-setup-storage
 
-$ pkg update && pkg upgrade && pkg install git -y
+$ pkg update -y && pkg upgrade -y && pkg install git -y
 
 $ git clone https://github.com/Bhaviktutorials/shark
 
@@ -58,7 +58,7 @@ $ shark
 
 ### * Single `Command` for termux :-
 ```
-$ termux-setup-storage && pkg update && pkg upgrade && pkg install git -y
+$ termux-setup-storage && pkg update -y && pkg upgrade -y && pkg install git -y
 
 $ git clone https://github.com/Bhaviktutorials/shark && cd shark && chmod +x * && ./setup
 
@@ -66,6 +66,8 @@ $ shark
 ```
 ### * `Commands` for Kali-Linux :-
 ```
+$ sudo apt-get update && apt-get upgrade && apt-get install git
+
 $ git clone https://github.com/Bhaviktutorials/shark
 
 $ cd shark
@@ -74,18 +76,21 @@ $ chmod +x *
 
 $ ./kali-setup
 
-$ shark 
+$ shark
 ```
-## Screenshots :- 
+## Screenshots :-
 
 ### Installing Shark :-
-![Screenshot_2020-09-05-12-12-25](https://user-images.githubusercontent.com/64035221/92299639-c2658f00-ef71-11ea-8eeb-cfa50f4c6c8c.jpg)
-![Screenshot_2020-09-05-12-13-33](https://user-images.githubusercontent.com/64035221/92299650-ec1eb600-ef71-11ea-8934-3dda718ea11d.jpg)
-![Screenshot_2020-09-05-12-14-31](https://user-images.githubusercontent.com/64035221/92299657-f5a81e00-ef71-11ea-89ce-9c29dc09b04f.jpg)
-![Screenshot_2020-09-05-12-14-40](https://user-images.githubusercontent.com/64035221/92299664-03f63a00-ef72-11ea-9b88-4faf157e727c.jpg)
+![Screenshot_20201019_183011](https://user-images.githubusercontent.com/64035221/96455162-74af9800-123a-11eb-8499-b59505159c14.jpg)
+![Screenshot_20201019_183027](https://user-images.githubusercontent.com/64035221/96455166-75e0c500-123a-11eb-9c78-9b84281c2bdd.jpg)
+![Screenshot_20201019_183040](https://user-images.githubusercontent.com/64035221/96455167-76795b80-123a-11eb-8fe6-4cf1e95cb393.jpg)
+![Screenshot_20201019_183224](https://user-images.githubusercontent.com/64035221/96455170-7711f200-123a-11eb-94bd-745deed33954.jpg)
+![Screenshot_20201019_183241](https://user-images.githubusercontent.com/64035221/96455173-77aa8880-123a-11eb-9f76-a0d233d911bf.jpg)
+![Screenshot_20201019_183410](https://user-images.githubusercontent.com/64035221/96455176-78431f00-123a-11eb-99ce-39082da3fed8.jpg)
+
 ***
 
-## Development by :- 
+## Development by :-
 
 ## Developer / Author: Ashish / [Bhavik Oza](https://github.com/Bhaviktutorials/)
 
@@ -95,4 +100,4 @@ $ shark
 ## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:
 
 [![Github](https://github.frapsoft.com/social/github.png)](https://github.com/Bhaviktutorials/)
-[![Youtube](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)](<img src="https://www.freepnglogos.com/uploads/youtube-logo-png-images-0.png" width="200" alt="youtube logo png images" />)
+[![Youtube](https://user-images.githubusercontent.com/64035221/96455525-f9021b00-123a-11eb-9119-0f7b3dfc821d.png)](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)
