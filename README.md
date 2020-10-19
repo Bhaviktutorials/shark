@@ -100,4 +100,4 @@ $ shark
 ## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:
 
 [![Github](https://github.frapsoft.com/social/github.png)](https://github.com/Bhaviktutorials/)
-[![Youtube](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)](<img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="drawing" width="200"/>)
+[![Youtube](https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png =100x)](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)
