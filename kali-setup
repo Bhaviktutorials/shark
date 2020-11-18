@@ -124,10 +124,10 @@ sleep 4
 clear
 echo
 echo
-echo -e "\e[31m[\e[32m~\e[31m]\e[33m Downloading ngrok .. \e[m "
-echo
 
 if [[ ! -f /usr/bin/ngrok ]];then
+  echo -e "\e[31m[\e[32m~\e[31m]\e[33m Downloading ngrok .. \e[m "
+  echo
   wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
   echo -e "\e[31m[\e[32m~\e[31m]\e[33m Successfuly Downloaded \e[m "
   sleep 2
@@ -147,8 +147,8 @@ chmod +x shark_logo
 
 # Simple Loop to copy files
 for dir in phs/*;do
-  cp ngrok $dir -r
-  cp shark_logo $dir -r
+  cp -R ngrok $dir
+  cp -R shark_logo $dir
 done
 
 clear
