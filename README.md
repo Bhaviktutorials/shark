@@ -27,7 +27,7 @@ For those guys who Don't know about Phishing let me explain "Phishing is the fra
 This Project Does not Promote anything Like this we just have made for testing purpose don't thing we into any illegal thing.
 we guys have added a feature of a custom link so the normal link of ngrok that will change into a different link in the tool itself and you can customize that link also like you can make https://google.com/gvbrvbtfg/ftps.io
 That way no one will be caught that you are phishing
-Hope you guys like this project, then don't forget to give it alike.
+Hope you guys like this project, then don't forget to give it a like.
 
 ## Installation of Shark:-
 
