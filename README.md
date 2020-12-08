@@ -22,16 +22,16 @@
 
 ## What is Shark??
 
-Shark is a tool that will help you do Phishing in advance way so no one check and identify that you are you doing phishing.
-For those guys who Doesn't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site."
-This Projetc Does not Promote any thing Like this we just have made for testing perpose dont thing we into any illegal thing.
-we guys have add a feature of custom link so the normal link of ngrok that will change in to different link in the tool it self and you can customise that link also like you can make https://google.com/gvbrvbtfg/ftps.io
-That way no one will caught that you are phishing
-Hope you guys like this Project,then dont forget to give it a like.
+A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing.
+For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site."
+This Project Does not Promote anything Like this we just have made for testing purpose don't thing we into any illegal thing.
+we guys have added a feature of a custom link so the normal link of ngrok that will change into a different link in the tool itself and you can customize that link also like you can make https://google.com/gvbrvbtfg/ftps.io
+That way no one will be caught that you are phishing
+Hope you guys like this project, then don't forget to give it alike.
 
-## Installation of Shark :-
+## Installation of Shark:-
 
-### * YouTube Tutorials :-
+### * YouTube Tutorials:-
 
 ##### [YouTube](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
 
@@ -78,7 +78,7 @@ $ ./kali-setup
 
 $ shark
 ```
-## Screenshots :-
+## Screenshots:-
 
 ### Installing Shark :-
 ![Screenshot_20201019_183011](https://user-images.githubusercontent.com/64035221/96455162-74af9800-123a-11eb-8499-b59505159c14.jpg)
@@ -90,7 +90,7 @@ $ shark
 
 ***
 
-## Development by :-
+## Development by:-
 
 ## Developer / Author: Ashish / [Bhavik Oza](https://github.com/Bhaviktutorials/)
 
