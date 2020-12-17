@@ -286,8 +286,10 @@ ash1() {
 	echo
         }
 
-ash() {        
-        echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2`
+ash() {   
+        echo;      
+	echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2`
+	echo;
 }
 
         read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;93m Choose Your Option : \e[0m' option
