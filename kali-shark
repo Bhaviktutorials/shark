@@ -254,7 +254,7 @@ banner
 echo 
 
 #ash
-ash1() {
+ash() {
 	sleep 0.5
 	url_checker() {
 	if [ ! "${1//:*}" = http ]; then
@@ -266,7 +266,7 @@ ash1() {
          }
         echo
 	echo -e "\e[1;96m=============================================================\e[m "
-        short=$(curl -s https://da.gd/s/?url=${link})
+        short=$(curl https://is.gd/create.php\?format\=simple\&url\=${link})
         shorter=${short#https://}
         echo
         read -p $'\e[1;91m[\e[1;92m~\e[1;91m]\e[1;92m Mask Your url domain here [\e[1;91mEx. https://facebook.com\e[1;92m] :\e[m ' mask
@@ -286,7 +286,7 @@ ash1() {
 	echo
         }
 	
-ash() {   
+ash1() {   
         echo;      
 	echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2`
 	echo;
