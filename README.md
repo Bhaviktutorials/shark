@@ -31,6 +31,10 @@
 #### <p align="center"> [**IGTV**](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
+
+```
+sudo wget -qO- https://github.com/just-hack/shark/raw/master/setup | sudo bash
+```
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
 
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
