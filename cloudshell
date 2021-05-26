@@ -1,0 +1,29 @@
+.\" Manpage for cloudshell.
+.\" Contact ashishsingh103020@gmail.com to correct errors or typos.
+.TH man 8 "10 Jan 2021" "2.0.3" "shark man page"
+
+.SH NAME
+shark 2.0.3
+
+.SH DESCRIPTION
+
+How To reboot or fix cloud shell
+
+follow this 3 steps:
+
+1) click on three dots or more option on the cloud shell
+
+2) click on restart and choose want clean VM state
+
+3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
+
+
+For additional info, see: https://github.com/Bhaviktutorials
+
+.SH SEE ALSO
+https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ/about
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Ashish Singh <ashishsingh103020@gmail.com>
