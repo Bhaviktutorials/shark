@@ -1,10 +1,11 @@
 <p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a>
 
-# <p align="center">Shark
+# <p align="center">**SHARK**
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/64035221/92106331-df7b5000-ee01-11ea-9f16-c0a62a027b27.jpg">
+  <img src="https://user-images.githubusercontent.com/64035221/119222744-81b7a100-bb13-11eb-9def-51bbbf62a106.jpg">
+
+#### <p align="center">**Future of Phishing is here**
 </p>
-<p align="center">Future of Phishing is here
 <p align="center">
 <a href="https://github.com/Bhaviktutorials"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red" ></a>
  <a href="https://paypal.me/bhavikoza"><img title="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue" ></a>
@@ -20,86 +21,41 @@
 ###### <p align="center"> *You can check [youtube](https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ)✌*
 ---
 
-## What is Shark??
+## <p align="center">**What is Shark??**
+ <p align="center"> <img src="https://media.giphy.com/media/PfHrNe1cSKAjC/giphy.gif" width="170" height="100" >
 
-A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing.
-For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site."
-This Project Does not Promote anything Like this we just have made for testing purpose don't thing we into any illegal thing.
-we guys have added a feature of a custom link so the normal link of ngrok that will change into a different link in the tool itself and you can customize that link also like you can make https://google.com/gvbrvbtfg/ftps.io
-That way no one will be caught that you are phishing
-Hope you guys like this project, then don't forget to give it a like.
+###### <p align="center"> A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing.For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site. as shown in MR ROBOT.
 
-## Installation of Shark:-
+### <p align="center"> <img src="https://media.giphy.com/media/l41YmiCZ8HXvVl5M4/giphy.gif" alt="Instagram" width="80" height="80" > **Instagram Tutorial :-**
 
-### * YouTube Tutorials:-
+#### <p align="center"> [**IGTV**](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
 
-##### [YouTube](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
+## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
+###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
 
-### * `Commands` for termux :-
-```
-$ termux-setup-storage
-
-$ pkg update -y && pkg upgrade -y && pkg install git -y
-
-$ git clone https://github.com/Bhaviktutorials/shark
-
-$ ls
-
-$ cd shark
-
-$ ls
-
-$ chmod +x *
-
-$ ./setup
-
-$ shark
-```
-
-### * Single `Command` for termux :-
-```
-$ termux-setup-storage && pkg update -y && pkg upgrade -y && pkg install git -y
-
-$ git clone https://github.com/Bhaviktutorials/shark && cd shark && chmod +x * && ./setup
-
-$ shark
-```
-### * `Commands` for Kali-Linux :-
-```
-$ sudo apt-get update && apt-get upgrade && apt-get install git
-
-$ git clone https://github.com/Bhaviktutorials/shark
-
-$ cd shark
-
-$ chmod +x *
-
-$ ./kali-setup
-
-$ shark
-```
-## Screenshots:-
-
-### Installing Shark :-
-![Screenshot_20201019_183011](https://user-images.githubusercontent.com/64035221/96455162-74af9800-123a-11eb-8499-b59505159c14.jpg)
-![Screenshot_20201019_183027](https://user-images.githubusercontent.com/64035221/96455166-75e0c500-123a-11eb-9c78-9b84281c2bdd.jpg)
-![Screenshot_20201019_183040](https://user-images.githubusercontent.com/64035221/96455167-76795b80-123a-11eb-8fe6-4cf1e95cb393.jpg)
-![Screenshot_20201019_183224](https://user-images.githubusercontent.com/64035221/96455170-7711f200-123a-11eb-94bd-745deed33954.jpg)
-![Screenshot_20201019_183241](https://user-images.githubusercontent.com/64035221/96455173-77aa8880-123a-11eb-9f76-a0d233d911bf.jpg)
-![Screenshot_20201019_183410](https://user-images.githubusercontent.com/64035221/96455176-78431f00-123a-11eb-99ce-39082da3fed8.jpg)
+### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
+<p align="center"> <img src="https://media.giphy.com/media/hnqWzpJ34xArYut26j/giphy.gif">
 
 ***
+## Support <img src="https://user-images.githubusercontent.com/64035221/113476039-61b21c80-9496-11eb-93d1-97a97f6acaa6.png" width="30" height="30">
+<table align="center" style="border:1px solid black;margin-left:auto;margin-right:auto;">
+  <tr>
+    <th><img src="https://user-images.githubusercontent.com/64035221/112847573-d535e180-90c4-11eb-8a9a-dc1dfe06a675.png" width="190" height="190"></th>
+    <th><img src="https://user-images.githubusercontent.com/64035221/112848945-3a3e0700-90c6-11eb-9c6b-db74023fe3f2.png" width="190" height="190"></th>
+  </tr>
+  <tr>
+    <td><p align="center"><b>Ashish Singh</b></td>
+    <td><p align="center"><b>Bhavik Tutorials</b></td>
+  </tr>
+  <tr>
+    <td><p align="center"><b>Developer</b></td>
+    <td><p align="center"><b>Publisher</b></td>
+  </tr>
+</table>
+<p align="center">
+<a href="https://www.buymeacoffee.com/BhavikTutorials"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Redbull&emoji=&slug=BhavikTutorials&button_colour=2ff22c&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
 
-## Development by:-
-
-## Developer / Author: Ashish / [Bhavik Oza](https://github.com/Bhaviktutorials/)
-
-## Company: [Bhavik Tutorials](https://www.youtube.com/bhaviktutorials)
-
-
-## To Know about Ethical Hacking , Android And Kali Linux Do Follow Us:
-
-<a href="https://github.com/Bhaviktutorials/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="110" height="110">
-<a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="110" height="110">
-<a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/96461243-c576bf00-1241-11eb-8fdf-139b4859bfb0.png" alt="Telegram" width="80" height="80">
-<a href="https://www.instagram.com/bhavik_tutorials/"><img src="https://user-images.githubusercontent.com/64035221/96461629-3d44e980-1242-11eb-8691-46dd14355085.png" alt="Instagram" width="90" height="90">
+<p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
+<a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="80" height="80">
+<a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/113977119-b91e0700-985f-11eb-9418-eab91ff1540e.png" alt="Telegram" width="80" height="">
+<a href="https://www.instagram.com/bhavik_tutorials/"><img src="https://user-images.githubusercontent.com/64035221/113977904-e61ee980-9860-11eb-82d1-9ebd795c8138.png" alt="Instagram" width="80" height="">
