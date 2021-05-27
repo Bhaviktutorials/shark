@@ -32,9 +32,9 @@
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
 ##### For Linux:-
-### <p align="center"> ``` sudo wget -qO- https://github.com/just-hack/shark/raw/master/setup | sudo bash ```
+#### <p align="center"> ``` sudo wget -qO- https://github.com/just-hack/shark/raw/master/setup | sudo bash ```
 ##### For Termux:-
-### <p align="center"> ``` wget -qO- https://github.com/just-hack/shark/raw/master/setup | bash ```
+#### <p align="center"> ``` wget -qO- https://github.com/just-hack/shark/raw/master/setup | bash ```
 
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/Bhaviktutorials/shark&tutorial=README.md)
