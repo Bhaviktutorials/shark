@@ -28,7 +28,7 @@
 
 ### <p align="center"> <img src="https://media.giphy.com/media/l41YmiCZ8HXvVl5M4/giphy.gif" alt="Instagram" width="80" height="80" > **Instagram Tutorial :-**
 
-#### <p align="center"> [**IGTV**](https://www.youtube.com/watch?v=_OWkSxIzTTg&t=8s)
+#### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CPaK7qzpUPo/?utm_source=ig_web_copy_link)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
 ##### For Linux:-
