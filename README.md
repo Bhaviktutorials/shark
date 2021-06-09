@@ -31,9 +31,9 @@
 #### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CPaK7qzpUPo/?utm_source=ig_web_copy_link)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
-##### For Linux:-
+##### Debian (kali, Ubuntu ..etc )
 #### <p align="center"> ``` sudo wget -qO- https://github.com/just-hack/shark/raw/master/setup | sudo bash ```
-##### For Termux:-
+##### Android (Termux)
 #### <p align="center"> ``` wget -qO- https://github.com/just-hack/shark/raw/master/setup | bash ```
 
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
