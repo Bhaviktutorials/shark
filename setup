@@ -62,9 +62,9 @@ function dependencies() {
 	for i in apache2 php jq curl wget; do		
 		if [ ! -f "${BIN}/${i}" ]; then			
     			if [ ${OS} != "DEBIAN" ]; then			        
-    				(apt-get install ncurses-utils ${i} -y && apt-get install mpv jp2a -y &> /dev/null) & spinner
+    				(apt-get install ncurses-utils ${i} -y && apt-get install mpv jp2a -y) &> /dev/null & spinner
 			else
-				(sudo apt-get install ${i} -y && sudo apt-get install mpv jp2a -y &> /dev/null) & spinner
+				(sudo apt-get install ${i} -y && sudo apt-get install mpv jp2a -y) &> /dev/null & spinner
 			fi
 		fi
 	done
