@@ -60,14 +60,12 @@ function git_clone() {
 
 
 function dependencies() {
-        launch="installing lib";splashdown="installed lib";echo
-	for i in apache2 php jq curl wget; do		
-		if [ ! -f "${BIN}/${i}" ]; then			
-    			if [ ${OS} != "DEBIAN" ]; then			        
-    				(apt-get install ncurses-utils ${i} -y > /dev/null 2&>1) & spinner
-			else
-				(sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
-			fi
+        launch="installing lib";splashdown="installed lib"; echo
+	for i in apache2 php jq curl wget; do					
+    		if [ ${OS} != "DEBIAN" ]; then	
+    			(pkg update -y > /dev/null 2&>1 && pkg install ncurses-utils ${i} -y > /dev/null 2&>1) & spinner
+		else
+			(sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
 		fi
 	done
 }
