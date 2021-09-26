@@ -98,6 +98,7 @@ function final_touchup() {
 		printf"\n\n "$yellow" Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : ... don't use ./ before the token \n"$nc" "
 		read ngrok_authtoken 
 		$ngrok_authtoken > /dev/null 2&>1
+	fi
 }
 
 os
