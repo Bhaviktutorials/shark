@@ -89,12 +89,8 @@ function setup_ngrok() {
 		elif [[ "$arch" == *'x86_64'* ]]; then
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
                 else
-                        ngrk_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-AIO.zip"
+                        ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	        fi
-		launch="installing ngrok_termux";splashdown="ngrok Installed";echo
-		(wget --quiet $ngrk_url -O ngrok) & spinner
-		chmod +x ngrok && mv ngrok $BIN
-                
                 launch="installing ngrok";splashdown="ngrok Installed";echo
 		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
