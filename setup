@@ -83,7 +83,7 @@ sleep 1
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux.zip"
+			ngrok_url="https://bin.equinox.io/a/e93TBaoFgZw/ngrok-2.2.8-linux-arm.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
