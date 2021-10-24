@@ -83,7 +83,8 @@ sleep 1
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip"
+		        ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+                        #(With hotspot) ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
@@ -110,6 +111,7 @@ if [ ${OS} != "DEBIAN" ]; then
         chmod +x ${BIN}/authtk
         clear
         authtk &>/dev/null
+ 
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
         clear
