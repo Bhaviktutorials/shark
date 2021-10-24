@@ -1,6 +1,5 @@
 #!/bin/bash
 clear
-cd $HOME
 pkg install ncurses-utils -y &>/dev/null 
 #########
 # COLORS
@@ -55,6 +54,7 @@ function os () {
 }
 
 function git_clone() {
+        cd
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
 	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main}) & spinner
@@ -83,7 +83,7 @@ sleep 1
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
@@ -96,7 +96,6 @@ function setup_ngrok() {
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
-
 
 function final_touchup() {
 	for i in shark; do
