@@ -114,7 +114,8 @@ if [ ${OS} != "DEBIAN" ]; then
         chmod +x ${BIN}/authtoken
         authtoken &> /dev/null
         #echo "export user=$HOME" > ${BIN}/authtoken                                                                         
-        printf ${yellow}"if link does not work then just full exit from termux, \nAnd just type authtoken in termux. \n"       printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+        printf ${yellow}"if link does not work then just full exit from termux, \nAnd just type authtoken in termux. \n"       
+        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
         clear
         dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
