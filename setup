@@ -107,8 +107,11 @@ if [ ${OS} != "DEBIAN" ]; then
         chmod +x ${BIN}/authtk
         sleep 2
         clear
+        sleep 1
 	export user=$HOME
+        sleep 2
         authtk &>/dev/null
+        printf ${yellow}"if link does not work then just full exit from termux, \n And just type authtk in termux. \n"
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
         clear
@@ -118,8 +121,7 @@ else
         sleep 2
         clear
         authtk &>/dev/null
-printf ${yellow}"if link does not work then just full exit termux \n 
-	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	
 fi
 }
