@@ -118,6 +118,7 @@ else
         sleep 2
         clear
         authtk &>/dev/null
+printf ${yellow}"if link does not work then just full exit termux \n 
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	
 fi
