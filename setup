@@ -111,13 +111,10 @@ if [ ${OS} != "DEBIAN" ]; then
         authtk &>/dev/null
         export user=$HOME
         mv ${BIN}/authtk ${BIN}/authtoken
-        chmod +x ${BIN}/authtoken
-        authtoken &> /dev/null                                                                         
-        printf ${yellow}"Full exiting....\nJust Reopen your termux after exit. \n"
+        chmod +x ${BIN}/authtoken                                                                        
+        #printf ${yellow}"Full exiting....\nJust Reopen your termux after exit. \n"
         sleep 1       
-        printf "\n${green}>>${white} then simply run : shark \n\n ${nc}"
-        sleep 2
-        ^D
+        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
         clear
         dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
