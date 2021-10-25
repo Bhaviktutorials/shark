@@ -117,6 +117,7 @@ function os () {
 		shark="${PREFIX}/share/shark"
                 old_shark="${PREFIX}/bin/shark"
 		OS=TERMUX
+  
 	fi
 }
 
