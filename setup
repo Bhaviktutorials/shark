@@ -102,7 +102,7 @@ function final_touchup() {
 	done
 if [ ${OS} != "DEBIAN" ]; then
 	clear
-	dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
+	dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
         mv authtk ${BIN}
         chmod +x ${BIN}/authtk
         sleep 2
@@ -112,13 +112,15 @@ if [ ${OS} != "DEBIAN" ]; then
         export user=$HOME
         mv ${BIN}/authtk ${BIN}/authtoken
         chmod +x ${BIN}/authtoken
-        authtoken &> /dev/null
-        echo "export user=$HOME" > ${BIN}/authtoken                                                                         
-        printf ${yellow}"if link does not work then just full exit from termux, \nAnd just type authtoken in termux. \n"       
-        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+        authtoken &> /dev/null                                                                         
+        printf ${yellow}"Full exiting....\nJust Reopen your termux after exit. \n"
+        sleep 1       
+        printf "\n${green}>>${white} then simply run : shark \n\n ${nc}"
+        sleep 2
+        ^D
 else 
         clear
-        dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
+        dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
         mv authtk ${BIN}
         chmod +x ${BIN}/authtk
         sleep 2
