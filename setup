@@ -62,8 +62,7 @@ function git_clone() {
 
 
 function dependencies() {
-killall -q dpkg apt pkg &>/dev/null 
-pkg update -y
+killall -q dpkg apt pkg &>/dev/null
 clear
 sleep 1
      launch="installing lib";splashdown="installed lib"; echo
