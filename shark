@@ -118,7 +118,7 @@ function os () {
                 old_shark="${PREFIX}/bin/shark"
 		OS=TERMUX
                 export user=$HOME
-  
+                authtoken
 	fi
 }
 
