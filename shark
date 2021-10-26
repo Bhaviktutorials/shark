@@ -126,7 +126,7 @@ function os () {
 function main_update() {
 	launch="updating shark"
 	splashdown="updated shark";echo
-	os;(wget -q https://github.com/tech2gamer/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	os;(wget -q https://github.com/Bhaviktutorials/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 }
 
 
