@@ -109,6 +109,7 @@ function os () {
 		shark="/usr/share/shark"
 		old_shark="/usr/bin/shark"
 		OS=DEBIAN
+                authtk &> /dev/null
 		check_root
 	else
 		BIN="${PREFIX}/bin"
@@ -116,7 +117,8 @@ function os () {
 		files="/sdcard"
 		shark="${PREFIX}/share/shark"
                 old_shark="${PREFIX}/bin/shark"
-		OS=TERMUX
+		authtoken &> /dev/null
+                OS=TERMUX
             
 	fi
 }
@@ -506,7 +508,6 @@ function audio_hack() {
 ########
 # DRIVER
 ########
-
 internet
 os
 kill_session
