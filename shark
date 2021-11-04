@@ -223,7 +223,12 @@ function fix_ngrok() {
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+		        if [[ "$ArNam" == *'amd64'* ]]; then
+			      ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+			else 
+			      ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                        fi
+			
 		elif [[ "$arch" == *'x86_64'* ]]; then
                         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
