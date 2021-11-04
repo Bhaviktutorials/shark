@@ -359,6 +359,7 @@ function url_shortner() {
         read -p $'\e[1;92mshark \033[1;97m>> \e[1;37mEnter your words here :\e[0m ' words
         final_url=$mask-$words@$shorter
 	#printf "$final_url\n"
+	fi
 }
 
 # MAIN 
