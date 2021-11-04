@@ -525,7 +525,7 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION} ${yellow}Reborn by Mr.Derek(t2g) "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION} ${yellow}Reborn by Mr.Derek(t2g)\n\n "
 
       printf "${green}      ╔──────────────────────────────────────╗\n"
       printf "${green}       |${white}    c r e a t e d  b y  a s h i s h ${green}  |\n"
