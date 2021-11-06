@@ -120,9 +120,9 @@ else
         dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
         mv authtk ${BIN}
         chmod +x ${BIN}/authtk
+        sleep 2
         clear
-        authtk
-        clear
+        authtk &>/dev/null
         printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	
 fi
