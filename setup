@@ -24,7 +24,7 @@ l_red="\033[1;37;41m"                                       ##
 nc="\033[0m"                                                ## 
 
 arch=`uname -m`
-ArNam=$(dpkg --print-architecture)
+
 #spinner
 spinner() {
         pid=$!
@@ -82,11 +82,7 @@ function setup_ngrok() {
 		elif [[ "$arch" == *'aarch64'* ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
-		        if [[ "$ArNam" == *'amd64'* ]]; then 
-                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-                        else
-                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
-                        fi
+			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
                 else
                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	        fi
