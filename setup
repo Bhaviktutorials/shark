@@ -95,7 +95,7 @@ function final_touchup() {
 		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	done
 	if [ ${OS} != "DEBIAN" ]; then
-		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : ... don't use ./ before the token \n $nc"
+		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ./ngrok authtoken I7QUQ ] : \n $nc"
 		read ngrok_authtoken 
 		$ngrok_authtoken > /dev/null 2&>1
 		mv ngrok $BIN
