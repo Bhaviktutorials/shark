@@ -50,7 +50,7 @@ function os () {
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
 		pkg update -y > /dev/null 2>&1
-		pkg install ncurses-utils -y > /dev/null 2>&1
+		pkg install ncurses-utils git -y > /dev/null 2>&1
 	fi
 }
 
