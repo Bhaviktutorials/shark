@@ -50,7 +50,7 @@ function os () {
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
 		pkg update -y > /dev/null 2>&1
-		pkg install ncurses-utils git -y > /dev/null 2>&1
+		pkg install ncurses-utils -y > /dev/null 2>&1
 	fi
 }
 
@@ -64,7 +64,7 @@ function git_clone() {
 function dependencies() {
         launch="installing lib";splashdown="installed lib"; echo					
     		if [ ${OS} != "DEBIAN" ]; then	
-    			(pkg install apache2 php jq curl wget -y > /dev/null 2>&1) & spinner
+    			(pkg install apache2 php jq curl wget git -y > /dev/null 2>&1) & spinner
 		else
 			(sudo apt-get install ${i} -y > /dev/null 2>&1) & spinner
 		fi
@@ -84,7 +84,7 @@ function setup_ngrok() {
 		fi
 		launch="installing ngrok";splashdown="installed ngrok";echo
 		(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
-		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
+		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
 	fi
 }
 
@@ -95,9 +95,10 @@ function final_touchup() {
 		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	done
 	if [ ${OS} != "DEBIAN" ]; then
-		printf "\n\n $yellow Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : ... don't use ./ before the token \n $nc"
+		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : ... don't use ./ before the token \n $nc"
 		read ngrok_authtoken 
 		$ngrok_authtoken > /dev/null 2&>1
+		mv ngrok $BIN
 	fi
 }
 
