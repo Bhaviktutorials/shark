@@ -49,7 +49,8 @@ function os () {
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
-		pkg install ncurses-utils -y >/dev/null 2&>1
+		pkg update -y > /dev/null 2>&1
+		pkg install ncurses-utils -y > /dev/null 2>&1
 	fi
 }
 
@@ -61,14 +62,12 @@ function git_clone() {
 
 
 function dependencies() {
-        launch="installing lib";splashdown="installed lib"; echo
-	for i in apache2 php jq curl wget; do					
+        launch="installing lib";splashdown="installed lib"; echo					
     		if [ ${OS} != "DEBIAN" ]; then	
-    			(pkg update -y > /dev/null 2&>1 && pkg install ${i} -y > /dev/null 2&>1) & spinner
+    			(pkg install apache2 php jq curl wget -y > /dev/null 2>&1) & spinner
 		else
-			(sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
+			(sudo apt-get install ${i} -y > /dev/null 2>&1) & spinner
 		fi
-	done
 }
 
 
