@@ -32,7 +32,7 @@ nc="\033[0m"                                                ##
 # VERSION
 ##########
 
-VERSION="2.5(BETA)"
+VERSION="2.5"
 
 ################
 # PRINT MESSAGE
@@ -519,7 +519,7 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION} ${yellow}Reborn by Mr.Derek(t2g)\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  .beta v${VERSION} \n        ${yellow}Reborn by Mr.Derek(t2g)\n\n "
 
       printf "${green}       ╔──────────────────────────────────────╗\n"
       printf "${green}           ${cyan1}    B E T A   V E R S I O N   ${green}"
