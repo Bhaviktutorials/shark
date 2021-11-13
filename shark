@@ -400,9 +400,9 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-        Reborn  by : ${white}Mr.Derek(t2g)${yellow}
-        SHARK BETA :${white}v${VERSION}${green}
-           Note    :${yellow}Soon will add New Features!${yellow}
+        Reborn  by : ${white}Mr.Derek(t2g)${green}
+        SHARK BETA : ${white}v${VERSION}${green}
+        Note : ${yellow}Soon will add New Features!${yellow}
 
         》 ${cyan1}${final_url}${yellow} 《
                 	or                 
