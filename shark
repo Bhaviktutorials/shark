@@ -394,19 +394,19 @@ fi
 
 #banner2
 banner2() {
-	printf "\n${cyan1}
+	printf "\n${green}
         ╔════════════════════════════════════╗
         ║${white}   ╔═╗┬─┐┌─┐┌┬┐┌─┐┌┐┌┌┬┐┬┌─┐┬  ┌─┐${green}  ║
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-	#Author    : ${white}Ashish singh${green}  when officially publish!
-        Reborn by : ${white}Mr.Derek(t2g)${green}
-        #Publisher : ${white}Bhavik Oza${green}
+        Reborn  by : ${white}Mr.Derek(t2g)${yellow}
+        SHARK BETA :${white}v${VERSION}${green}
+           Note    :${yellow}Soon will add New Features!${yellow}
 
-        》 ${cyan1}${final_url}${green} 《
+        》 ${cyan1}${final_url}${yellow} 《
                 	or                 
-        》 ${cyan1}${ngrok_url}${green} 《 \n
+        》 ${cyan1}${ngrok_url}${yellow} 《 \n
 \e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${cyan1}\n\n"	
 }
 
