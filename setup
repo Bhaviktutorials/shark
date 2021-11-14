@@ -85,16 +85,11 @@ function setup_ngrok() {
 		launch="installing ngrok";splashdown="installed ngrok";echo
 		(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
+		mv ngrok $BIN
 	fi
 }
 
 function final_touchup() {
-	if [ ${OS} != "DEBIAN" ]; then
-		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ./ngrok authtoken I7QUQ ] : \n $nc"
-		read ngrok_authtoken
-		$ngrok_authtoken > /dev/null 2&>1
-		mv ngrok $BIN
-	fi
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
