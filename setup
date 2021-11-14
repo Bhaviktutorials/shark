@@ -74,9 +74,9 @@ function dependencies() {
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+			ngrok_url="https://github.com/Bhaviktutorials/Ngrok_magical/raw/main/Magicalrok.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+			ngrok_url="https://github.com/Bhaviktutorials/Ngrok_magical/raw/main/Magicalrok.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
 		else
@@ -89,17 +89,17 @@ function setup_ngrok() {
 }
 
 function final_touchup() {
+	if [ ${OS} != "DEBIAN" ]; then
+		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ./ngrok authtoken I7QUQ ] : \n $nc"
+		read ngrok_authtoken
+		$ngrok_authtoken > /dev/null 2&>1
+		mv ngrok $BIN
+	fi
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
 		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-	done
-	if [ ${OS} != "DEBIAN" ]; then
-		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ./ngrok authtoken I7QUQ ] : \n $nc"
-		read ngrok_authtoken 
-		$ngrok_authtoken > /dev/null 2&>1
-		mv ngrok $BIN
-	fi
+	done	
 }
 
 os
