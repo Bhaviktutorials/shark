@@ -90,6 +90,11 @@ function setup_ngrok() {
 }
 
 function final_touchup() {
+		if [ ${OS} != "DEBIAN" ]; then
+		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : \n $nc"
+		read ngrok_authtoken
+		$ngrok_authtoken > /dev/null 2&>1	
+	fi
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
