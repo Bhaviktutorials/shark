@@ -94,12 +94,12 @@ function final_touchup() {
 		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ngrok authtoken I7QUQ ] : \n $nc"
 		read ngrok_authtoken
 		$ngrok_authtoken > /dev/null 2&>1	
-	fi
-	for i in shark; do
-		chmod +x ${main}/${i}
-		mv ${main}/${i} ${BIN}
-		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-	done	
+	        fi
+		for i in shark; do
+			chmod +x ${main}/${i}
+			mv ${main}/${i} ${BIN}
+			printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+		done	
 }
 
 os
