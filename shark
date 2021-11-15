@@ -400,13 +400,15 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-        Reborn  by : ${white}Mr.Derek(t2g)${green}
-        SHARK BETA : ${white}v${VERSION}${green}
-        Note : ${yellow}Soon will add New Features!${yellow}
+	SHARK BETA : ${white}v${VERSION}${green}
+         Reborn by : ${white}Mr.Derek(t2g)${green}
+         Publisher : ${white}Bhavik Oza${green}
+	    Author : ${white}Ashish Singh${green}
+	     Note  : ${yellow}Soon will add New Features!${yellow}
 
-        》 ${cyan1}${final_url}${yellow} 《
+        》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL. 
                 	or                 
-        》 ${cyan1}${ngrok_url}${yellow} 《 \n
+        》 ${cyan1}${ngrok_url}${yellow} 《 NGROK URL.\n
 \e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${cyan1}\n\n"	
 }
 
