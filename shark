@@ -400,8 +400,8 @@ banner2() {
         SHARK BETA : ${white}v${VERSION}${green}
          Reborn by : ${white}Mr.Derek(t2g)${green}
          Publisher : ${white}Bhavik Oza${green}
-	          Author : ${white}Ashish Singh${green}
-	           Note  : ${yellow}Soon will add New Features!${yellow}
+	    Author : ${white}Ashish Singh${green}
+	     Note  : ${yellow}Soon will add New Features!${yellow}
 
         》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL. 
                 	or                 
