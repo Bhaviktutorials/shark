@@ -189,7 +189,7 @@ Options:
   --fix-ngrok       Fix port forwarding issue 
   --fix-patches     Check missing packages & fix patches
   --fix-cloudshell  Restart Vm and cloudshell & fix patches
-For additional info, see: https://github.com/Bhaviktutorials/shark
+For additional info, see: https://github.com/Bhaviktutorials/shark/tree/Beta
 EOF
 }
 
