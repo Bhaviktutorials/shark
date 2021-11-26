@@ -1,7 +1,5 @@
 #!/bin/bash
-clear
-cd $HOME
-pkg install ncurses-utils -y &>/dev/null 
+
 #########
 # COLORS
 #########
@@ -24,7 +22,7 @@ l_red="\033[1;37;41m"                                       ##
 nc="\033[0m"                                                ## 
 
 arch=`uname -m`
-ArNam=$(dpkg --print-architecture)
+
 #spinner
 spinner() {
         pid=$!
@@ -51,6 +49,8 @@ function os () {
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
+		pkg update -y > /dev/null 2>&1
+		pkg install ncurses-utils -y > /dev/null 2>&1
 	fi
 }
 
@@ -62,23 +62,19 @@ function git_clone() {
 
 
 function dependencies() {
-killall -q dpkg apt pkg &>/dev/null
-clear
-sleep 1
-     launch="installing lib";splashdown="installed lib"; echo
-	for i in apache2 php jq curl wget git wget dialog; do					
+        launch="installing lib";splashdown="installed lib"; echo					
     		if [ ${OS} != "DEBIAN" ]; then	
-    			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null)& spinner
+    			(pkg install apache2 php jq curl wget git -y > /dev/null 2>&1) & spinner
 		else
-			(sudo apt-get install ${i} -y &> /dev/null)& spinner
+			(sudo apt-get install ${i} -y > /dev/null 2>&1) & spinner
 		fi
-	done
 }
+
 
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
                          if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
@@ -86,54 +82,28 @@ function setup_ngrok() {
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
                          fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
-		        if [[ "$ArNam" == *'amd64'* ]]; then 
-                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-                        else
-                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
-                        fi
-                else
-                        ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
-	        fi
-		
-                launch="installing ngrok";splashdown="ngrok Installed";echo
-		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
-		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
-        fi
+			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+		else
+			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
+		fi
+		launch="installing ngrok";splashdown="installed ngrok";echo
+		(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
+		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
+	fi
 }
-
 
 function final_touchup() {
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
-
+		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	done
-if [ ${OS} != "DEBIAN" ]; then
-	clear
-	dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
-        mv authtk ${BIN}
-        chmod +x ${BIN}/authtk
-        sleep 2
-        clear
-        sleep 2
-        authtk &>/dev/null
-        export user=$HOME
-        mv ${BIN}/authtk ${BIN}/authtoken
-        chmod +x ${BIN}/authtoken                                                                        
-        #printf ${yellow}"Full exiting....\nJust Reopen your termux after exit. \n"
-        sleep 1       
-        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-else 
-        clear
-        dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
-        mv authtk ${BIN}
-        chmod +x ${BIN}/authtk
-        sleep 2
-        clear
-        authtk &>/dev/null
-        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-	
-fi
+	if [ ${OS} != "DEBIAN" ]; then
+		printf "\n $yellow Enter your Ngrok Authtoken to continue [Ex. ./ngrok authtoken I7QUQ ] : \n $nc"
+		read ngrok_authtoken 
+		$ngrok_authtoken > /dev/null 2&>1
+		mv ngrok $BIN
+	fi
 }
 
 os

