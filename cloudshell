@@ -1,9 +1,11 @@
 .\" Manpage for cloudshell.
-.\" Contact ashishsingh103020@gmail.com to correct errors or typos.
-.TH man 8 "10 Jan 2021" "2.0.3" "shark man page"
+
+.\" Contact me on instagram @tech2.gamer to correct errors or typos.
+.TH man 8 "25th October 2021" "v2.5" "shark man page"
 
 .SH NAME
-shark 2.0.3
+shark beta v2.5
+
 
 .SH DESCRIPTION
 
@@ -15,15 +17,17 @@ follow this 3 steps:
 
 2) click on restart and choose want clean VM state
 
-3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
+3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/tech2gamer/shark/raw/master/setup | sudo bash
 
 
-For additional info, see: https://github.com/Bhaviktutorials
-
-.SH SEE ALSO
-https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ/about
+For additional info, see: https://github.com/tech2gamer
 
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Ashish Singh <ashishsingh103020@gmail.com>
+Ashish Singh 
+.SH RE-BORN By
+@tech2.gamer (on insta) 
+.SH PUBLISH By
+Bhavik Oza (Bhavik tutorials on yt)
+

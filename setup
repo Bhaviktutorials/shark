@@ -57,7 +57,7 @@ function os () {
 function git_clone() {
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main}) & spinner
+	(git clone https://github.com/tech2gamer/shark --quiet ${main}) & spinner
 }
 
 
@@ -76,7 +76,11 @@ function setup_ngrok() {
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+                         if [[ "$ArNam" == *'amd64'* ]]; then
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                         fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
 		else
