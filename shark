@@ -121,12 +121,12 @@ function os () {
 function main_update() {
 	launch="updating shark"
 	splashdown="updated shark";echo
-	os;(wget -q https://github.com/tech2gamer/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	os;(wget -q https://github.com/tech2gamer/shark/raw/Beta/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 }
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/Beta/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
 		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
@@ -156,7 +156,7 @@ function connection() {
 
 function check_update() {	
         connection
-        version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/master/shark | grep -w "VERSION=" | head -n1)
+        version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/Beta/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
         if [ ${latest_version} = ${VERSION} ];then		
                 echo -e "\tReading \tpackage \tlists... \tDone
@@ -188,7 +188,7 @@ Options:
   --fix-ngrok       Fix port forwarding issue 
   --fix-patches     Check missing packages & fix patches
   --fix-cloudshell  Restart Vm and cloudshell & fix patches
-For additional info, see: https://github.com/Bhaviktutorials/shark
+For additional info, see: https://github.com/Bhaviktutorials/shark/tree/Beta
 EOF
 }
 
