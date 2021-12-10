@@ -34,7 +34,7 @@
 ##### Debian (kali, Ubuntu ..etc )
 #### <p align="center"> ``` sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/Beta/setup | sudo bash ```
 ##### Android (Termux)
-#####      ⚠️If your termux is newly install then go for :-  [Termux-setup](https://drive.google.com/u/4/uc?id=1pDKb5svQLjEN-Mc2A2ERKY0MdYQV6ruP&export=download.mp4) then use below command⚠️.
+#####      ⚠️If your termux is newly install then go for :-  [Termux-setup](https://drive.google.com/u/4/uc?id=1-4pX8xLXJe1qQPlNrsPxGVwStK6u3D-s&export=download.mp4) then use below command⚠️.
 #### <p align="center"> ``` wget -qO- https://github.com/Bhaviktutorials/shark/raw/Beta/setup | bash ```
 ##### Windows
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/Bhaviktutorials/shark&tutorial=README.md)
