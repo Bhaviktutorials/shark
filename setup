@@ -1,7 +1,6 @@
 #!/bin/bash
 clear
-cd $HOME
-pkg install ncurses-utils -y &>/dev/null 
+cd $HOME 
 #########
 # COLORS
 #########
@@ -51,6 +50,7 @@ function os () {
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
+                pkg install ncurses-utils -y &>/dev/null
 	fi
 }
 
@@ -76,19 +76,19 @@ sleep 1
 }
 
 function setup_cloudflare() {
-if [ ! -f "${BIN}/cloudflared" ]; then
-        if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-		cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
-                elif [[ "$arch" == *'aarch64'* ]]; then
-                        cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-                elif [[ "$arch" == *'x86_64'* ]]; then
-                        if [[ "$ArNam" == *'amd64'* ]]; then
+           if [ ! -f "${BIN}/cloudflared" ]; then
+                   if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+		           cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
+                  elif [[ "$arch" == *'aarch64'* ]]; then
+                           cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+                  elif [[ "$arch" == *'x86_64'* ]]; then
+                           if [[ "$ArNam" == *'amd64'* ]]; then
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
-                        else
+                           else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-                        fi
-                else
-                        cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
+                           fi
+                  else
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
          fi
 	 launch="Installing cloudflare..";splashdown="cloudflare installed.";echo
          (wget --quiet ${cloudd} -O cloudflared) & spinner
