@@ -1,0 +1,37 @@
+{"level":"info","time":"2021-12-25T20:43:04Z","message":"Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps"}
+{"level":"info","time":"2021-12-25T20:43:04Z","message":"Requesting new quick Tunnel on trycloudflare.com..."}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"|  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"|  https://box-whole-connect-messaging.trycloudflare.com                                     |"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"Version 2021.12.3"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"GOOS: linux, GOVersion: go1.17, GoArch: arm"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"Settings: map[logfile:/data/data/com.termux/files/usr/share/shark/phs/.cloud.log protocol:quic url:127.0.0.1:8828]"}
+{"level":"info","autoupdateFreq":86400000,"time":"2021-12-25T20:43:06Z","message":"Autoupdate frequency is set"}
+{"level":"info","time":"2021-12-25T20:43:06Z","message":"Generated Connector ID: 8055341c-1228-4837-afd0-5e22945bb434"}
+{"level":"info","time":"2021-12-25T20:43:07Z","message":"Initial protocol quic"}
+{"level":"info","time":"2021-12-25T20:43:07Z","message":"Starting metrics server on 127.0.0.1:60249/metrics"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:07Z","message":"Failed to create new quic connection"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:07Z","message":"Register tunnel error from server side"}
+{"level":"info","connIndex":0,"time":"2021-12-25T20:43:08Z","message":"Retrying connection in up to 2s seconds"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:08Z","message":"Failed to create new quic connection"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:08Z","message":"Register tunnel error from server side"}
+{"level":"info","connIndex":0,"time":"2021-12-25T20:43:08Z","message":"Retrying connection in up to 4s seconds"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:10Z","message":"Failed to create new quic connection"}
+{"level":"error","connIndex":0,"error":"Unauthorized: Record for tunnel not found","time":"2021-12-25T20:43:10Z","message":"Register tunnel error from server side"}
+{"level":"info","connIndex":0,"time":"2021-12-25T20:43:10Z","message":"Retrying connection in up to 8s seconds"}
+{"level":"info","connIndex":0,"location":"DEL","time":"2021-12-25T20:43:18Z","message":"Connection 9f5c1c08-d9e6-47ac-924e-722ab3447597 registered"}
+{"level":"info","connIndex":1,"location":"BOM","time":"2021-12-25T20:43:19Z","message":"Connection 5f8d502b-8754-4735-831f-9001f7cb75c4 registered"}
+{"level":"info","connIndex":2,"location":"DEL","time":"2021-12-25T20:43:21Z","message":"Connection 46906f8e-ef92-411d-88de-2c5c854735c6 registered"}
+{"level":"info","connIndex":3,"location":"BOM","time":"2021-12-25T20:43:21Z","message":"Connection a6902509-8a82-440d-b708-ee3c388e2897 registered"}
+{"level":"info","time":"2021-12-25T20:44:14Z","message":"Initiating graceful shutdown due to signal interrupt ..."}
+{"level":"info","connIndex":3,"time":"2021-12-25T20:44:14Z","message":"Unregistered tunnel connection"}
+{"level":"info","connIndex":1,"time":"2021-12-25T20:44:14Z","message":"Unregistered tunnel connection"}
+{"level":"info","connIndex":2,"time":"2021-12-25T20:44:14Z","message":"Unregistered tunnel connection"}
+{"level":"info","connIndex":0,"time":"2021-12-25T20:44:14Z","message":"Unregistered tunnel connection"}
+{"level":"info","time":"2021-12-25T20:44:44Z","message":"Metrics server stopped"}
+{"level":"error","connIndex":0,"error":"context canceled","time":"2021-12-25T20:47:14Z","message":"Failed to serve quic connection"}
+{"level":"error","connIndex":1,"error":"context canceled","time":"2021-12-25T20:47:14Z","message":"Failed to serve quic connection"}
+{"level":"error","connIndex":2,"error":"context canceled","time":"2021-12-25T20:47:14Z","message":"Failed to serve quic connection"}
+{"level":"error","connIndex":3,"error":"context canceled","time":"2021-12-25T20:47:14Z","message":"Failed to serve quic connection"}
+{"level":"info","time":"2021-12-25T20:47:14Z","message":"Tunnel server stopped"}

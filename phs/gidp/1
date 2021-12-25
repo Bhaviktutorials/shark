@@ -1,0 +1,2 @@
+==> log.txt <==
+tail: cannot open '2' for reading: No such file or directory

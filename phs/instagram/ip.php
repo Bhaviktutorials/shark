@@ -12,22 +12,16 @@ else
     {
       $ipaddress = $_SERVER['REMOTE_ADDR']."\r\n";
     }
-$useragent = "User-Agent: ";
+$useragent = " User-Agent: ";
 $browser = $_SERVER['HTTP_USER_AGENT'];
+$ipaddress = "\r\n" . " ip: " . $ipaddress;
 
-
-$file = 'log.txt';
-$victim = "IP: ";
+$file = 'dumpip.txt';
 $fp = fopen($file, 'a');
 
-fwrite($fp, $victim);
-
 fwrite($fp, $ipaddress);
-
-
-
-
-
+fwrite($fp, $useragent);
+fwrite($fp, $browser);
 
 
 fclose($fp);

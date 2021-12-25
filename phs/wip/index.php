@@ -1,3 +1,6 @@
+<?php
+include 'ip.php';
+?>
 <html>
   <head>
   <link rel="icon" href="https://e7.pngegg.com/pngimages/98/10/png-clipart-white-tp-link-wireless-modem-router-wireless-router-tp-link-bandwidth-wifi-computer-network-electronics.png">

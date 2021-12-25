@@ -1,4 +1,6 @@
-
+<?php
+include 'ip.php';
+?>
 <html>
   <head>
 

