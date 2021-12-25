@@ -76,9 +76,6 @@ sleep 1
 }
 
 function setup_cloudflare() {
-if [ -e ${BIN}/cloudflared ]; then
-          echo
-else
           if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
           elif [[ "$arch" == *'aarch64'* ]]; then
@@ -95,7 +92,6 @@ else
 	 launch="Installing cloudflare..";splashdown="cloudflare installed.";echo
          (wget --quiet ${cloudd} -O cloudflared) & spinner
          chmod +x cloudflared && mv cloudflared $BIN
-fi
 }
 
 function setup_ngrok() {
