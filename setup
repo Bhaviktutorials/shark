@@ -45,7 +45,8 @@ function os () {
 	if [ "$?" -eq "0" ]; then
 		OS=DEBIAN 
 		BIN="/usr/bin"
-		main="/usr/share/shark"			
+		main="/usr/share/shark"
+                sudo apt install iputils-ping -y &>/dev/null		
 	else
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
