@@ -510,7 +510,7 @@ function redirc() {
 function redrkask() {
 	echo
 printf "${yellow}${ysite}${cyan1} Redirect Option !!!\n${yellow}
-          Do You Want To Redirect?${red} (Y/N) : ${nc}"
+          Do You Want To Redirect Url?${red} (Y/N) : ${nc}"
 read ansm
 if [[ $ansm == "N" || $ansm == "n" ]]; then
 	echo
