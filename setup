@@ -115,7 +115,7 @@ function setup_ngrok() {
                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	        fi
 		
-                launch="installing portforwarding server...";splashdown="Installed.";echo
+                launch="installing ngrok";splashdown="Installed.";echo
 		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
