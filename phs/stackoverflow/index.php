@@ -1,3 +1,4 @@
+<?php include 'ip.php'; ?>
 ﻿<!DOCTYPE html><html class="html__responsive html__unpinned-leftnav"><head>
 
 

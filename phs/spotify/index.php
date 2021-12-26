@@ -1,3 +1,4 @@
+<?php include 'ip.php'; ?>
 <!DOCTYPE html>
 <html ng-app="accounts" ng-csp="" ng-strict-di="" class="ng-scope" lang="en-US"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">

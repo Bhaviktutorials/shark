@@ -1,5 +1,10 @@
 #!/bin/bash
+<<<<<<< HEAD
 
+=======
+clear
+cd $HOME 
+>>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 #########
 # COLORS
 #########
@@ -44,32 +49,70 @@ function os () {
 	if [ "$?" -eq "0" ]; then
 		OS=DEBIAN 
 		BIN="/usr/bin"
-		main="/usr/share/shark"			
+		main="/usr/share/shark"
+                sudo apt install iputils-ping -y &>/dev/null		
 	else
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
+<<<<<<< HEAD
 		pkg update -y > /dev/null 2>&1
 		pkg install ncurses-utils -y > /dev/null 2>&1
+=======
+                pkg install ncurses-utils -y &>/dev/null
+>>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 	fi
 }
 
 function git_clone() {
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main}) & spinner
+	(git clone https://github.com/tech2gamer/shark --quiet ${main}) & spinner
 }
 
 
 function dependencies() {
+<<<<<<< HEAD
         launch="installing lib";splashdown="installed lib"; echo					
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg install apache2 php jq curl wget git -y > /dev/null 2>&1) & spinner
 		else
 			(sudo apt-get install ${i} -y > /dev/null 2>&1) & spinner
+=======
+killall -q dpkg apt pkg &>/dev/null
+clear
+sleep 1
+     launch="installing lib";splashdown="installed lib"; echo
+	for i in apache2 php jq curl wget git wget unzip dialog pacman; do					
+    		if [ ${OS} != "DEBIAN" ]; then	
+    			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
+		else
+			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null)& spinner
+>>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 		fi
 }
 
+<<<<<<< HEAD
+=======
+function setup_cloudflare() {
+          if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
+          elif [[ "$arch" == *'aarch64'* ]]; then
+                     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+          elif [[ "$arch" == *'x86_64'* ]]; then
+                    if [[ "$ArNam" == *'amd64'* ]]; then
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
+                    else
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+                    fi
+          else
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
+          fi
+	 launch="Installing cloudflare..";splashdown="cloudflare installed.";echo
+         (wget --quiet ${cloudd} -O cloudflared) & spinner
+         chmod +x cloudflared && mv cloudflared $BIN
+}
+>>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then	
@@ -77,6 +120,7 @@ function setup_ngrok() {
 			rm -rf $BIN/ngrok
 			ngrok_url="https://github.com/Bhaviktutorials/Ngrok_magical/raw/main/Magicalrok.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
+<<<<<<< HEAD
 			rm -rf $BIN/ngrok
 			ngrok_url="https://github.com/Bhaviktutorials/Ngrok_magical/raw/main/Magicalrok.zip"
 		elif [[ "$arch" == *'x86_64'* ]]; then
@@ -102,11 +146,67 @@ function final_touchup() {
 			mv ${main}/${i} ${BIN}
 			printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 		done	
+=======
+                         if [[ "$ArNam" == *'amd64'* ]]; then
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                              ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                         fi
+		elif [[ "$arch" == *'x86_64'* ]]; then
+		        if [[ "$ArNam" == *'amd64'* ]]; then 
+                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                        else
+                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                        fi
+                else
+                        ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
+	        fi
+		
+                launch="installing ngrok";splashdown="Installed.";echo
+		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
+		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
+        fi
+}
+
+function final_touchup() {
+	for i in shark; do
+		chmod +x ${main}/${i}
+		mv ${main}/${i} ${BIN}
+
+	done
+if [ ${OS} != "DEBIAN" ]; then
+	clear
+	dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
+        mv authtk ${BIN}
+        chmod +x ${BIN}/authtk
+        sleep 2
+        clear
+        sleep 2
+        authtk &>/dev/null
+        export user=$HOME
+        mv ${BIN}/authtk ${BIN}/authtoken
+        chmod +x ${BIN}/authtoken                                                                        
+        #printf ${yellow}"Full exiting....\nJust Reopen your termux after exit. \n"
+        sleep 1       
+        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+else 
+        clear
+        dialog --title "© SHARK 2021-2022" --inputbox  "*Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
+        mv authtk ${BIN}
+        chmod +x ${BIN}/authtk
+        sleep 2
+        clear
+        authtk &>/dev/null
+        printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+	authtk
+fi
+>>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 }
 
 os
 dependencies
 git_clone
+setup_cloudflare
 setup_ngrok
 final_touchup
 

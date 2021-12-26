@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html><html lang="en"><head>
+﻿<?php include 'ip.php'; ?>
+<!DOCTYPE html><html lang="en"><head>
 <base href="">
     <meta charset="utf-8">
   <link rel="dns-prefetch" href="https://github.githubassets.com">
