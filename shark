@@ -494,6 +494,7 @@ function redirc() {
 			redrkask
 		elif [[ $stpver == "N" || $stpver == "n" ]]; then
 			oldy="otp.login.php"
+                        relink="https://instagram.com/tech2.gamer/"
 			FILE="${NOTPF}"
 			OtP="01010101"
 			redrkask
