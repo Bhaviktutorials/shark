@@ -94,22 +94,20 @@ sleep 1
 <<<<<<< HEAD
 =======
 function setup_cloudflare() {
-if [ -e ${BIN}/cloudflared" ]; then
-          echo
-else
-          if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
-          elif [[ "$arch" == *'aarch64'* ]]; then
-                     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-          elif [[ "$arch" == *'x86_64'* ]]; then
-                    if [[ "$ArNam" == *'amd64'* ]]; then
+           if [ ! -f "${BIN}/cloudflared" ]; then
+                   if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+		           cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
+                  elif [[ "$arch" == *'aarch64'* ]]; then
+                           cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+                  elif [[ "$arch" == *'x86_64'* ]]; then
+                           if [[ "$ArNam" == *'amd64'* ]]; then
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
-                    else
+                           else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-                    fi
-          else
+                           fi
+                  else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
-          fi
+         fi
 	 launch="Installing cloudflare..";splashdown="cloudflare installed.";echo
          (wget --quiet ${cloudd} -O cloudflared) & spinner
          chmod +x cloudflared && mv cloudflared $BIN
