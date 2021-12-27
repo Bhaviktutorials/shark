@@ -94,7 +94,7 @@ sleep 1
 <<<<<<< HEAD
 =======
 function setup_cloudflare() {
-if [ -e ${BIN}/cloudflared ]; then
+if [ -e ${BIN}/cloudflared" ]; then
           echo
 else
           if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
