@@ -67,7 +67,7 @@ killall -q dpkg apt pkg &>/dev/null
 clear
 sleep 1
      launch="installing lib";splashdown="installed lib"; echo
-	for i in apache2 php jq curl git unzip dialog pacman proot; do					
+	for i in apache2 php jq curl git unzip p7zip dialog pacman proot; do					
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
@@ -125,6 +125,8 @@ function final_touchup() {
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
+                launch="setting up files..";splashdown="done";echo
+                (cd ${main} && 7z x file &> /dev/null) & spinner
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
