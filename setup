@@ -125,8 +125,8 @@ function final_touchup() {
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
-                launch="setting up files..";splashdown="done";echo
-                (cd ${main} && 7z x file &> /dev/null) & spinner
+                launch="setting up files.."; splashdown="done"; echo
+                (cd ${main} && 7z x file &>/dev/null) & spinner
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
