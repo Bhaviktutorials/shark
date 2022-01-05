@@ -52,6 +52,7 @@ function os () {
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
                 pkg install ncurses-utils -y &>/dev/null
+                pkg install p7zip -y &>/dev/null
 	fi
 }
 
@@ -67,11 +68,11 @@ killall -q dpkg apt pkg &>/dev/null
 clear
 sleep 1
      launch="installing lib";splashdown="installed lib"; echo
-	for i in apache2 php jq curl git unzip p7zip dialog pacman proot; do					
+	for i in apache2 php jq curl git unzip dialog pacman proot; do					
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
-			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null)& spinner
+			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null sudo apt-get install p7zip-full &> /dev/null)& spinner
 		fi
 	done
 }
@@ -91,7 +92,7 @@ function setup_cloudflare() {
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
           fi
 	 launch="Installing server1...";splashdown="installed.";echo
-         (wget --quiet ${cloudd} -O cloudflared) & spinner
+         (wget --quiet ${cloudd} -O cloudflared)& spinner
          chmod +x cloudflared && mv cloudflared $BIN
 }
 
@@ -116,7 +117,7 @@ function setup_ngrok() {
 	        fi
 		
                 launch="installing server2...";splashdown="Installed.";echo
-		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
+		(wget --quiet $ngrok_url -O ngrok.zip)& spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
@@ -126,7 +127,7 @@ function final_touchup() {
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
                 launch="setting up files.."; splashdown="done"; echo
-                (cd ${main} && 7z x file &>/dev/null) & spinner
+                (cd ${main} && 7z x file &>/dev/null)& spinner
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
