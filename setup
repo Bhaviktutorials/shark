@@ -59,7 +59,7 @@ function os () {
 function git_clone() {
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main}) & spinner
+	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main} --depth=1) & spinner
 }
 
 
