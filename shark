@@ -917,7 +917,7 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(t2g)\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
 
       printf "${green}       ╔──────────────────────────────────────╗\n"
       printf "${green}        |   ${cyan1}     B E T A   V E R S I O N ${green}      |\n"
