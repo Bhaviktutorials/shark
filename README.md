@@ -59,8 +59,8 @@
     <td><a href="https://github.com/Bhaviktutorials/"><p align="center"><b>Bhavik Tutorials</b></td>
   </tr>
   <tr>
-    <td><p align="center"><b>Developer</b></td>
-    <td><p align='center'><b>Developer</b></td>
+    <td><p align="center"><b>Author</b></td>
+    <td><p align='center'><b>Reborn Author</b></td>
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
