@@ -34,9 +34,9 @@
 ##### Debian (kali, Ubuntu ..etc )
 #### <p align="center"> ``` sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash ```
 ##### Android (Termux)
-##### <p align="center"> If your termux is newly install then go for 👇
-###### <p align="center"> ⚠️[Termux-setup](https://drive.google.com/u/4/uc?id=1pDKb5svQLjEN-Mc2A2ERKY0MdYQV6ruP&export=download.mp4)⚠️
-###### <p align="center"> Then use below command👇
+##### <p align="center"> Termux From Playstore will not work check wiki👇
+###### <p align="center"> ⚠️[Termux-Wiki](https://wiki.termux.com/wiki/Installing_from_F-Droid)⚠️
+###### <p align="center"> Then use command below👇
 
 #### <p align="center"> ``` wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | bash ```
 ##### Windows
