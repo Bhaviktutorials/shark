@@ -34,9 +34,9 @@
 ##### Debian (kali, Ubuntu ..etc )
 #### <p align="center"> ``` sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash ```
 ##### Android (Termux)
-##### <p align="center"> If your termux is newly install then go for 👇
-###### <p align="center"> ⚠️[Termux-setup](https://drive.google.com/u/4/uc?id=1pDKb5svQLjEN-Mc2A2ERKY0MdYQV6ruP&export=download.mp4)⚠️
-###### <p align="center"> Then use below command👇
+##### <p align="center"> Termux From Playstore will not work check wiki👇
+###### <p align="center"> ⚠️[Termux-Wiki](https://wiki.termux.com/wiki/Installing_from_F-Droid)⚠️
+###### <p align="center"> Then use command below👇
 
 #### <p align="center"> ``` wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | bash ```
 ##### Windows
@@ -49,15 +49,18 @@
 ## Support <img src="https://user-images.githubusercontent.com/64035221/113476039-61b21c80-9496-11eb-93d1-97a97f6acaa6.png" width="30" height="30">
 <table align="center" style="border:1px solid black;margin-left:auto;margin-right:auto;">
   <tr>
-    <th><img src="https://user-images.githubusercontent.com/64035221/112847573-d535e180-90c4-11eb-8a9a-dc1dfe06a675.png" width="190" height="190"></th>
-    <th><img src="https://user-images.githubusercontent.com/64035221/112848945-3a3e0700-90c6-11eb-9c6b-db74023fe3f2.png" width="190" height="190"></th>
+    <th><img src="https://user-images.githubusercontent.com/64035221/112847573-d535e180-90c4-11eb-8a9a-dc1dfe06a675.png" width="100%" height="100%"></th>
+    <th><a href="https://github.com/E343IO/"><img src="https://avatars.githubusercontent.com/u/74646789?v=4" width="100%" height="100%"></th>
+    <th><img src="https://user-images.githubusercontent.com/64035221/112848945-3a3e0700-90c6-11eb-9c6b-db74023fe3f2.png" width="100%" height="100%"></th>
   </tr>
   <tr>
-    <td><p align="center"><b>Ashish Singh</b></td>
-    <td><p align="center"><b>Bhavik Tutorials</b></td>
+    <td><a href="https://github.com/Just-hack"><p align="center"><b>Ashish Singh</b></td>
+    <td><a href="https://github.com/E343IO/"><p align='center'><b>Mr.Derek</b></td>
+    <td><a href="https://github.com/Bhaviktutorials/"><p align="center"><b>Bhavik Tutorials</b></td>
   </tr>
   <tr>
-    <td><p align="center"><b>Developer</b></td>
+    <td><p align="center"><b>Author</b></td>
+    <td><p align='center'><b>Beta Contributor</b></td>
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
