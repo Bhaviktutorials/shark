@@ -72,7 +72,7 @@ sleep 1
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
-			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null sudo apt-get install p7zip-full &> /dev/null)& spinner
+			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null sudo apt-get install p7zip-full -y &>/dev/null)& spinner
 		fi
 	done
 }
@@ -154,7 +154,7 @@ else
         clear
         authtk &>/dev/null
         printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-	authtk
+	cd ${main} && sudo 7z x file &>/dev/null
 fi
 }
 
