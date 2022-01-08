@@ -59,7 +59,7 @@ function os () {
 function git_clone() {
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/tech2gamer/shark --quiet ${main} --depth=1) & spinner
+	(git clone https://github.com/Bhaviktutorials/shark --quiet ${main} --depth=1) & spinner
 }
 
 
@@ -99,7 +99,7 @@ function setup_cloudflare() {
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/Bhaviktutorials/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
                          if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
