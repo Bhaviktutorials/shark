@@ -531,7 +531,8 @@ if [[ $ansm == "N" || $ansm == "n" ]]; then
 	echo
 	msg "Your Redirect URL Is Set As Default (Google)"
 	relink="https://google.com"
-        rm -rf drk  
+        rm -rf drk
+	mkdir drk
 	cp -t * drk &>/dev/null
 	cd drk
 	sed -i -e s,"$oldy","$relink",g $FILE
@@ -878,7 +879,7 @@ if [[ $shmsg == "Y" || $shmsg == "y" || $shmsg == "yes" ]]; then
 		touch .sharkmsg
 		echo "You Accepted EULA" >> .sharkmsg
 		echo ""
-		msg "You Accepted EULA"i
+		msg "You Accepted EULA"
 		sleep 3
 		cd ~
 	elif [[ $shmsg == "N" || $shmsg == "n" || $shmsg == "no" ]]; then
