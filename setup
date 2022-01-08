@@ -121,7 +121,7 @@ function setup_ngrok() {
         fi
 }
 
-banner() {
+function banner() {
         printf "${green}
         ██████╗██╗  ██╗ █████╗ ██████╗ ██╗  ██╗
        ██╔════╝██║  ██║██╔══██╗██╔══██╗██║ ██╔╝
@@ -168,10 +168,10 @@ else
         printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 fi
 }
-printf "${yellow}Please Wait.\n[!]Don't terminate this task.\n"
+printf "${yellow}Please Wait.\n[!] Don't terminate this task.\n"
 os
 clear
-printf "{green}Setting up libs...\n"
+printf "${green}Setting up libs...\n"
 sleep 4
 banner
 dependencies
