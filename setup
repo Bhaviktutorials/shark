@@ -120,20 +120,6 @@ function setup_ngrok() {
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
-
-function banner() {
-        printf "${green}
-        ██████╗██╗  ██╗ █████╗ ██████╗ ██╗  ██╗
-       ██╔════╝██║  ██║██╔══██╗██╔══██╗██║ ██╔╝
-       ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
-        ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
-       ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
-
-      printf "${green}       ╔──────────────────────────────────────╗\n"
-      printf "${green}        |   ${cyan1}     B E T A   V E R S I O N ${green}      |\n"
-      printf "${green}        ╚──────────────────────────────────────╝\n\n"
-}
 function final_touchup() {
 	for i in shark; do
 		chmod +x ${main}/${i}
@@ -168,12 +154,12 @@ else
         printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 fi
 }
-printf "${yellow}Please Wait.\n[!] Don't terminate this task.\n"
+printf "${yellow}Please Wait.\n\n[!] Don't terminate this task.\n"
 os
 clear
 printf "${green}Setting up libs...\n"
-sleep 4
-banner
+sleep 2
+clear
 dependencies
 git_clone
 setup_cloudflare
