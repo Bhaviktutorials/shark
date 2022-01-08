@@ -39,14 +39,14 @@ spinner() {
         printf "\r   ${green}[✔]${nc} ${green} $splashdown";echo
         tput cnorm
 }
-
 function os () {
 	cat /etc/os-release > /dev/null 2>&1
 	if [ "$?" -eq "0" ]; then
 		OS=DEBIAN 
 		BIN="/usr/bin"
 		main="/usr/share/shark"
-                sudo apt install iputils-ping -y &>/dev/null		
+                sudo apt install iputils-ping -y &>/dev/null
+		sudo apt install p7zip-full -y &>/dev/null
 	else
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
@@ -59,7 +59,7 @@ function os () {
 function git_clone() {
 	launch="cloning shark";splashdown="shark cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/tech2gamer/shark --quiet ${main}) & spinner
+	(git clone https://github.com/tech2gamer/shark --quiet ${main} --depth=1) & spinner
 }
 
 
@@ -72,7 +72,7 @@ sleep 1
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
-			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null sudo apt-get install p7zip-full -y &>/dev/null)& spinner
+			(sudo apt-get install ${i} -y &> /dev/null && sudo dnf -y install &> /dev/null)& spinner
 		fi
 	done
 }
@@ -91,9 +91,9 @@ function setup_cloudflare() {
           else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
           fi
-	 launch="Installing server1...";splashdown="installed.";echo
-         (wget --quiet ${cloudd} -O cloudflared)& spinner
-         chmod +x cloudflared && mv cloudflared $BIN
+	  launch="Installing server1";splashdown="installed.";echo
+	  (wget --quiet ${cloudd} -O cloudflared)& spinner
+	  chmod +x cloudflared && mv cloudflared $BIN
 }
 
 function setup_ngrok() {
@@ -115,19 +115,31 @@ function setup_ngrok() {
                 else
                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	        fi
-		
-                launch="installing server2...";splashdown="Installed.";echo
+		launch="installing server2";splashdown="Installed.";echo
 		(wget --quiet $ngrok_url -O ngrok.zip)& spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
 
+banner() {
+        printf "${green}
+        ██████╗██╗  ██╗ █████╗ ██████╗ ██╗  ██╗
+       ██╔════╝██║  ██║██╔══██╗██╔══██╗██║ ██╔╝
+       ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
+        ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
+       ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
+
+      printf "${green}       ╔──────────────────────────────────────╗\n"
+      printf "${green}        |   ${cyan1}     B E T A   V E R S I O N ${green}      |\n"
+      printf "${green}        ╚──────────────────────────────────────╝\n\n"
+}
 function final_touchup() {
 	for i in shark; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
-                launch="setting up files.."; splashdown="done"; echo
-                (cd ${main} && 7z x file &>/dev/null)& spinner
+		launch="setting up files"; splashdown="done";echo
+		(cd ${main} && 7z x file &>/dev/null)& spinner
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
@@ -154,11 +166,14 @@ else
         clear
         authtk &>/dev/null
         printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
-	cd ${main} && sudo 7z x file &>/dev/null
 fi
 }
-
+printf "${yellow}Please Wait.\n[!]Don't terminate this task.\n"
 os
+clear
+printf "{green}Setting up libs...\n"
+sleep 4
+banner
 dependencies
 git_clone
 setup_cloudflare
