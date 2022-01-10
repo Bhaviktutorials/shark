@@ -533,8 +533,9 @@ if [[ $ansm == "N" || $ansm == "n" ]]; then
 	relink="https://google.com"
         rm -rf drk
 	mkdir drk
-	cp -t * drk &>/dev/null
+	cp -R * drk &>/dev/null
 	cd drk
+        rm -rf drk/
 	sed -i -e s,"$oldy","$relink",g $FILE
 elif [[ $ansm == "y" || $ansm == "Y" ]]; then
         redrk
@@ -551,8 +552,9 @@ function redrk() {
         url_checker $relink
 	rm -rf drk/ 
 	mkdir drk 
-        cp -t * drk &>/dev/null
+        cp -R * drk &>/dev/null
 	cd drk
+        rm -rf drk/
 	sed -i -e s,"$oldy","$relink",g $FILE
 }
 function old() {
