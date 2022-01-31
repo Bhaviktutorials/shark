@@ -55,7 +55,6 @@
     <th><img src="https://user-images.githubusercontent.com/64035221/112848945-3a3e0700-90c6-11eb-9c6b-db74023fe3f2.png" width="100%" height="100%"></th>
   </tr>
   <tr>
-    <td><a href="https://github.com/E343IO/"><p align='center'><b>Mr.Derek</b></td>
     <td><a href="https://github.com/Just-hack"><p align="center"><b>Ashish Singh</b></td>
     <td><a href="https://github.com/Bhaviktutorials/"><p align="center"><b>Bhavik Tutorials</b></td>
   </tr>
