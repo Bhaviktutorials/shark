@@ -50,7 +50,6 @@
 
 <table align="center" style="border:1px solid black;margin-left:auto;margin-right:auto;">
   <tr>
-    <th><a href="https://github.com/E343IO/"><img src="https://avatars.githubusercontent.com/u/74646789?v=4" width="100%" height="100%"></th>
     <th><img src="https://user-images.githubusercontent.com/64035221/112847573-d535e180-90c4-11eb-8a9a-dc1dfe06a675.png" width="100%" height="100%"></th>
     <th><img src="https://user-images.githubusercontent.com/64035221/112848945-3a3e0700-90c6-11eb-9c6b-db74023fe3f2.png" width="100%" height="100%"></th>
   </tr>
