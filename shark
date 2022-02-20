@@ -604,7 +604,7 @@ if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "ngrok" ]]; then
                if [[ ! -e $HOME/.ngrok2 ]]; then
 		     echo ""
 		      read -p $'\e[1;33m Please Enter Your ngrok authtoken without "./"\n\n\e[0m./' auth
-		    if [[ $auth != ngrok authtoken [-0-9a-zA-Z]* ]]; then
+		    if [[ "$auth" != "ngrok authtoken [-0-9a-zA-Z]*" ]]; then
 		            echo ""
                             error_msg "You Have Made Some Mistake!, Try Again!!!"
                             exit 1
