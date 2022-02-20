@@ -15,10 +15,10 @@ follow this 3 steps:
 
 2) click on restart and choose want clean VM state
 
-3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/tech2gamer/shark/raw/master/setup | sudo bash
+3) Tap on restart and copy paste this url on the terminal : sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
 
 
-For additional info, see: https://github.com/E343io/shark
+For additional info, see: https://github.com/Bhaviktutorials/shark
 Give us feedback on chat grp : https://t.me/bhaviktutorial
 
 .SH BUGS
