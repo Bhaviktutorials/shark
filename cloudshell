@@ -18,11 +18,14 @@ follow this 3 steps:
 3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/tech2gamer/shark/raw/master/setup | sudo bash
 
 
-For additional info, see: https://github.com/tech2gamer
+For additional info, see: https://github.com/E343io/shark
+Give us feedback on chat grp : https://t.me/bhaviktutorial
 
 .SH BUGS
 No known bugs.
 .SH AUTHOR
 Ashish Singh
 .SH Beta Author
-@tech2.gamer (on insta)
+@e343io (Beta v2.1 - till now)
+.SH PUBLISHER
+Bhaviktutorials (B-Oza)
