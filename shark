@@ -901,7 +901,7 @@ if [[ ! -e "${logfile}.sharkmsg" ]]; then
 Developers assume NO liability and are NOT responsible for any damage caused by this program.
 Also we want to inform you that some of your actions may be ILLEGAL and you CAN NOT use this
 software to test device, company or any other type of target without WRITTEN PERMISSION from them.\n\n"
-msg "Give us your feedback on :- https://chat.whatsapp.com/DY8itwxRnuf64yqxoWZ0SQn\n"
+msg "Give us your feedback on telegram chat grp:- https://t.me/bhaviktutorial\n"
 
 read -p $'\e[1;40m\e[1;92m T O  R U N  S H A R K  A C C E P T  D I S C L A I M E R\e[1;93m (Y/N) : \e[0m' shmsg
 
