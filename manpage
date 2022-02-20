@@ -6,12 +6,24 @@
 shark 2.5.1
 
 .SH DESCRIPTION
-A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing. For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site." This Project Does not Promote anything Like this we just have made for testing purpose don't thing we into any illegal thing. we guys have added a feature of a custom link so the normal link of ngrok that will change into a different link in the tool itself and you can customize that link also like you can make https://google.com/gvbrvbtfg/ftps.io That way no one will be caught that you are phishing Hope you guys like this project, then don't forget to give it a like.
-
-For additional info, see: https://github.com/tech2gamer
-
+shark - future of phishing is here,
+A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing. For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site." This Project Does not Promote anything Like this we just have made for testing purpose don't thing we into any illegal thing. we guys have added a feature of a custom link so the normal link of ngrok that will change into a different link in the tool itself and you can customize that link also like you can make https://google.com/gvbrvbtfg/ftps.io That way no one will be caught that you are phishing Hope you guys like this project, then don't forget to give it a like and ⭐ on official repo.
+Given Below Options Are Some Usage Of Shark -:
+Options:
+  -u, --update      Update shark
+  -v, --version     Display the current shark version installed on your device
+  -h, --help        Print this help message
+  -a, --assist      List detail discription of shark
+  -p, --purge       Uninstall shark
+  --fix-ngrok       Fix port forwarding issue
+  --fix-cloudfl     Fix CloudFlared port forwarding issue
+  --fix-patches     Check missing packages & fix patches
+  --fix-cloudshell  Restart Vm and cloudshell & fix patches
+For additional info, see: https://github.com/Bhaviktutorials/shark
 .SH BUGS
-No known bugs.
+ If Such Bugs Find By Your Side Then Please Let Us know, By Creating An Issue Named As "Bug:shark" with Your Discription Of Explanation •Pointwise, Will Let You, As A Part Of Shark Contributors.
+ -: sharing of knowledge is more expensive than Buying of ...
+                                   ~[Mr.Derek]
 .SH AUTHOR
 Ashish Singh 
 .SH Beta Contributor
