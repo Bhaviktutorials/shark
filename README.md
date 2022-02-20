@@ -43,7 +43,7 @@
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/Bhaviktutorials/shark&tutorial=README.md)
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
-<p align="center"> <img src="https://media.giphy.com/media/hnqWzpJ34xArYut26j/giphy.gif">
+<p align="center"> <img src="https://i.ibb.co/kKhtDP6/shark.gif">
 
 ***
 ## Support <img src="https://user-images.githubusercontent.com/64035221/113476039-61b21c80-9496-11eb-93d1-97a97f6acaa6.png" width="30" height="30">
