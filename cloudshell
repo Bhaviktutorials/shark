@@ -1,5 +1,6 @@
 .\" Manpage for cloudshell.
 .\" Contact Us On telegram: [https://t.me/bhaviktutorial] to correct errors or typos.
+
 .TH man 8 "25th December 2021" "2.5.1" "shark man page"
 
 .SH NAME
@@ -37,7 +38,9 @@ For additional info, see: https://github.com/Bhaviktutorials/shark
                                    ~[Mr.Derek]
 .SH AUTHOR
 Ashish Singh
+
 .SH Beta Author
 @e343io (Beta v2.1 - till now)
+
 .SH PUBLISHER
 Bhaviktutorials (B-Oza)
