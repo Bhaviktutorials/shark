@@ -53,15 +53,16 @@ pkg install wget -y
 wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | bash 
 ```
 ***
-### Docker Will Available SAP ~
+##### Docker Will Available SAP ~
 
-##### Windows
+### Windows👇
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/Bhaviktutorials/shark&tutorial=README.md)
 ###### <p align="center"> Then use given command below👇
 ```bash
 sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
 ```
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
+***
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
 <p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://drive.google.com/u/4/uc?id=17WYsIDktAA-6qkrN9BCBUKrfrJKow5P8&export=download.gif">
 
