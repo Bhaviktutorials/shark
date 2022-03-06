@@ -9,7 +9,7 @@
 <p align="center">
 <a href="https://github.com/Bhaviktutorials"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red" ></a>
  <a href="https://paypal.me/bhavikoza"><img title="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue" ></a>
- <a href="https://github.com/Bhaviktutorials/shark"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=2.5&x2=0" ></a>
+ <a href="https://github.com/Bhaviktutorials/shark"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=2.5.1.beta&x2=0"></a>
 <a href="https://github.com/Bhaviktutorials"><img title="GitHub version" src="https://img.shields.io/github/license/Bhaviktutorials/T-Remix?color=Brightgree" ></a>
  <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img alt="Youtube" src="https://img.shields.io/badge/Youtube-Bhavik Tutorials-green"/></a>
  <a href="https://instagram.com/bhavik_tutorials"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-Bhavik_Tutorials-ff69b4"/></a>
@@ -31,20 +31,38 @@
 #### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CPaK7qzpUPo/?utm_source=ig_web_copy_link)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
-##### Debian (kali, Ubuntu ..etc )
-#### <p align="center"> ``` sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash ```
-##### Android (Termux)
+### Debian (kali, Ubuntu ..etc )👇
+```bash
+sudo apt update -y && sudo apt upgrade -y
+```
+```bash
+sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
+```
+***
+### Android (Termux)👇
 ##### <p align="center"> Termux From Playstore will not work check wiki👇
-###### <p align="center"> ⚠️[Termux-Wiki](https://wiki.termux.com/wiki/Installing_from_F-Droid)⚠️
-###### <p align="center"> Then use command below👇
+###### <p align="center"> ⚠️[Termux Wikipedia](https://wiki.termux.com/wiki/Installing_from_F-Droid)⚠️
+#### Note : Your Packages are Up-to-date.
+```bash
+pkg update -y
+```
+```bash
+pkg install wget -y
+```
+```bash
+wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | bash 
+```
+***
+##### Docker Will Available SAP ~
 
-#### <p align="center"> ``` wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | bash ```
-
-### Docker Will Available SAP ~
-
-##### Windows
+### Windows👇
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/Bhaviktutorials/shark&tutorial=README.md)
+###### <p align="center"> Then use given command below👇
+```bash
+sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
+```
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
+***
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
 <p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://drive.google.com/u/4/uc?id=17WYsIDktAA-6qkrN9BCBUKrfrJKow5P8&export=download.gif">
 
@@ -68,10 +86,8 @@
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
-<p align="center">
-<a href="https://www.buymeacoffee.com/BhavikTutorials"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Redbull&emoji=&slug=BhavikTutorials&button_colour=2ff22c&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
-
-<p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
+<p align="center"><a href="https://www.buymeacoffee.com/BhavikTutorials"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Redbull&emoji=&slug=BhavikTutorials&button_colour=2ff22c&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+<p align="center"><a href="https://github.com/E343IO/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
 <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="80" height="80">
 <a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/113977119-b91e0700-985f-11eb-9418-eab91ff1540e.png" alt="Telegram" width="80" height="">
 <a href="https://www.instagram.com/bhavik_tutorials/"><img src="https://user-images.githubusercontent.com/64035221/113977904-e61ee980-9860-11eb-82d1-9ebd795c8138.png" alt="Instagram" width="80" height="">
