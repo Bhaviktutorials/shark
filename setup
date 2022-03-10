@@ -78,6 +78,7 @@ sleep 1
 }
 
 function setup_cloudflare() {
+	if [ ! -e $bin/cloudflared ]; then
           if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
           elif [[ "$arch" == *'aarch64'* ]]; then
@@ -91,6 +92,9 @@ function setup_cloudflare() {
           else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
           fi
+  else 
+	  echo ""
+	fi
 	  launch="Installing server1";splashdown="installed.";echo
 	  (wget --quiet ${cloudd} -O cloudflared)& spinner
 	  chmod +x cloudflared && mv cloudflared $BIN
