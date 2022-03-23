@@ -71,7 +71,14 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
 ***
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
+
+## Video - (Kali Linux)
 <p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://drive.google.com/u/4/uc?id=17WYsIDktAA-6qkrN9BCBUKrfrJKow5P8&export=download.gif">
+
+***
+## Screenshot - (Termux)
+
+<p align="left"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_223712.png" width="50%" height="50%"><align="right"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_224024.png" width="50%" height="50%"><align="center"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_225945.png" width="80%" height="80%">
 
 ***
 ## Support <img src="https://user-images.githubusercontent.com/64035221/113476039-61b21c80-9496-11eb-93d1-97a97f6acaa6.png" width="30" height="30">

