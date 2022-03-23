@@ -25,10 +25,17 @@
  <p align="center"> <img src="https://media.giphy.com/media/PfHrNe1cSKAjC/giphy.gif" width="170" height="100" >
 
 ###### <p align="center"> A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing.For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site. as shown in MR ROBOT.
+***
+
+###### Uses ngrok - cloudflare Which helps in port forwarding. Soon will add more 
+***
+
+###### For ngrok first signup and get your authtoken - [**ngrok**](ngrok.io) Then check commands that given below.
+***
 
 ### <p align="center"> <img src="https://media.giphy.com/media/l41YmiCZ8HXvVl5M4/giphy.gif" alt="Instagram" width="80" height="80" > **Instagram Tutorial :-**
 
-#### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CPaK7qzpUPo/?utm_source=ig_web_copy_link)
+#### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CV5RyXxgFvb/?utm_source=ig_web_copy_link)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
 ### Debian (kali, Ubuntu ..etc )👇
