@@ -66,8 +66,8 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
 
 ## Video - (Kali Linux)
-<p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://github.com/E343IO/stuff/raw/main/shark.gif" width="80%" height="80%">
-  
+<p align="center"><a href="https://github.com/E343IO/"><img src="https://github.com/E343IO/stuff/raw/main/shark.gif" width="100%" height="100%">
+
 ***
   
 ## Screenshot - (Termux)
