@@ -94,7 +94,7 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
-<p align="center"><a href="https://www.buymeacoffee.com/BhavikTutorials"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Redbull&emoji=&slug=BhavikTutorials&button_colour=2ff22c&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+<p align="center"><a href="https://www.buymeacoffee.com/E343IO" target="E343IO"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 <p align="center"><a href="https://github.com/E343IO/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
 <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="80" height="80">
 <a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/113977119-b91e0700-985f-11eb-9418-eab91ff1540e.png" alt="Telegram" width="80" height="">
