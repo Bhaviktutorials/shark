@@ -1,8 +1,7 @@
-<p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a>
-
-# <p align="center">**SHARK**
+<!-- <p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a> -->
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/64035221/119222744-81b7a100-bb13-11eb-9def-51bbbf62a106.jpg">
+  <!-- <img src="https://user-images.githubusercontent.com/64035221/119222744-81b7a100-bb13-11eb-9def-51bbbf62a106.jpg"> -->
+       <img src="https://github.com/E343IO/stuff/raw/main/20220325_184030.jpg">
 
 #### <p align="center">**Future of Phishing is here**
 </p>
@@ -73,9 +72,10 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
 ### <p align="center"> ***Glimpse:-*** <img src="https://media.giphy.com/media/l3JDPrKf8VF69nzri/giphy.gif" width="" height="50" >
 
 ## Video - (Kali Linux)
-<p align="center"><a href="https://github.com/Bhaviktutorials/"><img src="https://drive.google.com/u/4/uc?id=17WYsIDktAA-6qkrN9BCBUKrfrJKow5P8&export=download.gif">
+<p align="center"><a href="https://github.com/E343IO/"><img src="https://github.com/E343IO/stuff/raw/main/shark.gif" width="100%" height="100%">
 
 ***
+  
 ## Screenshot - (Termux)
 
 <p align="left"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_223712.png" width="50%" height="50%"><align="right"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_224024.png" width="50%" height="50%"><align="center"><a href="https://github.com/E343IO"><img src="https://raw.githubusercontent.com/E343IO/stuff/main/20220323_225945.png" width="80%" height="80%">
@@ -100,8 +100,8 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
-<p align="center"><a href="https://www.buymeacoffee.com/BhavikTutorials"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Redbull&emoji=&slug=BhavikTutorials&button_colour=2ff22c&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
-<p align="center"><a href="https://github.com/E343IO/"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
+<p align="center"><a href="https://www.buymeacoffee.com/BhavikTutorials" target="E343IO"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<p align="center"><a href="https://github.com/Bhaviktutorials"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
 <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="80" height="80">
 <a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/113977119-b91e0700-985f-11eb-9418-eab91ff1540e.png" alt="Telegram" width="80" height="">
 <a href="https://www.instagram.com/bhavik_tutorials/"><img src="https://user-images.githubusercontent.com/64035221/113977904-e61ee980-9860-11eb-82d1-9ebd795c8138.png" alt="Instagram" width="80" height="">
