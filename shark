@@ -565,8 +565,8 @@ fi
 }
 function main2() {
 if [[ -e ${logfile}.cloud.log ]]; then
-	rm -rf $logfile/.cloud.log
-	touch $logfile/.cloud.log
+	rm -rf ${logfile}.cloud.log
+	touch ${logfile}.cloud.log
 fi
 if [[ `command -v termux-chroot` || "$osnam" == "Android" ]]; then
 	launch="starting shark server"; splashdown="started shark server";printf "\n"; connection;php -S "$HOST":"$PORT" > /dev/null 2>&1 & sleep 2; termux-chroot cloudflared tunnel --url "$HOST":"$PORT" --logfile ${logfile}.cloud.log > /dev/null 2>&1 & sleep 5 & spinner;
