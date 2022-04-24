@@ -1,7 +1,7 @@
-<!-- <p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a> -->
-<p align="center">
-  <!-- <img src="https://user-images.githubusercontent.com/64035221/119222744-81b7a100-bb13-11eb-9def-51bbbf62a106.jpg"> -->
-       <img src="https://github.com/E343IO/stuff/raw/main/20220325_184030.jpg">
+<p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/64035221/119222744-81b7a100-bb13-11eb-9def-51bbbf62a106.jpg">
+       <!--<img src="https://github.com/E343IO/stuff/raw/main/20220325_184030.jpg"> -->
 
 #### <p align="center">**Future of Phishing is here**
 </p>
@@ -24,10 +24,17 @@
  <p align="center"> <img src="https://media.giphy.com/media/PfHrNe1cSKAjC/giphy.gif" width="170" height="100" >
 
 ###### <p align="center"> A shark is a tool that will help you do Phishing in an advanced way so no one checks and identify that you are doing phishing.For those guys who Don't know about Phishing let me explain "Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords, by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing, instant messaging, and text messaging, phishing often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site. as shown in MR ROBOT.
+***
+
+###### Uses ngrok - cloudflare Which helps in port forwarding. Soon will add more 
+***
+
+###### For ngrok first signup and get your authtoken - [**ngrok**](ngrok.io) Then check commands that given below.
+***
 
 ### <p align="center"> <img src="https://media.giphy.com/media/l41YmiCZ8HXvVl5M4/giphy.gif" alt="Instagram" width="80" height="80" > **Instagram Tutorial :-**
 
-#### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CPaK7qzpUPo/?utm_source=ig_web_copy_link)
+#### <p align="center"> [**IGTV**](https://www.instagram.com/tv/CV5RyXxgFvb/?utm_source=ig_web_copy_link)
 
 ## <p align="center"> **Installation of Shark:-**<img src="https://media.giphy.com/media/yNfHI92t4SDw64z8X7/giphy.gif" width="" height="50" >
 ### Debian (kali, Ubuntu ..etc )👇
@@ -93,7 +100,8 @@ sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo 
     <td><p align="center"><b>Publisher</b></td>
   </tr>
 </table>
-<p align="center"><a href="https://www.buymeacoffee.com/E343IO" target="E343IO"><img src="https://github.com/E343IO/stuff/raw/main/default-orange.webp" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+<p align="center"><a href="https://www.buymeacoffee.com/BhavikTutorials" target="_blank"><img src="https://github.com/E343IO/stuff/blob/main/default-orange.webp?raw=true" alt="Buy Me A Coffee" height="41" width="174"></a>
 <p align="center"><a href="https://github.com/Bhaviktutorials"><img src="https://user-images.githubusercontent.com/64035221/96459220-834c7e00-123f-11eb-8417-534058a7ba62.png" alt="GitHub" width="80" height="80">
 <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img src="https://user-images.githubusercontent.com/64035221/96456596-4f238e00-123c-11eb-821e-85e9aaa3faec.png" alt="YouTube" width="80" height="80">
 <a href="https://t.me/bhaviktutorial"><img src="https://user-images.githubusercontent.com/64035221/113977119-b91e0700-985f-11eb-9418-eab91ff1540e.png" alt="Telegram" width="80" height="">
