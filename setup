@@ -99,7 +99,7 @@ function setup_cloudflare() {
 	fi
 	  launch="Installing server-1, size@25mb";splashdown="installed.";echo
 	  (wget --quiet ${cloudd} -O cloudflared)& spinner
-	  chmod +x cloudflared && mv cloudflared $BIN
+	  (chmod +x cloudflared && mv cloudflared $BIN)&>/dev/null
 }
 
 function setup_ngrok() {
