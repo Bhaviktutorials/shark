@@ -33,10 +33,11 @@ spinner() {
         while kill -0 $pid 2>/dev/null
 	do
                 i=$(( (i+1) %4 ))
-                printf "\r${cyan1}[${spin:$i:1}]${nc} ${cyan1} $launch"
+                printf "\r${cyan1}[${spin:$i:1}]${nc} ${cyan1} ${launch}"
                 sleep .1
 	done
-        printf "\r   ${green}[✔]${nc} ${green} $splashdown";echo
+        clear
+        printf "\r\n${green}[✔]${nc} ${green} ${splashdown}";echo
         tput cnorm
 }
 function os () {
@@ -68,7 +69,8 @@ killall -q dpkg apt pkg &>/dev/null
 clear
 sleep 1
      launch="installing lib";splashdown="installed lib"; echo
-	for i in apache2 php jq curl git unzip dialog pacman proot sox ffmpeg; do					
+    #ffmpeg  
+	for i in apache2 php jq curl git unzip dialog proot sox; do					
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
@@ -78,24 +80,24 @@ sleep 1
 }
 
 function setup_cloudflare() {
-	if [ ! -e $bin/cloudflared ]; then
-          if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+	if [ ! -f ${BIN}/cloudflared ]; then
+             if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
-          elif [[ "$arch" == *'aarch64'* ]]; then
+             elif [[ "$arch" == *'aarch64'* ]]; then
                      cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-          elif [[ "$arch" == *'x86_64'* ]]; then
+             elif [[ "$arch" == *'x86_64'* ]]; then
                     if [[ "$ArNam" == *'amd64'* ]]; then
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
                     else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
                     fi
-          else
+             else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
-          fi
-  else 
-	  echo ""
+             fi
+        else 
+	    echo ""
 	fi
-	  launch="Installing server1";splashdown="installed.";echo
+	  launch="Installing server-1, size@25mb";splashdown="installed.";echo
 	  (wget --quiet ${cloudd} -O cloudflared)& spinner
 	  chmod +x cloudflared && mv cloudflared $BIN
 }
@@ -103,7 +105,7 @@ function setup_cloudflare() {
 function setup_ngrok() {
 	if [ ! -f  "${BIN}/ngrok" ]; then
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/Bhaviktutorials/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/E343IO/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
                          if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
@@ -119,9 +121,11 @@ function setup_ngrok() {
                 else
                         ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
 	        fi
-		launch="installing server2";splashdown="Installed.";echo
+		launch="installing server-2, size@4mb";splashdown="Installed.";echo
 		(wget --quiet $ngrok_url -O ngrok.zip)& spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
+        else
+              echo ""
         fi
 }
 function final_touchup() {
