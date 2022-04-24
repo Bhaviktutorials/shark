@@ -94,12 +94,12 @@ function setup_cloudflare() {
              else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
              fi
+	          launch="Installing server-1, size@25mb";splashdown="installed.";echo
+	          (wget --quiet ${cloudd} -O cloudflared)& spinner
+	          chmod +x cloudflared && mv cloudflared $BIN
         else 
 	    echo ""
 	fi
-	  launch="Installing server-1, size@25mb";splashdown="installed.";echo
-	  (wget --quiet ${cloudd} -O cloudflared)& spinner
-	  chmod +x cloudflared && mv cloudflared $BIN
 }
 
 function setup_ngrok() {
