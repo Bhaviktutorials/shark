@@ -68,9 +68,8 @@ function dependencies() {
 killall -q dpkg apt pkg &>/dev/null
 clear
 sleep 1
-     launch="installing lib";splashdown="installed lib"; echo
-    #ffmpeg  
-	for i in apache2 php jq curl git unzip dialog proot sox; do					
+     launch="installing lib";splashdown="installed lib"; echo 
+	for i in apache2 php jq curl git unzip dialog proot sox ffmpeg; do					
     		if [ ${OS} != "DEBIAN" ]; then	
     			(pkg update -y &> /dev/null && pkg install ${i} -y &> /dev/null && pkg install proot resolv-conf &> /dev/null)& spinner
 		else
