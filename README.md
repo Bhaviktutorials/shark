@@ -41,6 +41,10 @@
 ```bash
 sudo apt update -y && sudo apt upgrade -y
 ```
+### Install wget if are not install
+```bash
+apt-get install wget -y
+```
 ```bash
 sudo wget -qO- https://github.com/Bhaviktutorials/shark/raw/master/setup | sudo bash
 ```
