@@ -780,7 +780,7 @@ banner2() {
         Shark beta : ${white}v${VERSION}${green}
         Reborn by  : ${white}Mr.Derek(E343IO)${green} •
          Publisher : ${white}Bhavik Oza${green}       •
-	    Author : ${white}Ashish Singh${red}     • 
+	    Author : ${white}Ashish Singh${green}     • 
             ${yellow}Note   : help us by giving your feedback
 
         》 ${cyan1}${final_url}${yellow} 《 MODIFIED URL.
