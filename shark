@@ -1,4 +1,4 @@
-#!/bin/bash
+8#!/bin/bash
 
 ##############################################
 #                                            #
@@ -150,7 +150,7 @@ function main_update() {
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/Beta/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
 		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
