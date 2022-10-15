@@ -138,7 +138,7 @@ function os () {
 function main_update() {
 	#launch="updating shark"
 	#splashdown="updated shark";echo
-	#os;(wget -q https://github.com/tech2gamer/shark/raw/Beta/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	#os;(wget -q https://github.com/Bhaviktutorials/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
 	echo
 	msg "update manually by installation command\n ~(check Official shark repo)"
 	sleep 2
@@ -150,7 +150,7 @@ function main_update() {
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/Beta/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
 		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
