@@ -598,16 +598,15 @@ if [[ $portfrd == "A" || $portfrd == "a" || $portfrd == "ngrok" ]]; then
                    msg "ngrok is already installed."
                if [[ ! -e $HOME/.ngrok2 ]]; then
 		     echo ""
-		      read -p $'\e[1;33m Please Enter Your ngrok authtoken without "./"\n\n\e[0m./' auth
-		 
-                           if [[ -z $auth  ]]; then
+		      read -p $'\e[1;33m Please Enter Your ngrok authtoken without "./"\n\n\e[0m./ngrok authtoken ' auth
+                           if [[ ! ${auth} =~ ^([0-9a-zA-Z]*[_][0-9a-zA-Z])$ ]]; then
 			    
 			      echo ""
 			      error_msg "it seems quit empty try again!"
 			      sleep 4
 			      prt
 		           else 
-			      $auth 
+			      ngrok authtoken ${auth}
 			      clear  
 			      msg "Authtoken Verified."
 			      sleep 2
