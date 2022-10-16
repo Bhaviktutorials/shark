@@ -1,4 +1,3 @@
-9
 #!/bin/bash
 ##############################################
 #                                            #
@@ -450,14 +449,7 @@ if [[ $drk == y || $drk == Y ]]; then
 echo ""
 read -p $'\e[1;32m\e[96m Please Enter Your Port \e[1;92mEx.3246: \e[0m' PORT
 
-if [[ -z "$PORT" ]]; then
-echo
-echo -e ${red}"Bro you didn't mentioned anything."
-echo
-echo -e ${green}"restarting your option No.$option...."
-sleep 2
-main
-fi
+if [[ ${PORT} -ge 1024 && ${PORT} =~ ^([1-9][0-9][0-9][0-9])$ ]]; then
 if [[ $p == "s" ]]; then
 main2
 elif [[ $p == "S" ]]; then
@@ -467,6 +459,14 @@ final_url="Nothing to Modify localhost"
 link="http://${HOST}:$PORT"
 
 launch="starting shark server"; splashdown="started shark server";printf "\n"; connection; php -S "$HOST":"$PORT" &>/dev/null &
+fi
+else
+echo
+echo -e ${red}"Bro you didn't mentioned anything."
+echo
+echo -e ${green}"restarting your option No.$option...."
+sleep 2
+main
 fi
 elif [[ $drk == n || $drk == N ]]; then
 PORT="8828"
