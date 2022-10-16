@@ -1,5 +1,5 @@
+9
 #!/bin/bash
-
 ##############################################
 #                                            #
 #             PROJECT: SHARK                 #
@@ -180,7 +180,7 @@ function connection() {
 
 function check_update() {
         connection
-        version=$(curl -L -s https://raw.githubusercontent.com/tech2gamer/shark/Beta/shark | grep -w "VERSION=" | head -n1)
+        version=$(curl -L -s https://raw.githubusercontent.com/Bhaviktutorials/shark/master/shark | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
         if [ ${latest_version} = ${VERSION} ];then
                 echo -e "\tReading \tpackage \tlists... \tDone
