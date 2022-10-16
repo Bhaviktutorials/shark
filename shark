@@ -447,7 +447,7 @@ echo
 read -p $'\e[1;32m\e[96m Do You want to enter port?\e[1;91m (Y/N): ' drk
 if [[ $drk == y || $drk == Y ]]; then
 echo ""
-read -p $'\e[1;32m\e[96m Please Enter Your Port \e[1;92mEx.3246: \e[0m' PORT
+read -n4 -p $'\e[1;32m\e[96m Please Enter Your Port \e[1;92mEx.3246: \e[0m' PORT
 
 if [[ ${PORT} -ge 1024 && ${PORT} =~ ^([1-9][0-9][0-9][0-9])$ ]]; then
 if [[ $p == "s" ]]; then
