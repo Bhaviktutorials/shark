@@ -462,9 +462,9 @@ launch="starting shark server"; splashdown="started shark server";printf "\n"; c
 fi
 else
 echo
-echo -e ${red}"Bro you didn't mentioned anything."
+echo -e ${red}"Invalid PORT : $PORT, Try Again!!"
 echo
-echo -e ${green}"restarting your option No.$option...."
+echo -e ${green}"Continue From oPtion No.: $option"
 sleep 2
 main
 fi
