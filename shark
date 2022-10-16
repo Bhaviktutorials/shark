@@ -242,7 +242,7 @@ function fix_ngrok() {
 	launch="fixing ngrok"
 	splashdown="fixed ngrok";echo
 	if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-2in1.zip"
+			ngrok_url="https://github.com/E343IO/stuff/raw/main/ngrok-2in1.zip"
 		elif [[ "$arch" == *'aarch64'* ]]; then
 		         if [[ "$ArNam" == *'amd64'* ]]; then
                               ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
